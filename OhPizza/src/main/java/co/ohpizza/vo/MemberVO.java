@@ -2,6 +2,7 @@ package co.ohpizza.vo;
 
 import java.util.Date;
 
+
 import lombok.Data;
 
 @Data
@@ -16,4 +17,5 @@ public class MemberVO {
 	private String authority;
 	private int point;
 	private String coupon;
+
 }
