@@ -15,5 +15,9 @@
   <definition name="WILDCARD:product/*" extends="myapp.homepage">
     <put-attribute name="body" value="/WEB-INF/jsp/{1}.jsp" />
   </definition>
+  <!-- 게시판 전용 헤더 -->
+  <definition name="WILDCARD:board/*" extends="myapp.homepage">
+    <put-attribute name="body" value="/WEB-INF/jsp/{1}.jsp" />
+  </definition>
   
 </tiles-definitions>

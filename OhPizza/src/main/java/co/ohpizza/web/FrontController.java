@@ -14,11 +14,11 @@ import co.ohpizza.common.Control;
 import co.ohpizza.control.LoginControl;
 import co.ohpizza.control.ProductControl;
 import co.ohpizza.control.ProductListControl;
-import co.ohpizza.control.addMemberControl;
-import co.ohpizza.control.boardControl;
-import co.ohpizza.control.createMemberControl;
-import co.ohpizza.control.eventControl;
-import co.ohpizza.control.mypageControl;
+import co.ohpizza.control.AddMemberControl;
+import co.ohpizza.control.BoardControl;
+import co.ohpizza.control.CreateMemberControl;
+import co.ohpizza.control.EventControl;
+import co.ohpizza.control.MypageControl;
 
 public class FrontController extends HttpServlet {
 	Map<String, Control> map;
@@ -39,18 +39,18 @@ public class FrontController extends HttpServlet {
 		map.put("/logIn.do", new LoginControl());
 		
 		// 회원가입 화면
-		map.put("/addMember.do", new addMemberControl());
+		map.put("/addMember.do", new AddMemberControl());
 		// 회원가입 (멤버 추가)
-		map.put("/createMember.do", new createMemberControl());
+		map.put("/createMember.do", new CreateMemberControl());
 		
 		// 이벤트
-		map.put("/event.do", new eventControl());
+		map.put("/event.do", new EventControl());
 		
 		// 게시판
-		map.put("/board.do", new boardControl());
+		map.put("/board.do", new BoardControl());
 		
 		// 나의오피
-		map.put("/myPage.do", new mypageControl());
+		map.put("/myPage.do", new MypageControl());
 	}
 	
 	@Override

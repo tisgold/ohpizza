@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import co.ohpizza.common.Control;
 
-public class mypageControl implements Control {
+public class MypageControl implements Control {
 
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
