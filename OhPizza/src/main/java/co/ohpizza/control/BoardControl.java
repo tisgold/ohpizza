@@ -1,6 +1,7 @@
 package co.ohpizza.control;
 
 import java.io.IOException;
+
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -24,7 +25,6 @@ public class BoardControl implements Control {
 		List<BoardVO> boardList = bsv.boardList();
 		
 		req.setAttribute("boardList", boardList);
-		
-	}
 
+		req.getRequestDispatcher("product/board.tiles").forward(req, resp);
 }

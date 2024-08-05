@@ -13,11 +13,15 @@
   </definition>
   
   <definition name="WILDCARD:product/*" extends="myapp.homepage">
-    <put-attribute name="body" value="/WEB-INF/jsp/{1}.jsp" />
+    <put-attribute name="menu" value="/WEB-INF/jsp/{1}.jsp" />
   </definition>
   <!-- 게시판 전용 헤더 -->
   <definition name="WILDCARD:board/*" extends="myapp.homepage">
     <put-attribute name="body" value="/WEB-INF/jsp/{1}.jsp" />
   </definition>
   
+    <definition name="WILDCARD:product/*" extends="myapp.homepage">
+    <put-attribute name="body" value="/WEB-INF/jsp/{1}.jsp" />
+  </definition>
+
 </tiles-definitions>

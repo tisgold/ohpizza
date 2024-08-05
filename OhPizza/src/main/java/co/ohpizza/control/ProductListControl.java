@@ -17,12 +17,17 @@ public class ProductListControl implements Control {
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String type = req.getParameter("type");
+		String grade = req.getParameter("grade");
+		grade = grade == null ? null : grade;
 		type = type == null ? "pizza" : type;
 		ProductService svc = new ProductServiceImpl();
+		List<ProductVO> glist = svc.productGList(type, grade);
 		List<ProductVO> list = svc.productList(type);
 		
 		req.setAttribute("type", type);
+		req.setAttribute("grade", grade);
 		req.setAttribute("productList", list);
+		req.setAttribute("productGList", glist);
 		req.getRequestDispatcher("product/productList.tiles").forward(req, resp);
 
 	}
