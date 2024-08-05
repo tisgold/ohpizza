@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,18 +29,21 @@
 <link href="css/login.css" rel="stylesheet">
 </head>
 <body class="text-center">
+<c:if test="${!empty msg }">
+  <p>${msg }</p>
+</c:if>
    <main class="form-signin">
-      <form action="productList.do" method="post">
+      <form action="loginCheck.do" method="post">
          <img class="mb-4" src="images/secret.jpg" alt="" width="72" height="57">
          <h1 class="h3 mb-3 fw-normal">로그인 페이지</h1>
 
          <div class="form-floating">
-            <input type="text" class="form-control" id="id" placeholder="아이디 입력...">
+            <input type="text" class="form-control" name="id" placeholder="아이디">
             <label for="id">아이디</label>
          </div>
          <div class="form-floating">
-            <input type="password" class="form-control" id="pwd" placeholder="Password">
-            <label for="pwd">비밀번호</label>
+            <input type="password" class="form-control" name="pw" placeholder="비밀번호">
+            <label for="pw">비밀번호</label>
          </div>
 
          <div class="checkbox mb-3">
