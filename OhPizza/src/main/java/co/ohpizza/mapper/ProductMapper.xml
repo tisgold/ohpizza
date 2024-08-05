@@ -15,5 +15,12 @@
     from tbl_prod
     where prod_no = #{prodNo}
   </select>
+  
+  <select id="selectGList" parameterType="string" resultType="co.ohpizza.vo.ProductVO">
+    select *
+    from tbl_prod
+    where prod_type = #{type}
+    and grade = #{grade}
+  </select>
 
 </mapper>
