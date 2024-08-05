@@ -8,11 +8,11 @@ import javax.servlet.http.HttpServletResponse;
 
 import co.ohpizza.common.Control;
 
-public class mypageControl implements Control {
+public class MemberListControl implements Control {
 
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		req.getRequestDispatcher("WEB-INF/jsp/myPage.jsp").forward(req, resp);
+		// TODO Auto-generated method stub
 
 	}
 
