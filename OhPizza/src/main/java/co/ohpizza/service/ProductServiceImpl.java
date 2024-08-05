@@ -23,4 +23,10 @@ public class ProductServiceImpl implements ProductService {
 		return mapper.selectProduct(type, prodNo);
 	}
 
+	@Override
+	public List<ProductVO> productGList(String type, String grade) {
+		return mapper.selectGList(type, grade);
+	}
+
+
 }
