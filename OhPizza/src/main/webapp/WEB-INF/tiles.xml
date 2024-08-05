@@ -16,4 +16,11 @@
     <put-attribute name="body" value="/WEB-INF/jsp/{1}.jsp" />
   </definition>
   
+    <definition name="WILDCARD:product/*" extends="myapp.homepage">
+    <put-attribute name="menu" value="/WEB-INF/jsp/{1}.jsp" />
+  </definition>
+  
+  
+  
+  
 </tiles-definitions>
