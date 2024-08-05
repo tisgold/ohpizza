@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <title>login.jsp</title>
     <!-- Bootstrap core CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<link href="css/bootstrap.min.css" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -29,11 +29,11 @@
 <link href="css/login.css" rel="stylesheet">
 </head>
 <body class="text-center">
+<c:if test="${!empty msg }">
+  <p>${msg }</p>
+</c:if>
    <main class="form-signin">
       <form action="loginCheck.do" method="post">
-		<c:if test="${!empty msg }">
-	  	  <p><b>${msg }</b></p>
-		</c:if>
          <img class="mb-4" src="images/secret.jpg" alt="" width="72" height="57">
          <h1 class="h3 mb-3 fw-normal">로그인 페이지</h1>
 

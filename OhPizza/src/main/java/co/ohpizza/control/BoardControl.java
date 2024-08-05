@@ -27,4 +27,5 @@ public class BoardControl implements Control {
 		req.setAttribute("boardList", boardList);
 
 		req.getRequestDispatcher("product/board.tiles").forward(req, resp);
+	}
 }

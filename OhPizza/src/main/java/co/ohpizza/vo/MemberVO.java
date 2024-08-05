@@ -2,7 +2,6 @@ package co.ohpizza.vo;
 
 import java.util.Date;
 
-
 import lombok.Data;
 
 @Data
