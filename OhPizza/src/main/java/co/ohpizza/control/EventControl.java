@@ -12,7 +12,9 @@ public class EventControl implements Control {
 
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
 		req.getRequestDispatcher("product/event.tiles").forward(req, resp);
+
 
 	}
 

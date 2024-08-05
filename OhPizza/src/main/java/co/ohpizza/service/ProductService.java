@@ -11,4 +11,6 @@ public interface ProductService {
 	// 매개값으로 넘어온 prod_no 의 리스트
 	ProductVO selectProduct(String type, String prodNo);
 	
+	List<ProductVO> productGList(String type, String grade);
+	
 }
