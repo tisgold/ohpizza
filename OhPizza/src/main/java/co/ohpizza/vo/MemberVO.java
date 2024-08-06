@@ -18,3 +18,4 @@ public class MemberVO {
 	    private String coupon;
 	}
 
+

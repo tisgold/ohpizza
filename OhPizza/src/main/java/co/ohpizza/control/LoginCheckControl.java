@@ -35,7 +35,7 @@ public class LoginCheckControl implements Control {
 		session.setAttribute("logid", id); // logid에 id값을 담음
 		session.setMaxInactiveInterval(30 * 60); // 30분
 		if(mvo.getAuthority().equals("User")) {
-			resp.sendRedirect("product/productList.tiles");
+			resp.sendRedirect("productList.do");
 		}
 		else if(mvo.getAuthority().equals("Admin")) {
 			resp.sendRedirect("memberList.do");

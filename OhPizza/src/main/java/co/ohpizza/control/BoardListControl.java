@@ -12,18 +12,19 @@ import co.ohpizza.service.BoardService;
 import co.ohpizza.service.BoardServiceImpl;
 import co.ohpizza.vo.BoardVO;
 
-public class BoardControl implements Control {
+public class BoardListControl implements Control {
 
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		req.getRequestDispatcher("board/board.tiles").forward(req, resp);
-
-		String page = req.getParameter("page");
-		page = page == null ? "1" : page;
-		BoardService bsv = new BoardServiceImpl();
-		List<BoardVO> boardList = bsv.boardList();
-
+		
+		BoardService BoardServiceList = new BoardServiceImpl();
+		List<BoardVO> boardList = BoardServiceList.boardList();
+		
+		
 		req.setAttribute("boardList", boardList);
-
+		
+		req.getRequestDispatcher("board/boardList.tiles")//
+		.forward(req, resp);
 	}
+
 }
