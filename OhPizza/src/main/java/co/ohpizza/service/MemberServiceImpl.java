@@ -1,5 +1,6 @@
 package co.ohpizza.service;
 
+import java.util.Date;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
@@ -22,4 +23,9 @@ public class MemberServiceImpl implements MemberService {
 		return mapper.selectList(orderBy, auth);
 	}
 
+	// 회원가입
+	@Override
+	public boolean newMember(MemberVO mvo) {
+		return mapper.insertMember(mvo) == 1;
+	}
 }
