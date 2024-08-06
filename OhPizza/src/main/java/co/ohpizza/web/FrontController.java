@@ -57,7 +57,9 @@ public class FrontController extends HttpServlet {
 		map.put("/myPage.do", new MypageControl());
 		
 		// 멤버 리스트 (Admin 로그인 시)
+
 		map.put("/memberList.do", new MemberListControl());
+
 	}
 	
 	@Override

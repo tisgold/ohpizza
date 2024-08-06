@@ -12,7 +12,8 @@ public class BoardControl implements Control {
 
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		req.getRequestDispatcher("WEB-INF/jsp/board.jsp").forward(req, resp);
+		req.getRequestDispatcher("product/board.tiles").forward(req, resp);
+
 
 	}
 
