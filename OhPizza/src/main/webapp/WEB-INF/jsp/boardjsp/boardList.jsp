@@ -16,11 +16,11 @@
 		<tbody>
 			<c:forEach var="board" items="${boardList }">
 				<tr>
-					<th>${boardList.boardNo }</th>
-					<td>${boardList.boardTitle }</td>
-					<td>${boardList.boardView }</td>
-					<td>${boardList.boardDate }</td>
-					<td>${boardList.boardView }</td>
+					<td>${board.boardNo }</td>
+					<td>${board.boardTitle }</td>
+					<td>${board.memId }</td>
+					<td>${board.boardDate }</td>
+					<td>${board.boardView }</td>
 				</tr>
 			</c:forEach>
 		</tbody>
