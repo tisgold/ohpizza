@@ -17,14 +17,13 @@ public class BoardControl implements Control {
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.getRequestDispatcher("board/board.tiles").forward(req, resp);
-				
-		String page = req.getParameter("page"); 
+
+		String page = req.getParameter("page");
 		page = page == null ? "1" : page;
 		BoardService bsv = new BoardServiceImpl();
 		List<BoardVO> boardList = bsv.boardList();
-		
-		req.setAttribute("boardList", boardList);
-		
-	}
 
+		req.setAttribute("boardList", boardList);
+
+	}
 }
