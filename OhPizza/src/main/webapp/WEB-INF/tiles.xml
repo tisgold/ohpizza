@@ -4,43 +4,32 @@
        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 <tiles-definitions>
 
-	<definition name="myapp.homepage"
-		template="/WEB-INF/layout/template.jsp">
-		<put-attribute name="title" value="일반사용자용 템플릿예제" />
-		<put-attribute name="header" value="/WEB-INF/layout/header.jsp" />
-		<put-attribute name="menu" value="/WEB-INF/layout/menu.jsp" />
-		<put-attribute name="body" value="/WEB-INF/layout/body.jsp" />
-		<put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />
-	</definition>
-	<definition name="WILDCARD:product/*" extends="myapp.homepage" />
+ 
+  <definition name="myapp.homepage" template="/WEB-INF/layout/template.jsp">
+    <put-attribute name="title" value="일반사용자용 템플릿예제" />
+    <put-attribute name="header" value="/WEB-INF/layout/header.jsp" />
+    <put-attribute name="menu" value="/WEB-INF/layout/menu.jsp" />
+    <put-attribute name="body" value="/WEB-INF/layout/body.jsp" />
+    <put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />
+  </definition>
+  
+  <!-- Admin 계정 페이지 -->
+  <definition name="myapp.admin" template="/WEB-INF/admin/template.jsp">
+    <put-attribute name="title" value="관리자용 템플릿예제" />
+    <put-attribute name="header" value="/WEB-INF/admin/header.jsp" />
+    <put-attribute name="menu" value="/WEB-INF/admin/menu.jsp" />
+    <put-attribute name="body" value="/WEB-INF/admin/body.jsp" />
+    <put-attribute name="footer" value="/WEB-INF/admin/footer.jsp" />
+  </definition>
+  
+  <definition name="WILDCARD:admin/*" extends="myapp.admin">
+    <put-attribute name="body" value="/WEB-INF/jsp/admin/{1}.jsp" />
+  </definition> 
+
+  <definition name="WILDCARD:*/*" extends="myapp.homepage">
+    <put-attribute name="body" value="/WEB-INF/jsp/{1}/{2}.jsp" />
+  </definition>
+  
 	
-	<!-- 게시판 페이지 -->
-	<definition name="WILDCARD:board/*" extends="myapp.homepage" >
-		<put-attribute name="body" value="/WEB-INF/jsp/boardjsp/{1}.jsp" />
-	</definition>
-	<!-- 게시판 페이지 끝 -->
-
-	<definition name="WILDCARD:product/*" extends="myapp.homepage">
-		<put-attribute name="body" value="/WEB-INF/jsp/{1}.jsp" />
-	</definition>
-
-	<!-- Admin 계정 페이지 -->
-	<definition name="myapp.admin"
-		template="/WEB-INF/admin/template.jsp">
-		<put-attribute name="title" value="관리자용 템플릿예제" />
-		<put-attribute name="header"
-			value="/WEB-INF/admin/header.jsp" />
-		<put-attribute name="menu"
-			value="/WEB-INF/admin/menu.jsp" />
-		<put-attribute name="body"
-			value="/WEB-INF/admin/body.jsp" />
-		<put-attribute name="footer"
-			value="/WEB-INF/admin/footer.jsp" />
-	</definition>
-
-	<definition name="WILDCARD:admin/*" extends="myapp.admin">
-		<put-attribute name="body"
-			value="/WEB-INF/jsp/admin/{1}.jsp" />
-	</definition>
 
 </tiles-definitions>
