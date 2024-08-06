@@ -50,6 +50,9 @@ public class FrontController extends HttpServlet {
 		// 이벤트
 		map.put("/event.do", new EventControl());
 		
+		// 이벤트 신메뉴
+		map.put("/newmenu.do", new NewmenuControl());
+		
 		// 게시판
 		map.put("/board.do", new BoardControl());
 		
