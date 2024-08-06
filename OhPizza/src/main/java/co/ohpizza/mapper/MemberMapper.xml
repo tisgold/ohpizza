@@ -11,4 +11,14 @@
     and   mem_pw = #{pw}
   </select>
   
+  <select id="selectList" parameterType="string" resultType="co.ohpizza.vo.MemberVO">
+    select mem_id
+          ,mem_pw
+          ,mem_name
+          ,authority
+    from tbl_member
+    where authority = #{auth}
+    order by ${orderBy}
+  </select>
+  
 </mapper>

@@ -1,5 +1,7 @@
 package co.ohpizza.service;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 
 import co.ohpizza.common.DataSource;
@@ -13,6 +15,11 @@ public class MemberServiceImpl implements MemberService {
 	@Override
 	public MemberVO loginCheck(String id, String pw) {
 		return mapper.selectMember(id, pw);
+	}
+
+	@Override
+	public List<MemberVO> memberList(String orderBy, String auth) {
+		return mapper.selectList(orderBy, auth);
 	}
 
 }

@@ -16,4 +16,5 @@ public class MemberVO {
 	private String authority;
 	private int point;
 	private String coupon;
+
 }
