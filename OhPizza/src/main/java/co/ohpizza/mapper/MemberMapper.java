@@ -1,5 +1,6 @@
 package co.ohpizza.mapper;
 
+import java.util.Date;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Param;
@@ -12,5 +13,8 @@ public interface MemberMapper {
 	
 	// 멤버 리스트 출력
 	List<MemberVO> selectList(@Param("orderBy") String order, @Param("auth") String res);
+	
+	// 회원가입
+	int insertMember(MemberVO mvo);
 
 }

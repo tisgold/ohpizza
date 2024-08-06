@@ -3,22 +3,44 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="co.ohpizza.mapper.MemberMapper">
-  
-  <select id="selectMember" parameterType="string" resultType="co.ohpizza.vo.MemberVO">
-    select *
-    from tbl_member
-    where mem_id = #{id}
-    and   mem_pw = #{pw}
-  </select>
-  
-  <select id="selectList" parameterType="string" resultType="co.ohpizza.vo.MemberVO">
-    select mem_id
-          ,mem_pw
-          ,mem_name
-          ,authority
-    from tbl_member
-    where authority = #{auth}
-    order by ${orderBy}
-  </select>
-  
+
+	<select id="selectMember" parameterType="string"
+		resultType="co.ohpizza.vo.MemberVO">
+		select *
+		from tbl_member
+		where mem_id = #{id}
+		and mem_pw =
+		#{pw}
+	</select>
+
+	<select id="selectList" parameterType="string"
+		resultType="co.ohpizza.vo.MemberVO">
+		select mem_id
+		,mem_pw
+		,mem_name
+		,authority
+		from tbl_member
+		where authority = #{auth}
+		order by ${orderBy}
+	</select>
+
+	<!-- 회원가입 -->
+	<insert id="insertMember" parameterType="co.ohpizza.vo.MemberVO">
+		insert into TBL_MEMBER(
+		MEM_ID,
+		MEM_PW,
+		MEM_NAME,
+		EMAIL,
+		PHONE,
+		ADDRESS,
+		AUTHORITY)
+		values(#{memId},
+		#{memPw},
+		#{memName},
+		#{email},
+		#{phone},
+		#{address},
+		#{authority})
+	</insert>
+
 </mapper>
