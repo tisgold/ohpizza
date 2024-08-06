@@ -17,7 +17,6 @@ public class BoardControl implements Control {
 
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		req.getRequestDispatcher("board/board.tiles").forward(req, resp);
 				
 		String page = req.getParameter("page"); 
 		page = page == null ? "1" : page;
@@ -26,6 +25,6 @@ public class BoardControl implements Control {
 		
 		req.setAttribute("boardList", boardList);
 
-		req.getRequestDispatcher("product/board.tiles").forward(req, resp);
+		req.getRequestDispatcher("user/board.tiles").forward(req, resp);
 	}
 }

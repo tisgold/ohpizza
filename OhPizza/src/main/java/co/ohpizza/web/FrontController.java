@@ -21,6 +21,7 @@ import co.ohpizza.control.BoardControl;
 import co.ohpizza.control.CreateMemberControl;
 import co.ohpizza.control.EventControl;
 import co.ohpizza.control.MypageControl;
+import co.ohpizza.control.OrderListControl;
 
 public class FrontController extends HttpServlet {
 	Map<String, Control> map;
@@ -55,6 +56,8 @@ public class FrontController extends HttpServlet {
 		
 		// 나의오피
 		map.put("/myPage.do", new MypageControl());
+		// 내주문내역
+		map.put("/myOrders.do", new OrderListControl());
 		
 		// 멤버 리스트 (Admin 로그인 시)
 

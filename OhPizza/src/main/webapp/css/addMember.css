@@ -1,4 +1,4 @@
-* {
+ * {
   margin: 0px;
   padding: 0px;
   text-decoration: none;
@@ -95,6 +95,24 @@ body {
   background: none;
 }
 
+#address_kakao{
+  width: 100%;
+  border:none;
+  outline:none;
+  color: #636e72;
+  font-size:16px;
+  height:25px;
+  background: none;
+}
+#address{
+  width: 100%;
+  border:none;
+  outline:none;
+  color: #636e72;
+  font-size:16px;
+  height:25px;
+  background: none;
+}
 .btn {
   position:relative;
   left:40%;
@@ -102,7 +120,7 @@ body {
   margin-bottom: 40px;
   width:80%;
   height:40px;
-  background: linear-gradient(125deg,#81ecec,#6c5ce7,#81ecec);
+  background: linear-gradient(125deg,#c91e00,#e60000,#ff0000);
   background-position: left;
   background-size: 200%;
   color:white;

@@ -12,16 +12,8 @@
     <put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />
   </definition>
   
-  <definition name="WILDCARD:product/*" extends="myapp.homepage">
-    <put-attribute name="menu" value="/WEB-INF/jsp/{1}.jsp" />
-  </definition>
-  <!-- 게시판 전용 헤더 -->
-  <definition name="WILDCARD:board/*" extends="myapp.homepage">
-    <put-attribute name="body" value="/WEB-INF/jsp/{1}.jsp" />
-  </definition>
-  
-    <definition name="WILDCARD:product/*" extends="myapp.homepage">
-    <put-attribute name="body" value="/WEB-INF/jsp/{1}.jsp" />
+  <definition name="WILDCARD:*/*" extends="myapp.homepage">
+    <put-attribute name="body" value="/WEB-INF/jsp/{1}/{2}.jsp" />
   </definition>
   
   <!-- Admin 계정 페이지 -->
