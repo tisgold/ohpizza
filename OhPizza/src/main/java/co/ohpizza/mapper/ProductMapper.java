@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Param;
 
+import co.ohpizza.vo.CouponVO;
 import co.ohpizza.vo.ProductVO;
 
 public interface ProductMapper {
@@ -12,4 +13,6 @@ public interface ProductMapper {
 	ProductVO selectProduct(@Param("type") String type, @Param("prodNo") String prodNo);
 
 	List<ProductVO> selectGList(@Param("type")String type, @Param("grade")String grade);
+
+	
 }

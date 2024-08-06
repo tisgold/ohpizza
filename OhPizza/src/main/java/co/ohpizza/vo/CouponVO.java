@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class CouponVO {
-	private String couponName;
-	private int discount;
+	private String couponName; //coupon_name
+	private int discount;	   //discount
 	
 }
