@@ -54,24 +54,21 @@ a {
 				<c:when test="${'set' == type}">
 					<a
 						class="list-group-item list-group-item-action list-group-item-light p-3"
-						href="#!">보너스 파우치</a>
-					<a
-						class="list-group-item list-group-item-action list-group-item-light p-3"
-						href="#!">모두 보기</a>
+						href="#!">특가 세트</a>
 				</c:when>
 				<c:when test="${'side' == type}">
 					<a
 						class="list-group-item list-group-item-action list-group-item-light p-3"
-						href="#!">샐러드&사이드</a>
+						href="productList.do?type=side&grade=salad">샐러드&사이드</a>
 					<a
 						class="list-group-item list-group-item-action list-group-item-light p-3"
-						href="#!">파스타&사이드</a>
+						href="productList.do?type=side&grade=pasta">파스타&사이드</a>
 					<a
 						class="list-group-item list-group-item-action list-group-item-light p-3"
-						href="#!">음료</a>
+						href="productList.do?type=side&grade=bever">음료</a>
 					<a
 						class="list-group-item list-group-item-action list-group-item-light p-3"
-						href="#!">모두 보기</a>
+						href="productList.do?type=side">모두 보기</a>
 				</c:when>
 			</c:choose>
 		</div>
@@ -113,8 +110,10 @@ a {
 															</c:forEach>
 														</div>
 														<!-- Product price-->
-														<span class="text-muted text-decoration-line-through">${product.priceL }
-															원</span> ${product.priceM } 원
+														<form>
+															<input type=radio name=size value='M ${product.priceM }' checked> M ${product.priceM }    
+															<input type=radio name=size value='L ${product.priceL }'> L ${product.priceL }
+														</form>
 													</div>
 												</div>
 												<!-- Product actions-->
@@ -156,8 +155,10 @@ a {
 															</c:forEach>
 														</div>
 														<!-- Product price-->
-														<span class="text-muted text-decoration-line-through">${product.priceL }
-															원</span> ${product.priceM } 원
+														<form>
+															<input type=radio name=size value='M ${product.priceM }' checked> M ${product.priceM }    
+															<input type=radio name=size value='L ${product.priceL }'> L ${product.priceL }
+														</form>
 													</div>
 												</div>
 												<!-- Product actions-->
@@ -199,8 +200,10 @@ a {
 															</c:forEach>
 														</div>
 														<!-- Product price-->
-														<span class="text-muted text-decoration-line-through">${product.priceL }
-															원</span> ${product.priceM } 원
+														<form>
+															<input type=radio name=size value='M ${product.priceM }' checked> M ${product.priceM }    
+															<input type=radio name=size value='L ${product.priceL }'> L ${product.priceL }
+														</form>
 													</div>
 												</div>
 												<!-- Product actions-->
@@ -218,6 +221,294 @@ a {
 							</c:choose>
 						</c:when>
 					</c:choose>
+					
+					<!-- 싱글 피자라인!!!!!!!!!!!!!!!!!!!!!!! -->
+					<c:choose>
+						<c:when test="${'spizza' == type}">
+							<c:forEach var="product" items="${productList }">
+										<!-- 아이템 -->
+										<div class="col mb-5">
+											<div class="card h-100">
+												<!-- Sale badge-->
+												<div class="badge bg-dark text-white position-absolute"
+													style="top: 0.5rem; right: 0.5rem">Sale</div>
+												<!-- Product image-->
+												<img class="card-img-top" src="images/${product.image }"
+													alt="..." />
+												<!-- Product details-->
+												<div class="card-body p-4">
+													<div class="text-center">
+														<!-- Product name-->
+														<h5 class="fw-bolder">
+															<a
+																href="productInfo.do?type=${type }&prodNo=${product.prodNo }">${product.prodName}</a>
+														</h5>
+														<!-- Product reviews-->
+														<div
+															class="d-flex justify-content-center small text-warning mb-2">
+															<c:forEach begin="1" end="${product.starPoint }">
+																<div class="bi-star-fill"></div>
+															</c:forEach>
+														</div>
+														<!-- Product price-->
+														<form>
+															<input type=radio name=size value='| ${product.priceM }' checked> \ ${product.priceM }    
+														</form>
+													</div>
+												</div>
+												<!-- Product actions-->
+												<div
+													class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+													<div class="text-center">
+														<a class="btn btn-outline-dark mt-auto" href="#">Add
+															to cart</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</c:forEach>
+						</c:when>
+					</c:choose>
+					
+					<!-- 세트라인!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+					<c:choose>
+						<c:when test="${'set' == type}">
+							<c:forEach var="product" items="${productList }">
+										<!-- 아이템 -->
+										<div class="col mb-5">
+											<div class="card h-100">
+												<!-- Sale badge-->
+												<div class="badge bg-dark text-white position-absolute"
+													style="top: 0.5rem; right: 0.5rem">Sale</div>
+												<!-- Product image-->
+												<img class="card-img-top" src="images/${product.image }"
+													alt="..." />
+												<!-- Product details-->
+												<div class="card-body p-4">
+													<div class="text-center">
+														<!-- Product name-->
+														<h5 class="fw-bolder">
+															<a
+																href="productInfo.do?type=${type }&prodNo=${product.prodNo }">${product.prodName}</a>
+														</h5>
+														<!-- Product reviews-->
+														<div
+															class="d-flex justify-content-center small text-warning mb-2">
+															<c:forEach begin="1" end="${product.starPoint }">
+																<div class="bi-star-fill"></div>
+															</c:forEach>
+														</div>
+														<!-- Product price-->
+														<form>
+															<input type=radio name=size value='M ${product.priceM }' checked> M ${product.priceM }    
+															<input type=radio name=size value='L ${product.priceL }'> L ${product.priceL }
+														</form>
+													</div>
+												</div>
+												<!-- Product actions-->
+												<div
+													class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+													<div class="text-center">
+														<a class="btn btn-outline-dark mt-auto" href="#">Add
+															to cart</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</c:forEach>
+						</c:when>
+					</c:choose>
+					
+					
+					<!-- 사이드 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+										<c:choose>
+						<c:when test="${'side' == type}">
+							<c:choose>
+								<c:when test="${'salad' == grade}">
+									<c:forEach var="product" items="${productGList }">
+										<!-- 아이템 -->
+										<div class="col mb-5">
+											<div class="card h-100">
+												<!-- Sale badge-->
+												<div class="badge bg-dark text-white position-absolute"
+													style="top: 0.5rem; right: 0.5rem">Sale</div>
+												<!-- Product image-->
+												<img class="card-img-top" src="images/${product.image }"
+													alt="..." />
+												<!-- Product details-->
+												<div class="card-body p-4">
+													<div class="text-center">
+														<!-- Product name-->
+														<h5 class="fw-bolder">
+															<a
+																href="productInfo.do?type=${type }&prodNo=${product.prodNo }">${product.prodName}</a>
+														</h5>
+														<!-- Product reviews-->
+														<div
+															class="d-flex justify-content-center small text-warning mb-2">
+															<c:forEach begin="1" end="${product.starPoint }">
+																<div class="bi-star-fill"></div>
+															</c:forEach>
+														</div>
+														<!-- Product price-->
+														<form>
+															<input type=radio name=size value='M ${product.priceM }' checked> \ ${product.priceM }    
+														</form>
+													</div>
+												</div>
+												<!-- Product actions-->
+												<div
+													class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+													<div class="text-center">
+														<a class="btn btn-outline-dark mt-auto" href="#">Add
+															to cart</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</c:forEach>
+								</c:when>
+								<c:when test="${'pasta' == grade}">
+									<c:forEach var="product" items="${productGList }">
+										<!-- 아이템 -->
+										<div class="col mb-5">
+											<div class="card h-100">
+												<!-- Sale badge-->
+												<div class="badge bg-dark text-white position-absolute"
+													style="top: 0.5rem; right: 0.5rem">Sale</div>
+												<!-- Product image-->
+												<img class="card-img-top" src="images/${product.image }"
+													alt="..." />
+												<!-- Product details-->
+												<div class="card-body p-4">
+													<div class="text-center">
+														<!-- Product name-->
+														<h5 class="fw-bolder">
+															<a
+																href="productInfo.do?type=${type }&prodNo=${product.prodNo }">${product.prodName}</a>
+														</h5>
+														<!-- Product reviews-->
+														<div
+															class="d-flex justify-content-center small text-warning mb-2">
+															<c:forEach begin="1" end="${product.starPoint }">
+																<div class="bi-star-fill"></div>
+															</c:forEach>
+														</div>
+														<!-- Product price-->
+														<form>
+															<input type=radio name=size value='M ${product.priceM }' checked> \ ${product.priceM }    
+														</form>
+													</div>
+												</div>
+												<!-- Product actions-->
+												<div
+													class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+													<div class="text-center">
+														<a class="btn btn-outline-dark mt-auto" href="#">Add
+															to cart</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</c:forEach>
+								</c:when>
+								<c:when test="${'bever' == grade}">
+									<c:forEach var="product" items="${productGList }">
+										<!-- 아이템 -->
+										<div class="col mb-5">
+											<div class="card h-100">
+												<!-- Sale badge-->
+												<div class="badge bg-dark text-white position-absolute"
+													style="top: 0.5rem; right: 0.5rem">Hot</div>
+												<!-- Product image-->
+												<img class="card-img-top" src="images/${product.image }"
+													alt="..." />
+												<!-- Product details-->
+												<div class="card-body p-4">
+													<div class="text-center">
+														<!-- Product name-->
+														<h5 class="fw-bolder">
+															<a
+																href="productInfo.do?type=${type }&prodNo=${product.prodNo }">${product.prodName}</a>
+														</h5>
+														<!-- Product reviews-->
+														<!-- Product price-->
+														<form>
+															<input type=radio name=size value='M ${product.priceM }' checked> M ${product.priceM }    
+															<input type=radio name=size value='L ${product.priceL }'> L ${product.priceL }
+														</form>
+													</div>
+												</div>
+												<!-- Product actions-->
+												<div
+													class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+													<div class="text-center">
+														<a class="btn btn-outline-dark mt-auto" href="#">Add
+															to cart</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</c:forEach>
+								</c:when>
+								<c:otherwise>
+									<c:forEach var="product" items="${productList }">
+										<!-- 아이템 -->
+										<div class="col mb-5">
+											<div class="card h-100">
+												<!-- Sale badge-->
+												<div class="badge bg-dark text-white position-absolute"
+													style="top: 0.5rem; right: 0.5rem">Sale</div>
+												<!-- Product image-->
+												<img class="card-img-top" src="images/${product.image }"
+													alt="..." />
+												<!-- Product details-->
+												<div class="card-body p-4">
+													<div class="text-center">
+														<!-- Product name-->
+														<h5 class="fw-bolder">
+															<a
+																href="productInfo.do?type=${type }&prodNo=${product.prodNo }">${product.prodName}</a>
+														</h5>
+														<!-- Product reviews-->
+														<div
+															class="d-flex justify-content-center small text-warning mb-2">
+															<c:forEach begin="1" end="${product.starPoint }">
+																<div class="bi-star-fill"></div>
+															</c:forEach>
+														</div>
+														<!-- Product price-->
+														<c:choose>
+															<c:when test="${0 != product.priceL }">
+																<form>
+																	<input type=radio name=size value='M ${product.priceM }' checked> M ${product.priceM }    
+																	<input type=radio name=size value='L ${product.priceL }'> L ${product.priceL }
+																</form>														
+															</c:when>
+															<c:otherwise>
+																<form>
+																	<input type=radio name=size value='M ${product.priceM }' checked> \ ${product.priceM }    
+																</form>															
+															</c:otherwise>
+														</c:choose>
+													</div>
+												</div>
+												<!-- Product actions-->
+												<div
+													class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+													<div class="text-center">
+														<a class="btn btn-outline-dark mt-auto" href="#">Add
+															to cart</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</c:forEach>
+								</c:otherwise>
+							</c:choose>
+						</c:when>
+					</c:choose>
+					
 				</div>
 			</div>
 		</section>

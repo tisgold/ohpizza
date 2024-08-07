@@ -5,8 +5,10 @@
 <mapper namespace="co.ohpizza.mapper.BoardMapper">
 
 	<select id="boardList" resultType="co.ohpizza.vo.BoardVO">
-		select *
-		from tbl_boardlist
+		select board_no, board_title, mem_id, board_date
+		from tbl_board
+		order by board_no desc
+
 	</select>
 	
 </mapper>

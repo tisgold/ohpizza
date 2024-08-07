@@ -8,7 +8,7 @@ import lombok.Data;
 public class OrderVO {
 	private int ordNo;
 	private String memId;
-	private Date ordDate;
+	private String ordDate;
 	private int price;
 	private String locName;
 }

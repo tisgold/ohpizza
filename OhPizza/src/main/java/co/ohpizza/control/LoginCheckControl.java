@@ -25,8 +25,8 @@ public class LoginCheckControl implements Control {
 
 		if(mvo == null) {
 			// 메세지를 "아이디와 비번을 확인하세요!"
-			req.setAttribute("msg", "아이디와 비번을 확인하세요!");
-			req.getRequestDispatcher("WEB-INF/jsp/login.jsp").forward(req, resp);
+			req.setAttribute("msg", "아이디와 비밀번호를 확인하세요!");
+			req.getRequestDispatcher("user/login.tiles").forward(req, resp);
 			return;
 		}
 		
