@@ -75,7 +75,7 @@ public class FrontController extends HttpServlet {
 		// 나의오피
 		map.put("/myPage.do", new MypageControl());
 		// 내주문내역
-		map.put("/myOrders.do", new OrderListControl());
+		map.put("/myOrder.do", new OrderListControl());
 		// 쿠폰 리스트
 		map.put("/myCoupon.do", new CouponListControl());
 		

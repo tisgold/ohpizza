@@ -22,4 +22,10 @@ public class CouponServiceImpl implements CouponService {
 		return mapper.memberCouponList(id);
 	}
 
+	@Override
+	public List<CouponVO> couponList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

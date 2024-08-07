@@ -16,4 +16,10 @@
   	where mem_id = #{id}
   </select>
   
+  <select id="getCoupon" resultType="co.ohpizza.vo.CouponVO">
+    select *
+    from tbl_coupon
+    order by coupon_name
+  </select>  
+  
 </mapper>

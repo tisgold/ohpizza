@@ -17,13 +17,17 @@ public class CouponListControl implements Control {
 
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String id = req.getParameter("logId");
+		String id = req.getParameter("id");
 		CouponService svc = new CouponServiceImpl();
 		List<String> names = svc.memberCouponList(id);
 		Map<String, String> coupons = new HashMap<>();
 		for(String name : names) {
 			coupons.put(name, svc.getCoupon(name));
 		}
+		
+		coupons.forEach((key, value) -> {
+			System.out.println(key + " : " + value);
+		});
 
 		req.setAttribute("coupons", coupons);
 		req.getRequestDispatcher("user/couponList.tiles").forward(req, resp);
