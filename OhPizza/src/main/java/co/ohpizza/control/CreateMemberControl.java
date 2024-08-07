@@ -39,9 +39,9 @@ public class CreateMemberControl implements Control {
 		mvo.setAuthority("OHPIZZA");
 
 		if (mapper.insertMember(mvo) == 1) {
-			resp.sendRedirect("productList.do");//로그인 될 경우 리스트로 이동
+			resp.sendRedirect("productList.do");//회원가입 될 경우 리스트로 이동
 		} else {
-			resp.sendRedirect("addMember.do"); // 로그인 실패 할 경우 회원가입 이동
+			resp.sendRedirect("addMember.do"); // 회원가입 실패 할 경우 회원가입 이동
 		}
 	}
 
