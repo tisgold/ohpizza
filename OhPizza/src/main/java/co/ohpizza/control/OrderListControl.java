@@ -16,10 +16,10 @@ public class OrderListControl implements Control {
 
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String memId = req.getParameter("memId");
+		String id = req.getParameter("id");
 		OrderService svc = new OrderServiceImpl();
 		
-		List<OrderVO> list = svc.orderList(memId);
+		List<OrderVO> list = svc.orderList(id);
 		req.setAttribute("orders", list);
 		req.getRequestDispatcher("user/orderList.tiles").forward(req, resp);
 
