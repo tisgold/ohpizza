@@ -36,7 +36,7 @@ public class CreateMemberControl implements Control {
 		mvo.setEmail(email);
 		mvo.setPhone(cellphoneNo);
 		mvo.setAddress(address);
-		mvo.setAuthority("OHPIZZA");
+		mvo.setAuthority("User");
 
 		if (mapper.insertMember(mvo) == 1) {
 			resp.sendRedirect("productList.do");//회원가입 될 경우 리스트로 이동
