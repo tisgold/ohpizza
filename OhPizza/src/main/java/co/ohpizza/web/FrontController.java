@@ -17,11 +17,14 @@ import co.ohpizza.control.MemberListControl;
 import co.ohpizza.control.ProductControl;
 import co.ohpizza.control.ProductListControl;
 import co.ohpizza.control.AddMemberControl;
+import co.ohpizza.control.AddOrderControl;
 import co.ohpizza.control.BoardListControl;
+import co.ohpizza.control.CartListControl;
 import co.ohpizza.control.CreateMemberControl;
 import co.ohpizza.control.EventControl;
 import co.ohpizza.control.MypageControl;
 import co.ohpizza.control.NewmenuControl;
+import co.ohpizza.control.OrderControl;
 import co.ohpizza.control.OrderListControl;
 
 public class FrontController extends HttpServlet {
@@ -65,6 +68,9 @@ public class FrontController extends HttpServlet {
 		
 		// 멤버 리스트 (Admin 로그인 시)
 		map.put("/memberList.do", new MemberListControl());
+		
+		// 장바구니 담기 누름.
+		map.put("/addOrder.do", new AddOrderControl());
 	}
 	
 	@Override

@@ -10,7 +10,7 @@
     where prod_type = #{type}
   </select>
   
-  <select id="selectProduct" parameterType="string" resultType="co.ohpizza.vo.ProductVO">
+  <select id="selectProduct" parameterType="int" resultType="co.ohpizza.vo.ProductVO">
     select *
     from tbl_prod
     where prod_no = #{prodNo}

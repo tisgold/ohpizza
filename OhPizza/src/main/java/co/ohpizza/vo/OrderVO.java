@@ -11,4 +11,6 @@ public class OrderVO {
 	private String ordDate;
 	private int price;
 	private String locName;
+	private String status;
+	private String coupon_name;
 }

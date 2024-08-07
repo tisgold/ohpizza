@@ -16,18 +16,15 @@ public class ProductControl implements Control {
 
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String type = req.getParameter("type");
-		type = type == null ? "pizza" : type;
+
 		String prodNo = req.getParameter("prodNo");
 		
 		ProductVO pvo = new ProductVO();
 		ProductService svc = new ProductServiceImpl();
-		pvo = svc.selectProduct(type, prodNo);
+		pvo = svc.selectProduct(Integer.parseInt(prodNo));
 		
-		List<ProductVO> list = svc.productList(type);
 		
-		req.setAttribute("productList", list);
-		req.setAttribute("type", type);
+
 		req.setAttribute("prod", pvo);
 		req.getRequestDispatcher("product/productInfo.tiles").forward(req, resp);
 

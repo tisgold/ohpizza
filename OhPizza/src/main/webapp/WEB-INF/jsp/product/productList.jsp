@@ -110,20 +110,18 @@ a {
 															</c:forEach>
 														</div>
 														<!-- Product price-->
-														<form>
-															<input type=radio name=size value='M ${product.priceM }' checked> M ${product.priceM }    
-															<input type=radio name=size value='L ${product.priceL }'> L ${product.priceL }
+														<form action="addOrder.do">
+															<input type=hidden name=prodName value='${product.prodName }'>
+															<input type=hidden name=memId value='${logId }'>
+															<input type=radio name=price value='${product.priceM }' checked> M ${product.priceM }    
+															<input type=radio name=price value='${product.priceL }'> L ${product.priceL }
+															<p></p>
+															<button type=submit>Add to cart</button>
 														</form>
 													</div>
 												</div>
 												<!-- Product actions-->
-												<div
-													class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-													<div class="text-center">
-														<a class="btn btn-outline-dark mt-auto" href="#">Add
-															to cart</a>
-													</div>
-												</div>
+
 											</div>
 										</div>
 									</c:forEach>
