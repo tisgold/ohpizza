@@ -15,5 +15,6 @@ public class OrderVO {
 	public String orderDate() {
 		return ordDate.substring(0, 10);
 	}
+
 }
 
