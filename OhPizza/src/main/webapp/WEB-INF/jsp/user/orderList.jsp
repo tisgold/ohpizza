@@ -6,6 +6,7 @@
 <table class="table table-light table-striped table-hover">
   <thead>
     <tr>
+      <th scope="col">#</th>
 	  <th scope="col">주문일자</th>
 	  <th scope="col">주문번호</th>
 	  <th scope="col">결제금액</th>
@@ -15,13 +16,14 @@
 	</tr>
   </thead>  
   <tbody>
-	 <c:forEach var="order" items="${orders }">
+	 <c:forEach var="order" items="${orders }" varStatus="stat">
 	   <tr>
-	     <td>${order.ordDate }</td>
+	     <th scope="row">${stat.count }</th>
+	     <td>${order.orderDate() }</td>
 	     <td>${order.ordNo }</td>
-	     <td>${order.price }</td>
-	     <td>${order.price }</td>
-	     <td>${order.price }</td>
+	     <td>${order.price } 원</td>
+	     <td>${order.price } 원</td>
+	     <td>${order.price } 원</td>
 	     <td>${order.locName }</td>
 	   </tr>
 	</c:forEach>

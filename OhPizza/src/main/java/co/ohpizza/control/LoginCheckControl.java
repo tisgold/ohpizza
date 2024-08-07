@@ -24,7 +24,7 @@ public class LoginCheckControl implements Control {
 		MemberVO mvo = svc.loginCheck(id, pw);
 
 		if(mvo == null) {
-			// 메세지를 "아이디와 비번을 확인하세요!"
+			// 메세지를 "아이디와 비밀번호를 확인하세요!"
 			req.setAttribute("msg", "아이디와 비밀번호를 확인하세요!");
 			req.getRequestDispatcher("user/login.tiles").forward(req, resp);
 			return;
@@ -32,7 +32,7 @@ public class LoginCheckControl implements Control {
 		
 		// 세션객체(attribute 활용해서 저장)
 		HttpSession session = req.getSession();
-		session.setAttribute("logid", id); // logid에 id값을 담음
+		session.setAttribute("logId", id); // logId에 id값을 담음
 		session.setMaxInactiveInterval(30 * 60); // 30분
 		if(mvo.getAuthority().equals("User")) {
 			resp.sendRedirect("productList.do");

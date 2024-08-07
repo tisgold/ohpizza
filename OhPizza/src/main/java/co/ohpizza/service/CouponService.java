@@ -4,11 +4,9 @@ import java.util.List;
 
 import co.ohpizza.vo.CouponVO;
 
-
 public interface CouponService {
-	//쿠폰리스트
 
-//	CouponVO couponCList(String coupon, String discount);
-
-	List<CouponVO> couponList();
+	String getCoupon(String couponNm); // 쿠폰이름의 할인율 확인 
+	
+	List<String> memberCouponList(String id); // 멤버가 보유한 쿠폰 확인
 }

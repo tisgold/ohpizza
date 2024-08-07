@@ -19,13 +19,21 @@ import co.ohpizza.control.ProductListControl;
 import co.ohpizza.control.AddMemberControl;
 import co.ohpizza.control.AddOrderControl;
 import co.ohpizza.control.BoardListControl;
+
 import co.ohpizza.control.CartListControl;
+
+import co.ohpizza.control.CouponListControl;
+
 import co.ohpizza.control.CreateMemberControl;
 import co.ohpizza.control.EventControl;
+import co.ohpizza.control.EventsProgress;
 import co.ohpizza.control.MypageControl;
 import co.ohpizza.control.NewmenuControl;
+
 import co.ohpizza.control.OrderControl;
+
 import co.ohpizza.control.OrderListControl;
+
 
 public class FrontController extends HttpServlet {
 	Map<String, Control> map;
@@ -58,6 +66,9 @@ public class FrontController extends HttpServlet {
 		// 이벤트 신메뉴
 		map.put("/newmenu.do", new NewmenuControl());
 		
+		// 진행중인 이벤트 (쿠폰 발행 이벤트)
+		map.put("/eventsProgress", new EventsProgress());
+		
 		// 게시판
 		map.put("/boardList.do", new BoardListControl());
 		
@@ -65,6 +76,8 @@ public class FrontController extends HttpServlet {
 		map.put("/myPage.do", new MypageControl());
 		// 내주문내역
 		map.put("/myOrders.do", new OrderListControl());
+		// 쿠폰 리스트
+		map.put("/myCoupon.do", new CouponListControl());
 		
 		// 멤버 리스트 (Admin 로그인 시)
 		map.put("/memberList.do", new MemberListControl());

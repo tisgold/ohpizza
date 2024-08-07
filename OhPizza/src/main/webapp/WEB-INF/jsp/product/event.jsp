@@ -17,7 +17,7 @@
 					<div class="list-group list-group-flush">
 						<a
 							class="list-group-item list-group-item-action list-group-item-light p-3"
-							href="/newmenu.do" target="_blank">신제품 소개</a> <a
+							href="newmenu.do" target="_blank">신제품 소개</a> <a
 							class="list-group-item list-group-item-action list-group-item-light p-3"
 							href="#!">진행중 이벤트</a> <a
 							class="list-group-item list-group-item-action list-group-item-light p-3"
@@ -25,20 +25,21 @@
 							class="list-group-item list-group-item-action list-group-item-light p-3"
 							href="#!">할인안내</a>
 					</div>
+					
 				</div>
-				<!-- 행사 정보 출력  -->	
-					<div class="container-fluid">행사번호 ${coupon}</div>
-				</div>
-				<div class="container-fluid">피자할인정보 이벤트</div>
-				<h1>여기에 배너 사진 삽입</h1>
-				<div class="container-fluid">사이드메뉴할인정보 이벤트</div>
-				<h1>여기에 배너 사진 삽입</h1>
-				<div class="container-fluid">방문포장 40% 이벤트</div>
-				<h1>여기에 배너 사진 삽입</h1>
+				<!-- 행사 정보 출력  -->
+					
+					<div class="container-fluid">행사번호 ${couponList}</div>
 				
 				
 				
-			</div>
+				
+				<!--  <a href="받을서버주소?이름1=값1&이름2=값2">내용</a>-->
+				
+				
+				
+				
+			
 </aside>
 
 <div id="page-content-wrapper">

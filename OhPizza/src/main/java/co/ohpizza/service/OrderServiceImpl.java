@@ -17,6 +17,7 @@ public class OrderServiceImpl implements OrderService {
 	public List<OrderVO> orderList(String memId) {
 		return mapper.selectOrder(memId);
 	}
+	
 
 	@Override
 	public boolean addOrder(String memId, String price) {
