@@ -32,15 +32,15 @@
 		MEM_NAME,
 		EMAIL,
 		PHONE,
-		ADDRESS,
-		AUTHORITY)
+		ADDRESS
+		)
 		values(#{memId},
 		#{memPw},
 		#{memName},
 		#{email},
 		#{phone},
-		#{address},
-		#{authority})
+		#{address}
+		)
 	</insert>
 
 </mapper>

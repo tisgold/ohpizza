@@ -36,7 +36,7 @@ public class CreateMemberControl implements Control {
 		mvo.setEmail(email);
 		mvo.setPhone(cellphoneNo);
 		mvo.setAddress(address);
-		mvo.setAuthority("User");
+		// mvo.setAuthority("User");
 
 		if (mapper.insertMember(mvo) == 1) {
 			resp.sendRedirect("productList.do");//로그인 될 경우 리스트로 이동
