@@ -21,9 +21,12 @@ import co.ohpizza.control.BoardListControl;
 import co.ohpizza.control.CouponListControl;
 import co.ohpizza.control.CreateMemberControl;
 import co.ohpizza.control.EventControl;
+import co.ohpizza.control.EventsProgress;
 import co.ohpizza.control.MypageControl;
 import co.ohpizza.control.NewmenuControl;
+
 import co.ohpizza.control.OrderListControl;
+
 
 public class FrontController extends HttpServlet {
 	Map<String, Control> map;
@@ -55,6 +58,9 @@ public class FrontController extends HttpServlet {
 		
 		// 이벤트 신메뉴
 		map.put("/newmenu.do", new NewmenuControl());
+		
+		// 진행중인 이벤트 (쿠폰 발행 이벤트)
+		map.put("/eventsProgress", new EventsProgress());
 		
 		// 게시판
 		map.put("/boardList.do", new BoardListControl());

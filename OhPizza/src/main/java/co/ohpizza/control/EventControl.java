@@ -12,16 +12,12 @@ public class EventControl implements Control {
 
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
-		
-		String coupon = req.getParameter("coupon");
-		coupon = coupon == null ? "coupon" : coupon;
-//		CouponService csc = new CouponServicelmpl();
-//		List<CouponVO> clist = csc.couponList();
-		
-//		req.setAttribute("coupon", clist);
+
+		CouponService csc = new CouponServicelmpl();
+		List<CouponVO> clist = csc.couponList();
+		req.setAttribute("coupon", clist);
 		req.getRequestDispatcher("product/event.tiles").forward(req, resp);
 		
 	}
-
 }
+
