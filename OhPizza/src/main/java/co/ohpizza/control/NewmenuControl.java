@@ -16,7 +16,7 @@ public class NewmenuControl implements Control {
 
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-	
+		req.getRequestDispatcher("product/newmenu.tiles").forward(req, resp);
 		
 	}
 

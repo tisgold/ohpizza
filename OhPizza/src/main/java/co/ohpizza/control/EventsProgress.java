@@ -8,12 +8,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import co.ohpizza.common.Control;
 
-public class AddMemberControl implements Control {
+public class EventsProgress implements Control {
 
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		req.getRequestDispatcher("product/event.tiles").forward(req, resp);
 
-		req.getRequestDispatcher("user/addMember.tiles").forward(req, resp); //addMember.jsp 열기
 	}
 
 }

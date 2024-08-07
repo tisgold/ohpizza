@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.ohpizza.mapper.OrderMapper">
+
+  <select id="selectOrder" parameterType="string" resultType="co.ohpizza.vo.OrderVO">
+    select *
+    from tbl_order
+    where mem_id = #{memId}
+  </select>
+
+</mapper>

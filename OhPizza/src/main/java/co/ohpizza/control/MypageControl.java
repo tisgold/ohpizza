@@ -12,7 +12,7 @@ public class MypageControl implements Control {
 
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		req.getRequestDispatcher("WEB-INF/jsp/myPage.jsp").forward(req, resp);
+		req.getRequestDispatcher("user/myPage.tiles").forward(req, resp);
 
 	}
 

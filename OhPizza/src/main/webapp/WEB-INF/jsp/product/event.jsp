@@ -17,7 +17,7 @@
 					<div class="list-group list-group-flush">
 						<a
 							class="list-group-item list-group-item-action list-group-item-light p-3"
-							href="/newmenu.do" target="_blank">신제품 소개</a> <a
+							href="newmenu.do" target="_blank">신제품 소개</a> <a
 							class="list-group-item list-group-item-action list-group-item-light p-3"
 							href="#!">진행중 이벤트</a> <a
 							class="list-group-item list-group-item-action list-group-item-light p-3"
@@ -28,8 +28,8 @@
 					
 				</div>
 				<!-- 행사 정보 출력  -->
-
-					<!--  <div class="container-fluid">행사번호 ${coupon}</div> -->
+					
+					<div class="container-fluid">행사번호 ${couponList}</div>
 				
 				
 				
