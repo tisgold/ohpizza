@@ -21,6 +21,7 @@ import co.ohpizza.control.BoardControl;
 import co.ohpizza.control.CreateMemberControl;
 import co.ohpizza.control.EventControl;
 import co.ohpizza.control.MypageControl;
+import co.ohpizza.control.NewmenuControl;
 
 public class FrontController extends HttpServlet {
 	Map<String, Control> map;
@@ -52,6 +53,8 @@ public class FrontController extends HttpServlet {
 		
 		// 이벤트 신메뉴
 		map.put("/newmenu.do", new NewmenuControl());
+		
+		// 이벤트  
 		
 		// 게시판
 		map.put("/board.do", new BoardControl());
