@@ -27,6 +27,7 @@ import co.ohpizza.control.CouponListControl;
 import co.ohpizza.control.CreateMemberControl;
 import co.ohpizza.control.EventControl;
 import co.ohpizza.control.EventsProgress;
+import co.ohpizza.control.InquiryControl;
 import co.ohpizza.control.MypageControl;
 import co.ohpizza.control.NewmenuControl;
 
@@ -84,6 +85,9 @@ public class FrontController extends HttpServlet {
 		
 		// 장바구니 담기 누름.
 		map.put("/addOrder.do", new AddOrderControl());
+		
+		// 내 문의 내역 확인하는 기능
+		map.put("/inquiry.do", new InquiryControl());
 	}
 	
 	@Override

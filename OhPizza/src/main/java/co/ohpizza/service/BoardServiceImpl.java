@@ -13,7 +13,15 @@ public class BoardServiceImpl implements BoardService{
 	BoardMapper mapper = sqlSession.getMapper(BoardMapper.class);
 	
 	@Override
-	public List<BoardVO> boardList() {
-		return mapper.boardList();
+	public List<BoardVO> boardList(String page) {
+		return mapper.boardList(page);
+	}
+	@Override
+	public List<BoardVO> inquiryList(String MemId) {
+		return mapper.inquiryList(MemId);
+	}
+	@Override
+	public int totalPage() {
+		return mapper.totalPage();
 	}
 }

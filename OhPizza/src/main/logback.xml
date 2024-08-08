@@ -14,6 +14,9 @@
   <logger name="co.ohpizza.mapper.MemberMapper">
     <level value="debug"/>
   </logger>
+  <logger name="co.ohpizza.mapper.BoardMapper">
+    <level value="debug"/>
+  </logger>
 
   <root level="error">
     <appender-ref ref="stdout"/>
