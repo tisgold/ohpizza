@@ -52,7 +52,7 @@
                 <hr class="mt-5 mb-4 border-secondary-subtle">
                 <div class="d-flex gap-2 gap-md-4 flex-column flex-md-row justify-content-md-end">
                   <a href="addMember.do" class="link-secondary text-decoration-none">새로운 계정 생성</a>
-                  <a href="#!" class="link-secondary text-decoration-none">비밀번호를 잃어버렸습니까?</a>
+                  <a href="findPass.do" class="link-secondary text-decoration-none">비밀번호를 잃어버렸습니까?</a>
                 </div>
               </div>
             </div>

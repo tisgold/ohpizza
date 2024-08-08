@@ -4,9 +4,22 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="co.ohpizza.mapper.CouponMapper">
 
-  <select id="couponList" parameterType="String" resultType="co.ohpizza.vo.CouponVO">
+  <select id="selectCoupon" parameterType="string" resultType="string">
+    select discount
+    from tbl_coupon
+    where coupon_name = #{couponNm}
+  </select>
+  
+  <select id="memberCouponList" parameterType="string" resultType="string">
+  	select coupon_name
+  	from tbl_mem_coupon
+  	where mem_id = #{id}
+  </select>
+  
+  <select id="getCoupon" resultType="co.ohpizza.vo.CouponVO">
     select *
     from tbl_coupon
-  </select>
+    order by coupon_name
+  </select>  
   
 </mapper>

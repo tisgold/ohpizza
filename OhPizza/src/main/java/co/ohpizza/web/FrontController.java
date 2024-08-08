@@ -16,14 +16,29 @@ import co.ohpizza.control.LoginControl;
 import co.ohpizza.control.MemberListControl;
 import co.ohpizza.control.ProductControl;
 import co.ohpizza.control.ProductListControl;
+import co.ohpizza.control.ShowMemInfoControl;
+import co.ohpizza.control.UpdateMemInfoControl;
 import co.ohpizza.control.AddMemberControl;
+import co.ohpizza.control.AddOrderControl;
 import co.ohpizza.control.BoardListControl;
+
+import co.ohpizza.control.CouponListControl;
+
 import co.ohpizza.control.CreateMemberControl;
 import co.ohpizza.control.EventControl;
+
 import co.ohpizza.control.IdCheckControl;
+
+import co.ohpizza.control.EventsProgress;
+import co.ohpizza.control.FindPassControl;
+
 import co.ohpizza.control.MypageControl;
 import co.ohpizza.control.NewmenuControl;
+
+import co.ohpizza.control.OrderControl;
+
 import co.ohpizza.control.OrderListControl;
+
 
 public class FrontController extends HttpServlet {
 	Map<String, Control> map;
@@ -45,6 +60,9 @@ public class FrontController extends HttpServlet {
 		// 로그인 체크
 		map.put("/loginCheck.do", new LoginCheckControl());
 
+		// 비밀번호 찾기 화면
+		map.put("/findPass.do", new FindPassControl());
+		
 		// 회원가입 화면
 		map.put("/addMember.do", new AddMemberControl());
 		// 회원가입 (멤버 추가)
@@ -69,6 +87,30 @@ public class FrontController extends HttpServlet {
 
 		// 멤버 리스트 (Admin 로그인 시)
 		map.put("/memberList.do", new MemberListControl());
+		
+		// 진행중인 이벤트 (쿠폰 발행 이벤트)
+		map.put("/eventsProgress", new EventsProgress());
+		
+		// 게시판
+		map.put("/boardList.do", new BoardListControl());
+		
+		// 나의오피
+		map.put("/myPage.do", new MypageControl());
+		// 내주문내역
+		map.put("/myOrder.do", new OrderListControl());
+		// 쿠폰 리스트
+		map.put("/myCoupon.do", new CouponListControl());
+		// 정보수정 화면
+		map.put("/showMemInfo.do", new ShowMemInfoControl());
+		// 정보수정
+		map.put("/updateMemInfo.do", new UpdateMemInfoControl());
+		
+		// 멤버 리스트 (Admin 로그인 시)
+		map.put("/memberList.do", new MemberListControl());
+		
+		// 장바구니 담기 누름.
+		map.put("/addOrder.do", new AddOrderControl());
+
 	}
 
 	@Override

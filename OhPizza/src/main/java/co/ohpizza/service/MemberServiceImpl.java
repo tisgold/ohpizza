@@ -28,13 +28,16 @@ public class MemberServiceImpl implements MemberService {
 		return mapper.insertMember(mvo) == 1;
 	}
 
+  // 김수호
+  // id중복체크
 	@Override
 	public boolean duplicateId(String id) {
 		return mapper.selectId(id) == 0;
 	}
-	
-	// id중복체크
-	
-//		return mapper.selectId(id);
-	
+
+  public boolean modMember(String id) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+  
 }

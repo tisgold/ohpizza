@@ -8,25 +8,24 @@ import co.ohpizza.common.DataSource;
 import co.ohpizza.mapper.CouponMapper;
 import co.ohpizza.vo.CouponVO;
 
-public class CouponServicelmpl implements CouponService {
+public class CouponServiceImpl implements CouponService {
 	SqlSession sqlSession = DataSource.getInstance().openSession(true);
 	CouponMapper mapper = (CouponMapper) sqlSession.getMapper(CouponMapper.class);
-//	@Override
-//	public List<CouponVO> couponList(String couponlist, int discount) {
-//		return mapper.couponList(coupon);
-//	}
 
-
+	@Override
+	public String getCoupon(String couponNm) {
+		return mapper.selectCoupon(couponNm);
+	}
+	
+	@Override
+	public List<String> memberCouponList(String id) {
+		return mapper.memberCouponList(id);
+	}
 
 	@Override
 	public List<CouponVO> couponList() {
 		// TODO Auto-generated method stub
-		return mapper.couponList();
+		return null;
 	}
 
-//	@Override
-//	public List<CouponVO> couponList(String couponlist, int discount) {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
 }

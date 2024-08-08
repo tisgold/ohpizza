@@ -8,13 +8,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import co.ohpizza.common.Control;
 
-public class NewmenuControl implements Control {
+public class OrderControl implements Control {
 
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// TODO Auto-generated method stub
 
-		req.getRequestDispatcher("product/newmenu.tiles").forward(req, resp);
-		
 	}
 
 }

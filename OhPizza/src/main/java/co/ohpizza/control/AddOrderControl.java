@@ -1,7 +1,6 @@
 package co.ohpizza.control;
 
 import java.io.IOException;
-import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -10,18 +9,20 @@ import javax.servlet.http.HttpServletResponse;
 import co.ohpizza.common.Control;
 import co.ohpizza.service.OrderService;
 import co.ohpizza.service.OrderServiceImpl;
-import co.ohpizza.vo.OrderVO;
 
-public class OrderListControl implements Control {
+public class AddOrderControl implements Control {
 
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String id = req.getParameter("id");
-		OrderService svc = new OrderServiceImpl();
+		// TODO Auto-generated method stub
+		String prodName = req.getParameter("prodName");
+		String memId = req.getParameter("memId");
+		String price = req.getParameter("price");
 		
-		List<OrderVO> list = svc.orderList(id);
-		req.setAttribute("orders", list);
-		req.getRequestDispatcher("user/orderList.tiles").forward(req, resp);
+		OrderService osvc = new OrderServiceImpl();
+		osvc.addOrder(memId, price);
+		
+		req.getRequestDispatcher("product/productList.tiles").forward(req, resp);
 
 	}
 

@@ -9,7 +9,7 @@ public interface ProductService {
 	List<ProductVO> productList(String type);
 	
 	// 매개값으로 넘어온 prod_no 의 리스트
-	ProductVO selectProduct(String type, String prodNo);
+	ProductVO selectProduct(int prodNo);
 	
 	List<ProductVO> productGList(String type, String grade);
 	

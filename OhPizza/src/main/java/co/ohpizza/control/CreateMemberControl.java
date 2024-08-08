@@ -45,12 +45,12 @@ public class CreateMemberControl implements Control {
 		mvo.setPhone(cellphoneNo);
 		mvo.setAddress(address);
 		mvo.setAuthority("User");
-			// mapper. 안에 있는 insertMember 매소드호출하는데 매개변수가 있어서 mvo () 넣은것.
-		if (mapper.insertMember(mvo) == 1) {
+		// mapper. 안에 있는 insertMember 매소드호출하는데 매개변수가 있어서 mvo () 넣은것.
+
+    if (mapper.insertMember(mvo) == 1) {
 			resp.sendRedirect("productList.do");// 회원가입 될 경우 리스트로 이동
 		} else {
 			resp.sendRedirect("addMember.do"); // 회원가입 실패 할 경우 회원가입 이동
-			
 		}
 
 	
