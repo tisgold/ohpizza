@@ -16,17 +16,18 @@ import co.ohpizza.control.LoginControl;
 import co.ohpizza.control.MemberListControl;
 import co.ohpizza.control.ProductControl;
 import co.ohpizza.control.ProductListControl;
+import co.ohpizza.control.ShowMemInfoControl;
+import co.ohpizza.control.UpdateMemInfoControl;
 import co.ohpizza.control.AddMemberControl;
 import co.ohpizza.control.AddOrderControl;
 import co.ohpizza.control.BoardListControl;
-
-import co.ohpizza.control.CartListControl;
 
 import co.ohpizza.control.CouponListControl;
 
 import co.ohpizza.control.CreateMemberControl;
 import co.ohpizza.control.EventControl;
 import co.ohpizza.control.EventsProgress;
+import co.ohpizza.control.FindPassControl;
 import co.ohpizza.control.MypageControl;
 import co.ohpizza.control.NewmenuControl;
 
@@ -54,6 +55,8 @@ public class FrontController extends HttpServlet {
 		map.put("/login.do", new LoginControl());
 		// 로그인 체크
 		map.put("/loginCheck.do", new LoginCheckControl());
+		// 비밀번호 찾기 화면
+		map.put("/findPass.do", new FindPassControl());
 		
 		// 회원가입 화면
 		map.put("/addMember.do", new AddMemberControl());
@@ -78,6 +81,10 @@ public class FrontController extends HttpServlet {
 		map.put("/myOrder.do", new OrderListControl());
 		// 쿠폰 리스트
 		map.put("/myCoupon.do", new CouponListControl());
+		// 정보수정 화면
+		map.put("/showMemInfo.do", new ShowMemInfoControl());
+		// 정보수정
+		map.put("/updateMemInfo.do", new UpdateMemInfoControl());
 		
 		// 멤버 리스트 (Admin 로그인 시)
 		map.put("/memberList.do", new MemberListControl());

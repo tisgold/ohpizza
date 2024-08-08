@@ -15,5 +15,8 @@ public interface MemberMapper {
 	
 	// 회원가입
 	int insertMember(MemberVO mvo);
+	
+	// 멤버 정보변경
+	int updateMember(MemberVO mvo);
 
 }
