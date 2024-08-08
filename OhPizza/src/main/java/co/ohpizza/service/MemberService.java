@@ -1,6 +1,5 @@
 package co.ohpizza.service;
 
-import java.util.Date;
 import java.util.List;
 
 import co.ohpizza.vo.MemberVO;
@@ -14,4 +13,7 @@ public interface MemberService {
 	
 	// 회원가입
 	boolean newMember(MemberVO mvo);
+	
+	// id중복체크
+	boolean duplicateId(String id);
 }

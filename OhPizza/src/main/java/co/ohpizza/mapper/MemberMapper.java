@@ -1,6 +1,5 @@
 package co.ohpizza.mapper;
 
-import java.util.Date;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Param;
@@ -16,5 +15,8 @@ public interface MemberMapper {
 	
 	// 회원가입
 	int insertMember(MemberVO mvo);
+	
+	// id중복체크
+	int selectId(String id);
 
 }

@@ -42,5 +42,12 @@
 		#{address},
 		#{authority})
 	</insert>
+	<!-- 회원가입 ID중복확인 -->
+	<select id="selectId" parameterType="string"
+		resultType="int">
+		select count(*)
+		from tbl_member
+		where mem_id = #{MEM_ID}
+	</select>
 
 </mapper>
