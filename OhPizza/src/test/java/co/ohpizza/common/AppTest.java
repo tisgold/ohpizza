@@ -25,7 +25,7 @@ public class AppTest {
 //		}
 		
 		//mapper.totalCount(20);
-		System.out.println(mapper.totalCount(1));
+		System.out.println(mapper.totalCount());
 
 	}
 }

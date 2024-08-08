@@ -11,7 +11,7 @@
           <a class="list-group-item list-group-item-action list-group-item-light p-3" href="myOrder.do?id=${logId }">내주문내역</a>
           <a class="list-group-item list-group-item-action list-group-item-light p-3" href="myCoupon.do?id=${logId }">내쿠폰</a>
           <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">내문의내역</a>
-          <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">정보수정</a>
+          <a class="list-group-item list-group-item-action list-group-item-light p-3" href="showMemInfo.do?id=${logId }">정보수정</a>
           <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">회원탈퇴</a>
       </div>
   </div>

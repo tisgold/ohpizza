@@ -15,5 +15,12 @@ public interface MemberMapper {
 	
 	// 회원가입
 	int insertMember(MemberVO mvo);
+	
+  // 김수호
+	// id중복체크
+	int selectId(String id);
+
+	// 멤버 정보변경
+	int updateMember(MemberVO mvo);
 
 }

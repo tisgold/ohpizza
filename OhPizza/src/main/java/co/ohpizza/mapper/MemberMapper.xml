@@ -9,8 +9,7 @@
 		select *
 		from tbl_member
 		where mem_id = #{id}
-		and mem_pw =
-		#{pw}
+		and mem_pw = #{pw}
 	</select>
 
 	<select id="selectList" parameterType="string"
@@ -32,15 +31,32 @@
 		MEM_NAME,
 		EMAIL,
 		PHONE,
-		ADDRESS
-		)
+		ADDRESS)
 		values(#{memId},
 		#{memPw},
 		#{memName},
 		#{email},
 		#{phone},
-		#{address}
-		)
+		#{address})
 	</insert>
+
+	<!-- 회원가입 ID중복확인 (김수호) -->
+	<select id="selectId" parameterType="string"
+		resultType="int">
+		select count(*)
+		from tbl_member
+		where mem_id = #{MEM_ID}
+	</select>
+	
+	<!-- 정보변경 -->
+	<update id="updateMember" parameterType="co.ohpizza.vo.MemberVO">
+		update tbl_member
+		set mem_name = #{name},
+		set mem_pw = #{password},
+		set phone = #{phone},
+		set email = #{email},
+		set address = #{address}
+		where mem_id = #{id}
+	</update>
 
 </mapper>

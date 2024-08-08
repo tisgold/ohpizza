@@ -15,7 +15,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			<c:forEach var="board" items="${boardList }" varStatus="stat">
+			<c:forEach var="board" items="${pageOut }" varStatus="stat">
 				<tr>
 					<th scope="row">${stat.count }</th>
 					<td>${board.boardTitle }</td>
@@ -60,7 +60,7 @@
       </c:choose>
     </c:forEach>    
      <!-- next 페이지 -->
-    <c:if test="${pagOut.isNext()}">
+    <c:if test="${pageOut.isNext()}">
     <li class="page-item">
       <a class="page-link" href="boardList.do?pageNum=${pageOut.page + 1 }" aria-label="Next">
         <span aria-hidden="true">&raquo;</span>
