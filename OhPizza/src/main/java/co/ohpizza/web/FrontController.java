@@ -22,6 +22,10 @@ import co.ohpizza.control.AddMemberControl;
 import co.ohpizza.control.AddOrderControl;
 import co.ohpizza.control.BoardListControl;
 
+
+import co.ohpizza.control.CartListControl;
+import co.ohpizza.control.ClosedEventControl;
+
 import co.ohpizza.control.CouponListControl;
 
 import co.ohpizza.control.CreateMemberControl;
@@ -38,7 +42,6 @@ import co.ohpizza.control.NewmenuControl;
 import co.ohpizza.control.OrderControl;
 
 import co.ohpizza.control.OrderListControl;
-
 
 public class FrontController extends HttpServlet {
 	Map<String, Control> map;
@@ -88,26 +91,30 @@ public class FrontController extends HttpServlet {
 		// 멤버 리스트 (Admin 로그인 시)
 		map.put("/memberList.do", new MemberListControl());
 		
+		// 종료된 이벤트
+		map.put("/closedEvent.do", new ClosedEventControl());
+
 		// 진행중인 이벤트 (쿠폰 발행 이벤트)
-		map.put("/eventsProgress", new EventsProgress());
-		
+		map.put("/eventsProgress.do", new EventsProgress());
+
 		// 게시판
 		map.put("/boardList.do", new BoardListControl());
-		
+
 		// 나의오피
 		map.put("/myPage.do", new MypageControl());
 		// 내주문내역
 		map.put("/myOrder.do", new OrderListControl());
 		// 쿠폰 리스트
 		map.put("/myCoupon.do", new CouponListControl());
-		// 정보수정 화면
+
+    // 정보수정 화면
 		map.put("/showMemInfo.do", new ShowMemInfoControl());
 		// 정보수정
 		map.put("/updateMemInfo.do", new UpdateMemInfoControl());
 		
 		// 멤버 리스트 (Admin 로그인 시)
 		map.put("/memberList.do", new MemberListControl());
-		
+
 		// 장바구니 담기 누름.
 		map.put("/addOrder.do", new AddOrderControl());
 

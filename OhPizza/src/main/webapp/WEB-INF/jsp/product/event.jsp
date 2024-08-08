@@ -19,17 +19,15 @@
 							class="list-group-item list-group-item-action list-group-item-light p-3"
 							href="newmenu.do" target="_blank">신제품 소개</a> <a
 							class="list-group-item list-group-item-action list-group-item-light p-3"
-							href="#!">진행중 이벤트</a> <a
+							href="eventsProgress.do">진행중 이벤트</a> <a
 							class="list-group-item list-group-item-action list-group-item-light p-3"
-							href="#!">종료된 이벤트</a> <a
+							href="closedEvent.do">종료된 이벤트</a> <a
 							class="list-group-item list-group-item-action list-group-item-light p-3"
 							href="#!">할인안내</a>
-					</div>
-					
+					</div>	
 				</div>
 				<!-- 행사 정보 출력  -->
 					
-					<div class="container-fluid">행사번호 ${couponList}</div>
 				
 				
 				
@@ -42,12 +40,10 @@
 			
 </aside>
 
-<div id="page-content-wrapper">
+<div id="page-content-wrapper"></div>
 	<section class="py-5">
-		<div class="container px-4 px-lg-5 mt-5">
-			<div
-				class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+		<div class="container px-4 px-lg-5 mt-5"></div>
+			<div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
 
 			</div>
 	</section>
-</div>
