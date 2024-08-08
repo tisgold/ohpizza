@@ -1,7 +1,6 @@
 package co.ohpizza.vo;
 
 import lombok.Data;
-
 @Data
 public class OrderVO {
 	private int ordNo; // 주문번호

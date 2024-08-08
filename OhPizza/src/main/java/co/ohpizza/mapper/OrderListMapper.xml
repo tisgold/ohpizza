@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.ohpizza.mapper.OrderListMapper">
+	<insert id="addOrderList" parameterType="int">
+		insert into tbl_orderlist(list_no, ord_no, prod_no, count, prod_price)
+		values (orderlist_seq.nextVal, ${ordNo}, ${prodNo}, ${count}, ${prodPrice})
+	</insert>
+	
+	<select id="selectOrderListL" parameterType="int" resultType="co.ohpizza.vo.OrderlistVO">
+		select *
+		from tbl_orderlist
+		where ord_no = #{ordNo}
+	</select>
+
+</mapper>

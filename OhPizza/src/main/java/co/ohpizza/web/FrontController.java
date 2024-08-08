@@ -20,7 +20,6 @@ import co.ohpizza.control.AddMemberControl;
 import co.ohpizza.control.AddOrderControl;
 import co.ohpizza.control.BoardListControl;
 
-import co.ohpizza.control.CartListControl;
 
 import co.ohpizza.control.CouponListControl;
 
