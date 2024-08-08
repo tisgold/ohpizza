@@ -19,12 +19,13 @@
 		<!--  필드 -->
 		<div class="field">
 			<b>아이디</b> <span class="placehold-text"><input type="text"
-				id ="loginId" name="loginId" class="id" placeholder="아이디 입력 10자리 이내로 아이디 입력"></span>
+				id ="loginId" name="loginId" class="id" placeholder="10자리 이내로 아이디 입력"
+				maxlength="10" required></span>
 		</div>
 		<div id="checkIdMsg"></div>
 		<div class="field">
 			<b>비밀번호</b> <input class="pw" type="password" name="loginPw"
-				placeholder="비밀번호 입력 10자리 이내로 입력">
+				placeholder="10자리 이내로 비밀번호 입력" maxlength="10" required>
 		</div>
 		<div id="checkPwdMsg1"></div>
 		<div class="strongPassword-message hide">8글자 이상, 영문, 숫자,
@@ -32,7 +33,7 @@
 
 		<div class="field">
 			<b>비밀번호 재확인</b> <input class="pw-confirm" type="password"
-				name="loginPwConfirm" placeholder="비밀번호 확인">
+				name="pwConfirm" placeholder="비밀번호 확인" maxlength="10" required>
 		</div>
 		
 		<div id="checkPwdMsg2"></div>
@@ -40,23 +41,23 @@
 
 		<div class="textForm">
 			<b>이름</b> <input type="text" name="name" class="name"
-				placeholder="이름">
+				placeholder="이름" required>
 		</div>
 
 
 		<!-- 이메일_전화번호 -->
 		<div class="textForm">
 			<b>본인 확인 이메일</b> <input type="text" name="email" class="email"
-				placeholder="이메일">
+				placeholder="you@example.com" required>
 		</div>
 
 
 		<div class="textForm">
 			<b>전화번호</b> <input name="cellphoneNo" type="text" class="cellphoneNo"
-				oninput="oninputPhone(this)" maxlength="14" placeholder="전화번호">
+				oninput="oninputPhone(this)" maxlength="14" placeholder="전화번호" required>
 		</div>
 		<div class="textForm">
-			<b>주소</b> <input name="address" type="text" id="address_kakao"
+			<b>주소</b> <input name="address" type="text" id="address"
 				placeholder="주소입력" readonly>
 
 		</div>
@@ -80,35 +81,13 @@
 <tiles:insertAttribute name="footer" /> -->
 
 <script src="js/addMemberTest.js"></script>
-<script
-	src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script src="js/passCheck.js"></script>
+<script	src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script src="js/address.js"></script>
 <script>
-	window.onload = function() {
-		document
-				.getElementById("address_kakao")
-				.addEventListener(
-						"click",
-						function() { //주소입력칸을 클릭하면
-							//카카오 지도 발생
-							new daum.Postcode(
-									{
-										oncomplete : function(data) { //선택시 입력값 세팅
-											document
-													.getElementById("address_kakao").value = data.address; // 주소 넣기
-											document
-													.querySelector(
-															"input[name=address_detail]")
-													.focus(); //상세입력 포커싱
-										}
-									}).open();
-						});
-	}
-
 	function oninputPhone(target) {
 		target.value = target.value.replace(/[^0-9]/g, '').replace(
-				/(^02.{0}|^01.{1}|[0-9]{3,4})([0-9]{3,4})([0-9]{4})/g,
-				"$1-$2-$3");
+			/(^02.{0}|^01.{1}|[0-9]{3,4})([0-9]{3,4})([0-9]{4})/g, "$1-$2-$3");
 	}
 </script>
-
 </html>

@@ -2,7 +2,7 @@
  * 암호 확인용
  */
 var password = document.getElementById("password");
-var confirm_password = document.getElementById("loginPwConfirm");
+var confirm_password = document.getElementById("pwConfirm");
 
 password.onchange = validatePassword;
 confirm_password.onkeyup = validatePassword;
