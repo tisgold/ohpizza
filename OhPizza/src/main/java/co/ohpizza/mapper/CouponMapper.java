@@ -3,6 +3,7 @@ package co.ohpizza.mapper;
 import java.util.List;
 
 import co.ohpizza.vo.CouponVO;
+import co.ohpizza.vo.MemCouponVO;
 
 public interface CouponMapper {
 	// 쿠폰 할인율
@@ -13,5 +14,7 @@ public interface CouponMapper {
 	
 	// 쿠폰 리스트 출력
 	List<CouponVO> getCoupon();
-
+	
+	// 회원 쿠폰 발급
+	int insertMemCoupon(MemCouponVO mcv);
 }

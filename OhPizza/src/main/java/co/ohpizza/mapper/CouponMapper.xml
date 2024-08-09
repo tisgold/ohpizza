@@ -22,4 +22,9 @@
     order by coupon_name
   </select>  
   
+  <insert id="insertMemCoupon" parameterType="co.ohpizza.vo.MemCouponVO">
+  	insert into tbl_mem_coupon (MEM_ID, COUPON_NAME)
+  	values (#{memId}, #{couponName}) 	
+  </insert>
+  
 </mapper>

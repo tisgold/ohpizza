@@ -7,6 +7,7 @@ import org.apache.ibatis.session.SqlSession;
 import co.ohpizza.common.DataSource;
 import co.ohpizza.mapper.CouponMapper;
 import co.ohpizza.vo.CouponVO;
+import co.ohpizza.vo.MemCouponVO;
 
 public class CouponServiceImpl implements CouponService {
 	SqlSession sqlSession = DataSource.getInstance().openSession(true);
@@ -26,6 +27,11 @@ public class CouponServiceImpl implements CouponService {
 	public List<CouponVO> couponList() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public boolean addMemCoupon(MemCouponVO mcvo) {
+		return mapper.insertMemCoupon(mcvo) == 1;
 	}
 
 }

@@ -3,6 +3,7 @@ package co.ohpizza.service;
 import java.util.List;
 
 import co.ohpizza.vo.CouponVO;
+import co.ohpizza.vo.MemCouponVO;
 
 public interface CouponService {
 
@@ -11,4 +12,6 @@ public interface CouponService {
 	List<String> memberCouponList(String id); // 멤버가 보유한 쿠폰 확인
 	
 	List<CouponVO> couponList(); // 쿠폰 리스트 출력
+	
+	boolean addMemCoupon(MemCouponVO mcvo);
 }
