@@ -5,10 +5,13 @@ import java.util.List;
 import co.ohpizza.vo.CouponVO;
 
 public interface CouponService {
-
-	String getCoupon(String couponNm); // 쿠폰이름의 할인율 확인 
+	// 쿠폰 등록(Admin)
+	boolean addCoupon(CouponVO coupon);
 	
-	List<String> memberCouponList(String id); // 멤버가 보유한 쿠폰 확인
+	// 쿠폰이름의 할인율 확인
+	String getCoupon(String couponNm);  
 	
-	List<CouponVO> couponList(); // 쿠폰 리스트 출력
+	// 멤버가 보유한 쿠폰 확인
+	List<String> memberCouponList(String id);
+	
 }
