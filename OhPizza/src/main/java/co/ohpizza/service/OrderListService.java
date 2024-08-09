@@ -6,7 +6,13 @@ import co.ohpizza.vo.OrderlistVO;
 
 public interface OrderListService {
 
-	boolean addOrderList(int orderNo, int prodNo, int cnt, int prodPrice);
+	boolean addOrderList(String orderNo, String prodNo, String cnt, String prodPrice, String prodName);
 	
 	List<OrderlistVO> selectOrderListL(int ordNo);
+	
+	// 장바구니 품목 숫자
+	int countOrderList(int ordNo);
+	
+	// 장바구니 삭제
+	boolean deleteOrderList(int listNo);
 }
