@@ -28,7 +28,7 @@
 					class="list-group-item list-group-item-action list-group-item-light p-3"
 					href="eventsProgress.do">진행중 이벤트</a> <a
 					class="list-group-item list-group-item-action list-group-item-light p-3"
-					href="#!">종료된 이벤트</a> <a
+					href="closedEvent.do">종료된 이벤트</a> <a
 					class="list-group-item list-group-item-action list-group-item-light p-3"
 					href="#!">할인안내</a>
 			</div>
