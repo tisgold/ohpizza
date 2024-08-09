@@ -30,7 +30,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			<c:forEach var="board" items="${pageOut }" varStatus="stat">
+			<c:forEach var="board" items="${boardList }" varStatus="stat">
 				<tr>
 					<th scope="row">${board.boardNo }</th>
 					<td>${board.boardTitle }</td>
