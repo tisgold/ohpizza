@@ -18,19 +18,23 @@ import co.ohpizza.control.ProductControl;
 import co.ohpizza.control.ProductListControl;
 import co.ohpizza.control.ShowMemInfoControl;
 import co.ohpizza.control.UpdateMemInfoControl;
+
+import co.ohpizza.control.AddMemCouponControl;
+
 import co.ohpizza.control.addCouponControl;
 import co.ohpizza.control.createCouponControl;
 import co.ohpizza.control.deleteMemberControl;
+
 import co.ohpizza.control.AddMemberControl;
 import co.ohpizza.control.AddOrderControl;
 import co.ohpizza.control.BoardListControl;
 
 import co.ohpizza.control.ClosedEventControl;
 
-
 import co.ohpizza.control.CouponListControl;
 
 import co.ohpizza.control.CreateMemberControl;
+import co.ohpizza.control.DiscountCouponControl;
 import co.ohpizza.control.EventControl;
 
 import co.ohpizza.control.IdCheckControl;
@@ -38,7 +42,6 @@ import co.ohpizza.control.IdCheckControl;
 import co.ohpizza.control.EventsProgress;
 
 import co.ohpizza.control.FindPassControl;
-
 
 import co.ohpizza.control.InquiryControl;
 
@@ -81,24 +84,17 @@ public class FrontController extends HttpServlet {
 		map.put("/idCheck.do", new IdCheckControl());
 
 		// 이벤트
-		map.put("/event.do", new EventControl());
-
+		map.put("/event.do", new EventControl());	
 		// 이벤트 신메뉴
 		map.put("/newmenu.do", new NewmenuControl());
-
+		// 종료된 이벤트
+		map.put("/closedEvent.do", new ClosedEventControl());	
+		// 유저 쿠폰 발급
+		map.put("/addMemCoupon.do", new AddMemCouponControl());
+		
+		
 		// 게시판
 		map.put("/boardList.do", new BoardListControl());
-
-		// 나의오피
-		//map.put("/myPage.do", new MypageControl());
-		// 나의오피 -> 내주문내역
-		map.put("/myOrder.do", new OrderListControl());
-
-		// 멤버 리스트 (Admin 로그인 시)
-		map.put("/memberList.do", new MemberListControl());
-		
-		// 종료된 이벤트
-		map.put("/closedEvent.do", new ClosedEventControl());
 
 		// 진행중인 이벤트 (쿠폰 발행 이벤트)
 		map.put("/eventsProgress.do", new EventsProgress());
