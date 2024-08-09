@@ -19,6 +19,8 @@ import co.ohpizza.control.ProductListControl;
 import co.ohpizza.control.ShowMemInfoControl;
 import co.ohpizza.control.UpdateMemInfoControl;
 
+import co.ohpizza.control.AddBoardControl;
+
 import co.ohpizza.control.AddMemCouponControl;
 
 import co.ohpizza.control.addCouponControl;
@@ -27,6 +29,8 @@ import co.ohpizza.control.deleteMemberControl;
 
 import co.ohpizza.control.AddMemberControl;
 import co.ohpizza.control.AddOrderControl;
+import co.ohpizza.control.BoardDetailControl;
+import co.ohpizza.control.BoardFormControl;
 import co.ohpizza.control.BoardListControl;
 
 import co.ohpizza.control.ClosedEventControl;
@@ -99,9 +103,15 @@ public class FrontController extends HttpServlet {
 		// 진행중인 이벤트 (쿠폰 발행 이벤트)
 		map.put("/eventsProgress.do", new EventsProgress());
 
-		// 게시판
+		// 게시판 리스트
 		map.put("/boardList.do", new BoardListControl());
-
+		//게시물 상세 페이지
+		map.put("/boardDetail.do", new BoardDetailControl());
+		//게시글 쓰는 폼
+		map.put("/boardForm.do",new BoardFormControl());
+		//게시글 쓰기
+		map.put("/addBoard.do", new AddBoardControl());
+		
 		// 나의오피
 		map.put("/myPage.do", new MypageControl());
 		// 내주문내역
