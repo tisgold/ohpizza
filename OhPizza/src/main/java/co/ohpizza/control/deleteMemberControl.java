@@ -9,13 +9,24 @@ import javax.servlet.http.HttpServletResponse;
 import co.ohpizza.common.Control;
 import co.ohpizza.service.MemberService;
 import co.ohpizza.service.MemberServiceImpl;
-import co.ohpizza.vo.MemberVO;
 
-public class LoginControl implements Control {
+public class deleteMemberControl implements Control {
 
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		req.getRequestDispatcher("account/login.tiles").forward(req, resp);
+		String id = req.getParameter("id");
+		MemberService svc = new MemberServiceImpl();
+		
+		String msg = "";
+		if(svc.delMember(id)) {
+			msg = id + " 회원 삭제 완료!";
+		}
+		else {
+			msg = "삭제 중 오류 발생!";
+		}
+		
+		req.setAttribute("msg", msg);
+		resp.sendRedirect("memberList.do");
 	}
 
 }
