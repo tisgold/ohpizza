@@ -32,7 +32,9 @@ import co.ohpizza.control.AddOrderControl;
 import co.ohpizza.control.BoardDetailControl;
 import co.ohpizza.control.BoardFormControl;
 import co.ohpizza.control.BoardListControl;
-
+import co.ohpizza.control.CartControl;
+import co.ohpizza.control.CartDeleteControl;
+import co.ohpizza.control.CartNoControl;
 import co.ohpizza.control.ClosedEventControl;
 
 import co.ohpizza.control.CouponListControl;
@@ -139,7 +141,17 @@ public class FrontController extends HttpServlet {
 
 		// 내 문의 내역 확인하는 기능
 		map.put("/inquiry.do", new InquiryControl());
-	}
+		
+		// 장바구니 숫자 추가
+		map.put("/cartNo.do", new CartNoControl());
+		
+		// 장바구니 창
+		map.put("/cart.do", new CartControl());
+		
+		// 장바구니 품목 삭제
+		map.put("/cartDelete.do", new CartDeleteControl());
+
+  }
 
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
