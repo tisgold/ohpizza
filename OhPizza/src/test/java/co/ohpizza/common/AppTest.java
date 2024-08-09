@@ -21,8 +21,6 @@ public class AppTest {
 				DataSource.getInstance().openSession(true); // <--true 써야지 자동커밋
 		OrderListMapper mapper = sqlSession.getMapper(OrderListMapper.class);
 		
-		
-
 
 	}
 }
