@@ -13,14 +13,26 @@ public class OrderListServiceImpl implements OrderListService{
 	OrderListMapper mapper = (OrderListMapper) sqlSession.getMapper(OrderListMapper.class);
 	
 	@Override
-	public boolean addOrderList(int orderNo, int prodNo, int count, int prodPrice) {
-		return mapper.addOrderList(orderNo, prodNo, count, prodPrice) == 1;
+	public boolean addOrderList(String orderNo, String prodNo, String count, String prodPrice, String prodName) {
+		return mapper.addOrderList(orderNo, prodNo, count, prodPrice, prodName) == 1;
 	}
 
 	@Override
 	public List<OrderlistVO> selectOrderListL(int ordNo) {
 		// TODO Auto-generated method stub
 		return mapper.selectOrderListL(ordNo);
+	}
+
+	@Override
+	public int countOrderList(int ordNo) {
+		// TODO Auto-generated method stub
+		return mapper.countOrderList(ordNo);
+	}
+
+	@Override
+	public boolean deleteOrderList(int listNo) {
+		// TODO Auto-generated method stub
+		return mapper.deleteOrderList(listNo) == 1;
 	}
 
 	
