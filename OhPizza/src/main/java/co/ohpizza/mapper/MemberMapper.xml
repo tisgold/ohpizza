@@ -4,14 +4,7 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="co.ohpizza.mapper.MemberMapper">
 
-	<select id="selectMember" parameterType="string"
-		resultType="co.ohpizza.vo.MemberVO">
-		select *
-		from tbl_member
-		where mem_id = #{id}
-		and mem_pw = #{pw}
-	</select>
-
+	<!-- 멤버 리스트 -->
 	<select id="selectList" parameterType="string"
 		resultType="co.ohpizza.vo.MemberVO">
 		select mem_id
@@ -21,6 +14,20 @@
 		from tbl_member
 		where authority = #{auth}
 		order by ${orderBy}
+	</select>
+	
+	<!-- 멤버 삭제 -->
+	<delete id="deleteMember" parameterType="string">
+		delete tbl_member
+		where mem_id = #{id}
+	</delete>
+	
+	<select id="selectMember" parameterType="string"
+		resultType="co.ohpizza.vo.MemberVO">
+		select *
+		from tbl_member
+		where mem_id = #{id}
+		and mem_pw = #{pw}
 	</select>
 
 	<!-- 회원가입 -->

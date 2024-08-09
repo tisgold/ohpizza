@@ -5,7 +5,6 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 
 import co.ohpizza.common.DataSource;
-import co.ohpizza.mapper.CartMapper;
 import co.ohpizza.mapper.OrderMapper;
 import co.ohpizza.vo.OrderVO;
 
@@ -15,13 +14,34 @@ public class OrderServiceImpl implements OrderService {
 
 	@Override
 	public List<OrderVO> orderList(String memId) {
-		return mapper.selectOrder(memId);
+		return mapper.selectOrderList(memId);
 	}
 	
 
 	@Override
-	public boolean addOrder(String memId, String price) {
-		return mapper.addOrder(memId, price) == 1;
+	public boolean addOrder(String memId) {
+		return mapper.addOrder(memId) == 1;
+	}
+
+
+	@Override
+	public boolean checkOrder(String memId) {
+		// TODO Auto-generated method stub
+		return mapper.checkOrder(memId)>=1;
+	}
+
+
+	@Override
+	public OrderVO selectOrder(String memId) {
+		// TODO Auto-generated method stub
+		return mapper.selectOrder(memId);
+	}
+
+
+	@Override
+	public int priceOrder(int price, int ordNo) {
+		// TODO Auto-generated method stub
+		return mapper.priceOrder(price, ordNo);
 	}
 
 }

@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <h3>회원목록...</h3>
+
 <table class="table table-dark table-striped table-hover">
   <ul class="nav nav-pills">
     <c:choose>
@@ -30,6 +31,7 @@
 	  <th scope="col">비밀번호</th>
 	  <th scope="col"><a href="memberList.do?auth=${auth }&order=mem_name">이름</a></th>
 	  <th scope="col">권한</th>
+	  <th scope="col">계정삭제</th>
 	</tr>
   </thead>  
   <tbody>
@@ -40,6 +42,7 @@
 	     <td>${member.memPw }</td>
 	     <td>${member.memName }</td>
 	     <td>${member.authority }</td>
+	     <td><a href="deleteMember.do?id=${member.memId }">삭제</a>
 	   </tr>
 	</c:forEach>
   </tbody>
