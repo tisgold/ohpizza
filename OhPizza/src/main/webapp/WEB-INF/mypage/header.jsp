@@ -12,6 +12,7 @@
                 <li class="nav-item"><a class="nav-link" href="event.do">이벤트</a></li>
                 <li class="nav-item"><a class="nav-link" href="boardList.do">게시판</a></li>
                 <li class="nav-item"><a class="nav-link" href="myOrder.do?id=${logId }">나의오피</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">매장</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Blog</a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
@@ -34,6 +35,7 @@
                     <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
                 </button>
             </form>
-        </div>
-    </div>
+            
+       	</div>
+	</div>
 </nav>

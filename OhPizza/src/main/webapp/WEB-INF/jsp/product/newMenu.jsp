@@ -8,13 +8,13 @@
 	<div class="border-end bg-white" align="center" id="sidebar-wrapper">
 		<h1>진행중인 이벤트</h1>
 		<h1>신제품 소개</h1>
-		<button type="button" 
+		<button type="button"
 			onclick="location.href='newmenu.do?img=thehiden'">더 히든 시크릿</button>
-		<button type="button" 
+		<button type="button"
 			onclick="location.href='newmenu.do?img=secretgarden'">시크릿가든</button>
-			<div>
+		<div>
 			<img src="images/${img}.jpg" width="30%" height="30%">
-			</div>
+		</div>
 	</div>
 	<div class="d-flex" id="wrapper">
 		<!-- Sidebar-->
@@ -24,28 +24,28 @@
 			<div class="list-group list-group-flush">
 				<a
 					class="list-group-item list-group-item-action list-group-item-light p-3"
-					href="newmenu.do" target="_blank">신제품 소개</a> <a
+					href="newmenu.do?img=thehiden">신제품 소개</a> <a
 					class="list-group-item list-group-item-action list-group-item-light p-3"
 					href="eventsProgress.do">진행중 이벤트</a> <a
 					class="list-group-item list-group-item-action list-group-item-light p-3"
-					href="#!">종료된 이벤트</a> <a
+					href="closedEvent.do">종료된 이벤트</a> <a
 					class="list-group-item list-group-item-action list-group-item-light p-3"
 					href="#!">할인안내</a>
 			</div>
 		</div>
 	</div>
-			
-					
-		
-		
-		
+
+
+
+
+
 
 
 	<!-- Sidebar -->
 	<div class="border-end bg-white" align="center" id="sidebar-wrapper">
-
 	</div>
 </aside>
+
 
 
 
@@ -57,9 +57,14 @@
 		<div class="container px-4 px-lg-5 mt-5">
 			<div
 				class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-				<a class="center"
-					href="http://localhost/OhPizza/productInfo.do?type=set&prodNo=10000002"
-					align="center"> 주문하기 </a>
+
+
+				<button type="button" 
+					onclick="location.href='http://localhost/OhPizza/productInfo.do?type=pizza&prodNo=10000012'">
+					히든시크릿 주문하기</button>
+				<button type="button"
+					onclick="location.href='http://localhost/OhPizza/productInfo.do?type=pizza&prodNo=10000001'">
+					시크릿가든 주문하기</button>
 			</div>
 		</div>
 	</section>
