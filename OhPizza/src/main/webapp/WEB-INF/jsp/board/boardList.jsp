@@ -4,20 +4,7 @@
 <h1>게시판 페이지</h1>
 <!-- body -->
 <!-- Sidebar -->
-<div class="d-flex" id="wrapper">
-  <!-- Sidebar-->
-  <div class="border-end bg-white" id="sidebar-wrapper">
-	<div class="sidebar-heading border-bottom bg-light"></div>
-      <div class="list-group list-group-flush">
-          <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Dashboard</a>
-          <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Shortcuts</a>
-          <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Overview</a>
-          <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Events</a>
-          <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Profile</a>
-          <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Status</a>
-      </div>
-  </div>
-</div>
+	<a href="boardForm.do"><button class="btn btn-warning" type="submit">글쓰기</button></a>
 <div class="boardList">
 	<table class="table table-striped">
 		<thead>
@@ -30,10 +17,10 @@
 			</tr>
 		</thead>
 		<tbody>
-			<c:forEach var="board" items="${pageOut }" varStatus="stat">
+			<c:forEach var="board" items="${boardList }" varStatus="stat">
 				<tr>
 					<th scope="row">${board.boardNo }</th>
-					<td>${board.boardTitle }</td>
+					<td><a href="boardDetail.do?bno=${board.boardNo }&id=${board.memId }">${board.boardTitle }</a></td>
 					<td>${board.memId }</td>
 					<td>${board.boardDate }</td>
 					<td>${board.boardView }</td>
@@ -48,7 +35,7 @@
 
 <!-- end Sidebar -->
 <!-- pageNumbering -->
-<p>${pageOut }</p>
+<!-- <p>${pageOut }</p> -->
 <!-- 페이징 -->
 <nav aria-label="Page navigation example">
    <ul class="pagination justify-content-center">
