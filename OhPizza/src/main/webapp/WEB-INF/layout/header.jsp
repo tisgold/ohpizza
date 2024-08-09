@@ -11,7 +11,7 @@
                 <li class="nav-item"><a class="nav-link" href="productList.do">메뉴</a></li>
                 <li class="nav-item"><a class="nav-link" href="event.do">이벤트</a></li>
                 <li class="nav-item"><a class="nav-link" href="boardList.do">게시판</a></li>
-                <li class="nav-item"><a class="nav-link" href="myPage.do">나의오피</a></li>
+                <li class="nav-item"><a class="nav-link" href="myOrder.do?id=${logId }">나의오피</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Blog</a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
@@ -27,11 +27,11 @@
                     </ul>
                 </li>
             </ul>
-            <form class="d-flex">
-                <button class="btn btn-outline-light" type="submit">
+            <form class="d-flex" action="cartList.do"> 
+                <button class="btn btn-outline-light" onclick = "location.href = 'cart.do?id=${logId }'" type="button">
                     <i class="bi-cart-fill me-1"></i>
                     Cart
-                    <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                    <span class="badge bg-dark text-white ms-1 rounded-pill">${cartNo }</span>
                 </button>
             </form>
         </div>

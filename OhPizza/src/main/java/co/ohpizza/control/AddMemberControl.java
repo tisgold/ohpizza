@@ -13,7 +13,7 @@ public class AddMemberControl implements Control {
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-		req.getRequestDispatcher("user/addMember.tiles").forward(req, resp); //addMember.jsp 열기
+		req.getRequestDispatcher("account/addMember.tiles").forward(req, resp); //addMember.jsp 열기
 	}
 
 }

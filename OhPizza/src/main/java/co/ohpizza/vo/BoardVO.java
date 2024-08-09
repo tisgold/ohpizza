@@ -9,7 +9,7 @@ public class BoardVO {
 	private int boardView; //board_view
 	private String boardDate; //board_date
 	private String review; //review
-	private String compaint; //complaint
+	private String complaint; //complaint
 	private String answer; //answer
 	private String memId; //mem_id
 }

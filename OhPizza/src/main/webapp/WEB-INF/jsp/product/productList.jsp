@@ -111,10 +111,15 @@ a {
 														</div>
 														<!-- Product price-->
 														<form action="addOrder.do">
-															<input type=hidden name=prodName value='${product.prodName }'>
-															<input type=hidden name=memId value='${logId }'>
-															<input type=radio name=price value='${product.priceM }' checked> M ${product.priceM }    
-															<input type=radio name=price value='${product.priceL }'> L ${product.priceL }
+															<input type=hidden name=prodName value='${product.prodName }'> 
+																<input type=hidden name=memId value='${logId }'> 
+																<input type=hidden name=type value='${type }'> 
+																<input type=hidden name=grade value='${grade }'> 
+																<input type=hidden name=cnt value="1"> 
+																<input type=hidden name=prodNo value='${product.prodNo }'> 
+																<input type=radio name=price value='${product.priceM }' checked>
+																M ${product.priceM } 
+																<input type=radio name=price value='${product.priceL }'> L ${product.priceL }
 															<p></p>
 															<button type=submit>Add to cart</button>
 														</form>
@@ -153,20 +158,24 @@ a {
 															</c:forEach>
 														</div>
 														<!-- Product price-->
-														<form>
-															<input type=radio name=size value='M ${product.priceM }' checked> M ${product.priceM }    
-															<input type=radio name=size value='L ${product.priceL }'> L ${product.priceL }
+														<form action="addOrder.do">
+															<input type=hidden name=prodName
+																value='${product.prodName }'> <input type=hidden
+																name=memId value='${logId }'> <input type=hidden
+																name=type value='${type }'> <input type=hidden
+																name=grade value='${grade }'> <input type=hidden
+																name=cnt value="1"> <input type=hidden
+																name=prodNo value='${product.prodNo }'> <input
+																type=radio name=price value='${product.priceM }' checked>
+															M ${product.priceM } <input type=radio name=price
+																value='${product.priceL }'> L ${product.priceL }
+															<p></p>
+															<button type=submit>Add to cart</button>
 														</form>
 													</div>
 												</div>
 												<!-- Product actions-->
-												<div
-													class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-													<div class="text-center">
-														<a class="btn btn-outline-dark mt-auto" href="#">Add
-															to cart</a>
-													</div>
-												</div>
+
 											</div>
 										</div>
 									</c:forEach>
@@ -198,20 +207,23 @@ a {
 															</c:forEach>
 														</div>
 														<!-- Product price-->
-														<form>
-															<input type=radio name=size value='M ${product.priceM }' checked> M ${product.priceM }    
-															<input type=radio name=size value='L ${product.priceL }'> L ${product.priceL }
+														<form action="addOrder.do">
+															<input type=hidden name=prodName
+																value='${product.prodName }'> <input type=hidden
+																name=memId value='${logId }'> <input type=hidden
+																name=type value='${type }'> <input type=hidden
+																name=grade value='${grade }'> <input type=hidden
+																name=cnt value="1"> <input type=hidden
+																name=prodNo value='${product.prodNo }'> <input
+																type=radio name=price value='${product.priceM }' checked>
+															M ${product.priceM } <input type=radio name=price
+																value='${product.priceL }'> L ${product.priceL }
+															<p></p>
+															<button type=submit>Add to cart</button>
 														</form>
 													</div>
 												</div>
 												<!-- Product actions-->
-												<div
-													class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-													<div class="text-center">
-														<a class="btn btn-outline-dark mt-auto" href="#">Add
-															to cart</a>
-													</div>
-												</div>
 											</div>
 										</div>
 									</c:forEach>
@@ -219,107 +231,113 @@ a {
 							</c:choose>
 						</c:when>
 					</c:choose>
-					
+
 					<!-- 싱글 피자라인!!!!!!!!!!!!!!!!!!!!!!! -->
 					<c:choose>
 						<c:when test="${'spizza' == type}">
 							<c:forEach var="product" items="${productList }">
-										<!-- 아이템 -->
-										<div class="col mb-5">
-											<div class="card h-100">
-												<!-- Sale badge-->
-												<div class="badge bg-dark text-white position-absolute"
-													style="top: 0.5rem; right: 0.5rem">Sale</div>
-												<!-- Product image-->
-												<img class="card-img-top" src="images/${product.image }"
-													alt="..." />
-												<!-- Product details-->
-												<div class="card-body p-4">
-													<div class="text-center">
-														<!-- Product name-->
-														<h5 class="fw-bolder">
-															<a
-																href="productInfo.do?type=${type }&prodNo=${product.prodNo }">${product.prodName}</a>
-														</h5>
-														<!-- Product reviews-->
-														<div
-															class="d-flex justify-content-center small text-warning mb-2">
-															<c:forEach begin="1" end="${product.starPoint }">
-																<div class="bi-star-fill"></div>
-															</c:forEach>
-														</div>
-														<!-- Product price-->
-														<form>
-															<input type=radio name=size value='| ${product.priceM }' checked> \ ${product.priceM }    
-														</form>
-													</div>
-												</div>
-												<!-- Product actions-->
+								<!-- 아이템 -->
+								<div class="col mb-5">
+									<div class="card h-100">
+										<!-- Sale badge-->
+										<div class="badge bg-dark text-white position-absolute"
+											style="top: 0.5rem; right: 0.5rem">Sale</div>
+										<!-- Product image-->
+										<img class="card-img-top" src="images/${product.image }"
+											alt="..." />
+										<!-- Product details-->
+										<div class="card-body p-4">
+											<div class="text-center">
+												<!-- Product name-->
+												<h5 class="fw-bolder">
+													<a
+														href="productInfo.do?type=${type }&prodNo=${product.prodNo }">${product.prodName}</a>
+												</h5>
+												<!-- Product reviews-->
 												<div
-													class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-													<div class="text-center">
-														<a class="btn btn-outline-dark mt-auto" href="#">Add
-															to cart</a>
-													</div>
+													class="d-flex justify-content-center small text-warning mb-2">
+													<c:forEach begin="1" end="${product.starPoint }">
+														<div class="bi-star-fill"></div>
+													</c:forEach>
 												</div>
+												<!-- Product price-->
+												<form action="addOrder.do">
+													<input type=hidden name=prodName
+														value='${product.prodName }'> <input type=hidden
+														name=memId value='${logId }'> <input type=hidden
+														name=type value='${type }'> <input type=hidden
+														name=grade value='${grade }'> <input type=hidden
+														name=cnt value="1"> <input type=hidden name=prodNo
+														value='${product.prodNo }'> <input type=radio
+														name=price value='${product.priceM }' checked> M
+													${product.priceM }
+													<p></p>
+													<button type=submit>Add to cart</button>
+												</form>
 											</div>
 										</div>
-									</c:forEach>
+										<!-- Product actions-->
+									</div>
+								</div>
+							</c:forEach>
 						</c:when>
 					</c:choose>
-					
+
 					<!-- 세트라인!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 					<c:choose>
 						<c:when test="${'set' == type}">
 							<c:forEach var="product" items="${productList }">
-										<!-- 아이템 -->
-										<div class="col mb-5">
-											<div class="card h-100">
-												<!-- Sale badge-->
-												<div class="badge bg-dark text-white position-absolute"
-													style="top: 0.5rem; right: 0.5rem">Sale</div>
-												<!-- Product image-->
-												<img class="card-img-top" src="images/${product.image }"
-													alt="..." />
-												<!-- Product details-->
-												<div class="card-body p-4">
-													<div class="text-center">
-														<!-- Product name-->
-														<h5 class="fw-bolder">
-															<a
-																href="productInfo.do?type=${type }&prodNo=${product.prodNo }">${product.prodName}</a>
-														</h5>
-														<!-- Product reviews-->
-														<div
-															class="d-flex justify-content-center small text-warning mb-2">
-															<c:forEach begin="1" end="${product.starPoint }">
-																<div class="bi-star-fill"></div>
-															</c:forEach>
-														</div>
-														<!-- Product price-->
-														<form>
-															<input type=radio name=size value='M ${product.priceM }' checked> M ${product.priceM }    
-															<input type=radio name=size value='L ${product.priceL }'> L ${product.priceL }
-														</form>
-													</div>
-												</div>
-												<!-- Product actions-->
+								<!-- 아이템 -->
+								<div class="col mb-5">
+									<div class="card h-100">
+										<!-- Sale badge-->
+										<div class="badge bg-dark text-white position-absolute"
+											style="top: 0.5rem; right: 0.5rem">Sale</div>
+										<!-- Product image-->
+										<img class="card-img-top" src="images/${product.image }"
+											alt="..." />
+										<!-- Product details-->
+										<div class="card-body p-4">
+											<div class="text-center">
+												<!-- Product name-->
+												<h5 class="fw-bolder">
+													<a
+														href="productInfo.do?type=${type }&prodNo=${product.prodNo }">${product.prodName}</a>
+												</h5>
+												<!-- Product reviews-->
 												<div
-													class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-													<div class="text-center">
-														<a class="btn btn-outline-dark mt-auto" href="#">Add
-															to cart</a>
-													</div>
+													class="d-flex justify-content-center small text-warning mb-2">
+													<c:forEach begin="1" end="${product.starPoint }">
+														<div class="bi-star-fill"></div>
+													</c:forEach>
 												</div>
+												<!-- Product price-->
+												<form action="addOrder.do">
+													<input type=hidden name=prodName
+														value='${product.prodName }'> <input type=hidden
+														name=memId value='${logId }'> <input type=hidden
+														name=type value='${type }'> <input type=hidden
+														name=grade value='${grade }'> <input type=hidden
+														name=cnt value="1"> <input type=hidden name=prodNo
+														value='${product.prodNo }'> <input type=radio
+														name=price value='${product.priceM }' checked> M
+													${product.priceM } <input type=radio name=price
+														value='${product.priceL }'> L ${product.priceL }
+													<p></p>
+													<button type=submit>Add to cart</button>
+												</form>
 											</div>
 										</div>
-									</c:forEach>
+										<!-- Product actions-->
+									</div>
+								</div>
+							</c:forEach>
 						</c:when>
 					</c:choose>
-					
-					
+
+
 					<!-- 사이드 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-										<c:choose>
+					<c:choose>
 						<c:when test="${'side' == type}">
 							<c:choose>
 								<c:when test="${'salad' == grade}">
@@ -349,19 +367,23 @@ a {
 															</c:forEach>
 														</div>
 														<!-- Product price-->
-														<form>
-															<input type=radio name=size value='M ${product.priceM }' checked> \ ${product.priceM }    
+														<form action="addOrder.do">
+															<input type=hidden name=prodName
+																value='${product.prodName }'> <input type=hidden
+																name=memId value='${logId }'> <input type=hidden
+																name=type value='${type }'> <input type=hidden
+																name=grade value='${grade }'> <input type=hidden
+																name=cnt value="1"> <input type=hidden
+																name=prodNo value='${product.prodNo }'> <input
+																type=radio name=price value='${product.priceM }' checked>
+															M ${product.priceM }
+															<p></p>
+															<button type=submit>Add to cart</button>
 														</form>
 													</div>
 												</div>
 												<!-- Product actions-->
-												<div
-													class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-													<div class="text-center">
-														<a class="btn btn-outline-dark mt-auto" href="#">Add
-															to cart</a>
-													</div>
-												</div>
+
 											</div>
 										</div>
 									</c:forEach>
@@ -393,19 +415,23 @@ a {
 															</c:forEach>
 														</div>
 														<!-- Product price-->
-														<form>
-															<input type=radio name=size value='M ${product.priceM }' checked> \ ${product.priceM }    
+														<form action="addOrder.do">
+															<input type=hidden name=prodName
+																value='${product.prodName }'> <input type=hidden
+																name=memId value='${logId }'> <input type=hidden
+																name=type value='${type }'> <input type=hidden
+																name=grade value='${grade }'> <input type=hidden
+																name=cnt value="1"> <input type=hidden
+																name=prodNo value='${product.prodNo }'> <input
+																type=radio name=price value='${product.priceM }' checked>
+															M ${product.priceM }
+															<p></p>
+															<button type=submit>Add to cart</button>
 														</form>
 													</div>
 												</div>
 												<!-- Product actions-->
-												<div
-													class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-													<div class="text-center">
-														<a class="btn btn-outline-dark mt-auto" href="#">Add
-															to cart</a>
-													</div>
-												</div>
+
 											</div>
 										</div>
 									</c:forEach>
@@ -431,20 +457,24 @@ a {
 														</h5>
 														<!-- Product reviews-->
 														<!-- Product price-->
-														<form>
-															<input type=radio name=size value='M ${product.priceM }' checked> M ${product.priceM }    
-															<input type=radio name=size value='L ${product.priceL }'> L ${product.priceL }
+														<form action="addOrder.do">
+															<input type=hidden name=prodName
+																value='${product.prodName }'> <input type=hidden
+																name=memId value='${logId }'> <input type=hidden
+																name=type value='${type }'> <input type=hidden
+																name=grade value='${grade }'> <input type=hidden
+																name=cnt value="1"> <input type=hidden
+																name=prodNo value='${product.prodNo }'> <input
+																type=radio name=price value='${product.priceM }' checked>
+															M ${product.priceM } <input type=radio name=price
+																value='${product.priceL }'> L ${product.priceL }
+															<p></p>
+															<button type=submit>Add to cart</button>
 														</form>
 													</div>
 												</div>
 												<!-- Product actions-->
-												<div
-													class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-													<div class="text-center">
-														<a class="btn btn-outline-dark mt-auto" href="#">Add
-															to cart</a>
-													</div>
-												</div>
+
 											</div>
 										</div>
 									</c:forEach>
@@ -478,27 +508,42 @@ a {
 														<!-- Product price-->
 														<c:choose>
 															<c:when test="${0 != product.priceL }">
-																<form>
-																	<input type=radio name=size value='M ${product.priceM }' checked> M ${product.priceM }    
-																	<input type=radio name=size value='L ${product.priceL }'> L ${product.priceL }
-																</form>														
+																<form action="addOrder.do">
+																	<input type=hidden name=prodName
+																		value='${product.prodName }'> <input
+																		type=hidden name=memId value='${logId }'> <input
+																		type=hidden name=type value='${type }'> <input
+																		type=hidden name=grade value='${grade }'> <input
+																		type=hidden name=cnt value="1"> <input
+																		type=hidden name=prodNo value='${product.prodNo }'>
+																	<input type=radio name=price value='${product.priceM }'
+																		checked> M ${product.priceM } <input
+																		type=radio name=price value='${product.priceL }'>
+																	L ${product.priceL }
+																	<p></p>
+																	<button type=submit>Add to cart</button>
+																</form>
 															</c:when>
 															<c:otherwise>
-																<form>
-																	<input type=radio name=size value='M ${product.priceM }' checked> \ ${product.priceM }    
-																</form>															
+																<form action="addOrder.do">
+																	<input type=hidden name=prodName
+																		value='${product.prodName }'> <input
+																		type=hidden name=memId value='${logId }'> <input
+																		type=hidden name=type value='${type }'> <input
+																		type=hidden name=grade value='${grade }'> <input
+																		type=hidden name=cnt value="1"> <input
+																		type=hidden name=prodNo value='${product.prodNo }'>
+																	<input type=radio name=price value='${product.priceM }'
+																		checked> M ${product.priceM }
+																	<p></p>
+																	<button type=submit>Add to cart</button>
+																</form>
 															</c:otherwise>
 														</c:choose>
 													</div>
 												</div>
 												<!-- Product actions-->
-												<div
-													class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-													<div class="text-center">
-														<a class="btn btn-outline-dark mt-auto" href="#">Add
-															to cart</a>
-													</div>
-												</div>
+
 											</div>
 										</div>
 									</c:forEach>
@@ -506,7 +551,7 @@ a {
 							</c:choose>
 						</c:when>
 					</c:choose>
-					
+
 				</div>
 			</div>
 		</section>
