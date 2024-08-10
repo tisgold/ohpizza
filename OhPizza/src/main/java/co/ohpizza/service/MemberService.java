@@ -23,6 +23,6 @@ public interface MemberService {
 	boolean duplicateId(String id);
 
 	// 회원 정보변경
-	boolean modMember(String id);
+	boolean modMember(MemberVO mvo);
 
 }

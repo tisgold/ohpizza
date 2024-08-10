@@ -10,7 +10,7 @@ import co.ohpizza.common.Control;
 import co.ohpizza.service.MemberService;
 import co.ohpizza.service.MemberServiceImpl;
 
-public class deleteMemberControl implements Control {
+public class DeleteMemberControl implements Control {
 
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

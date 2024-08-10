@@ -25,11 +25,11 @@
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="index.jsp">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="productList.do">메뉴</a></li>
                             <li class="nav-item"><a class="nav-link" href="event.do">이벤트</a></li>
                             <li class="nav-item"><a class="nav-link" href="boardList.do">게시판</a></li>
-                            <li class="nav-item"><a class="nav-link" href="myOrder.do?id=${logId}">나의오피</a></li>
+                            <li class="nav-item"><a class="nav-link" href="myPage.do">나의오피</a></li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Blog</a>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
@@ -54,11 +54,18 @@
                     <div class="row gx-5 align-items-center justify-content-center">
                         <div class="col-lg-8 col-xl-7 col-xxl-6">
                             <div class="my-5 text-center text-xl-start">
-                                <h1 class="display-5 fw-bolder text-white mb-2">오! 피자 몰</h1>
+                                <h1 class="display-5 fw-bolder text-white mb-2">오! 피자</h1>
                                 <p class="lead fw-normal text-white-50 mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit!</p>
                                 <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
                                     <a class="btn btn-primary btn-lg px-4 me-sm-3" href="productList.do?type=pizza">메뉴로 이동</a>
-                                    <a class="btn btn-outline-light btn-lg px-4" href="login.do">로그인</a>
+                                    <c:choose>
+                      				  <c:when test="${empty logId }">
+                                        <a class="btn btn-outline-light btn-lg px-4" href="login.do">로그인</a>
+                                      </c:when>
+                                      <c:otherwise>
+                                        <a class="btn btn-outline-light btn-lg px-4" href="logout.do">로그아웃</a>
+                                      </c:otherwise>
+                                    </c:choose>
                                 </div>
                             </div>
                         </div>

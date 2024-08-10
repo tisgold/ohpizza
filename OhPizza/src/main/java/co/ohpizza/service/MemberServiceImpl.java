@@ -42,10 +42,8 @@ public class MemberServiceImpl implements MemberService {
 		return mapper.selectId(id) == 0;
 	}
 
-	public boolean modMember(String id) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean modMember(MemberVO mvo) {
+		return mapper.updateMember(mvo) == 1;
 	}
-
   
 }

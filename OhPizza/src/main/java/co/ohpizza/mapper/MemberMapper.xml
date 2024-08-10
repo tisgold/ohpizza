@@ -58,12 +58,12 @@
 	<!-- 정보변경 -->
 	<update id="updateMember" parameterType="co.ohpizza.vo.MemberVO">
 		update tbl_member
-		set mem_name = #{name},
-		set mem_pw = #{password},
-		set phone = #{phone},
-		set email = #{email},
-		set address = #{address}
-		where mem_id = #{id}
+		set mem_name = #{memName},
+		    mem_pw = #{memPw},
+		    phone = #{phone},
+		    email = #{email},
+		    address = #{address}
+		where mem_id = #{memId}
 	</update>
 
 </mapper>
