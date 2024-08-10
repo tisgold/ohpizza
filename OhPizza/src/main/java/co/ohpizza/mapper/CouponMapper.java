@@ -3,6 +3,7 @@ package co.ohpizza.mapper;
 import java.util.List;
 
 import co.ohpizza.vo.CouponVO;
+import co.ohpizza.vo.MemCouponVO;
 
 public interface CouponMapper {
 	// 쿠폰 등록(Admin)
@@ -14,4 +15,7 @@ public interface CouponMapper {
 	// 회원 보유 쿠폰
 	List<String> memberCouponList(String id);
 	
+	// 회원 쿠폰 발급 (kangwonjun)
+	int insertMemCoupon(MemCouponVO mcv);
+
 }
