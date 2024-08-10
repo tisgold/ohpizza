@@ -41,6 +41,7 @@ import co.ohpizza.control.ClosedEventControl;
 import co.ohpizza.control.CouponListControl;
 
 import co.ohpizza.control.CreateMemberControl;
+import co.ohpizza.control.DeleteMeControl;
 import co.ohpizza.control.EventControl;
 
 import co.ohpizza.control.IdCheckControl;
@@ -127,6 +128,8 @@ public class FrontController extends HttpServlet {
 		map.put("/showMemInfo.do", new ShowMemInfoControl());
 		// 정보수정
 		map.put("/updateMemInfo.do", new UpdateMemInfoControl());
+		// 회원탈퇴
+		map.put("/deleteMe.do", new DeleteMeControl());
 		
 		// Admin 기능들
 		// 멤버 리스트

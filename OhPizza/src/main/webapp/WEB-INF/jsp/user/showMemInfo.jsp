@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,36 +16,36 @@
             <div class="col-12">
               <label for="name" class="form-label">이름</label>
               <input type="text" class="form-control" id="name" name="name"
-              placeholder="" required>
+              value=${member.memName } readonly>
             </div>
 
             <div class="col-12">
               <label for="password" class="form-label">비밀번호</label>
               <input type="password" class="form-control" id="password" name="password"
-              placeholder="" maxlength="10" required>
+              placeholder="변경할 비밀번호 입력" maxlength="10" required>
             </div>
             <div class="col-12">
               <label for="pwConfirm" class="form-label">비밀번호 확인</label>
               <input type="password" class="form-control" id="pwConfirm" name="pwConfirm"
-              placeholder="" maxlength="10" required>
+              placeholder="비밀번호 확인" maxlength="10" required>
             </div>
             
             <div class="col-12">
               <label for="phone" class="form-label">전화번호</label>
               <input type="text" class="form-control" id="phone" name="phone" 
-              placeholder="" oninput="oninputPhone(this)" maxlength="14">
+              value=${member.phone } oninput="oninputPhone(this)" maxlength="14">
             </div>
 
             <div class="col-12">
               <label for="email" class="form-label">Email</label>
               <input type="email" class="form-control" id="email" name="email"
-              placeholder="you@example.com">
+              value=${member.email }>
             </div>
 
             <div class="col-12">
               <label for="address" class="form-label">주소</label>
               <input type="text" class="form-control" id="address" name="address"
-              placeholder="">
+              value=${member.address }>
             </div>
             <div class="col-12">
               <label for="address_detail" class="form-label">상세 주소</label>
@@ -53,7 +54,8 @@
             </div>
           </div><br>
           
-          <button class="btn btn-primary btn-lg" type="submit">정보수정</button><br><br>
+          <button class="btn btn-primary" type="submit">정보수정</button>
+          <button class="btn btn-secondary" type="reset">취소</button><br><br>
         </form>
       </div>
     </div>

@@ -26,7 +26,7 @@ public class MemberServiceImpl implements MemberService {
 	
 	@Override
 	public MemberVO loginCheck(String id, String pw) {
-		return mapper.selectMember(id, pw);
+		return mapper.checkMember(id, pw);
 	}
 
 	// 회원가입
@@ -42,6 +42,11 @@ public class MemberServiceImpl implements MemberService {
 		return mapper.selectId(id) == 0;
 	}
 
+	@Override
+	public MemberVO showMember(String id) {
+		return mapper.selectMember(id);
+	}
+	
 	public boolean modMember(MemberVO mvo) {
 		return mapper.updateMember(mvo) == 1;
 	}

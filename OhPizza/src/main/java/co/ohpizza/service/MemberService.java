@@ -21,6 +21,9 @@ public interface MemberService {
     // 김수호
 	// id중복체크
 	boolean duplicateId(String id);
+	
+	// 회원 정보
+	MemberVO showMember(String id);
 
 	// 회원 정보변경
 	boolean modMember(MemberVO mvo);

@@ -12,9 +12,6 @@
               <div class="col-12">
                 <div class="mb-5">
                   <h3>로그인</h3>
-                    <c:if test="${!empty msg }">
-	  	  			  <p>${msg }</p>
-				    </c:if>
                 </div>
               </div>
             </div>

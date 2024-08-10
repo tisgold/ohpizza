@@ -5,38 +5,35 @@ import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import co.ohpizza.common.AlertControl;
 import co.ohpizza.common.Control;
 import co.ohpizza.service.MemberService;
 import co.ohpizza.service.MemberServiceImpl;
 
-public class DeleteMemberControl implements Control {
+public class DeleteMeControl implements Control {
 
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String id = req.getParameter("id");
-		MemberService msv = new MemberServiceImpl();
+		HttpSession session = req.getSession(false);
+		String id = (String) session.getAttribute("logId");
 		
 		String msg = null;
-		String url = "memberList.do";
-//		String url = req.getParameter("url");
-//		url = url == null ? "memberList.do" : url;
+		String url = "index.jsp";
 		
-		if(id == "admin") {
-			msg = "admin 계정은 삭제할 수 없습니다!!";
-			AlertControl.alertAndGo(resp, msg, url);
-			return;
-		}
-		
+		MemberService msv = new MemberServiceImpl();
 		if(msv.delMember(id)) {
-			msg = "계정 " + id + " 삭제 완료!";
+			session.invalidate();
+			msg = "탈퇴 처리 되었습니다!!";
+			AlertControl.alertAndGo(resp, msg, url);
 		}
 		else {
-			msg = "계정 삭제 중 오류 발생!";
+			msg = "탈퇴 처리 중 오류가 발생했습니다!";
+			url = "myPage.do";
+			AlertControl.alertAndGo(resp, msg, url);
 		}
-		AlertControl.alertAndGo(resp, msg, url);
-		
+
 	}
 
 }

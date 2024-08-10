@@ -26,10 +26,10 @@
 		<div class="field">
 			<b>비밀번호</b> <input class="pw" type="password" name="loginPw"
 				placeholder="10자리 이내로 비밀번호 입력" maxlength="10" required>
-		</div>
-		<div id="checkPwdMsg1"></div>
-		<div class="strongPassword-message hide">8글자 이상, 영문, 숫자,
-			특수문자(@$!%*#?&)를 사용하세요</div>
+		<!-- </div> -->
+		<!-- <div id="checkPwdMsg1"></div> -->
+		<!-- <div class="strongPassword-message hide">8글자 이상, 영문, 숫자,
+			특수문자(@$!%*#?&)를 사용하세요</div> -->
 
 		<div class="field">
 			<b>비밀번호 재확인</b> <input class="pw-confirm" type="password"
@@ -44,13 +44,11 @@
 				placeholder="이름" required>
 		</div>
 
-
 		<!-- 이메일_전화번호 -->
 		<div class="textForm">
 			<b>본인 확인 이메일</b> <input type="text" name="email" class="email"
 				placeholder="you@example.com" required>
 		</div>
-
 
 		<div class="textForm">
 			<b>전화번호</b> <input name="cellphoneNo" type="text" class="cellphoneNo"
@@ -65,15 +63,9 @@
 			<b>상세주소</b> <input name="address_detail" type="text" id="address"
 				placeholder="상세주소 입력">
 
-
-
 		</div>
 		<!-- 6. 가입하기 버튼 -->
 		<input type="submit" value="가입하기" class="btn">
-
-
-
-
 
 	</form>
 </body>

@@ -22,14 +22,14 @@
 		where mem_id = #{id}
 	</delete>
 	
-	<select id="selectMember" parameterType="string"
+	<select id="checkMember" parameterType="string"
 		resultType="co.ohpizza.vo.MemberVO">
 		select *
 		from tbl_member
 		where mem_id = #{id}
 		and mem_pw = #{pw}
 	</select>
-
+	
 	<!-- 회원가입 -->
 	<insert id="insertMember" parameterType="co.ohpizza.vo.MemberVO">
 		insert into TBL_MEMBER(
@@ -53,6 +53,13 @@
 		select count(*)
 		from tbl_member
 		where mem_id = #{MEM_ID}
+	</select>
+	
+	<!-- 정보 확인 -->
+	<select id="selectMember" parameterType="string" resultType="co.ohpizza.vo.MemberVO">
+		select *
+		from tbl_member
+		where mem_id = #{id}
 	</select>
 	
 	<!-- 정보변경 -->
