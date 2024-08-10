@@ -24,6 +24,8 @@ public class CartControl implements Control {
 		
 		OrderService osvc = new OrderServiceImpl();
 		
+		if(osvc.checkOrder(id)) {
+		
 		OrderVO ovo = osvc.selectOrder(id);
 		
 		OrderListService olsvc = new OrderListServiceImpl();
@@ -42,7 +44,13 @@ public class CartControl implements Control {
 		
 		req.setAttribute("aPrice", aPrice);
 		
-		req.getRequestDispatcher("product/cartList.tiles").forward(req, resp);
+		req.getRequestDispatcher("product/cartList.tiles").forward(req, resp);}
+		
+		else {
+			osvc.addOrder(id);
+			
+			req.getRequestDispatcher("product/cartList.tiles").forward(req, resp);
+		}
 	}
 
 }
