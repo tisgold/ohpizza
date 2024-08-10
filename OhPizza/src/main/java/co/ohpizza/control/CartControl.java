@@ -48,6 +48,9 @@ public class CartControl implements Control {
 		
 		else {
 			osvc.addOrder(id);
+
+			
+			
 			
 			req.getRequestDispatcher("product/cartList.tiles").forward(req, resp);
 		}

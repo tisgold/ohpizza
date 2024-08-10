@@ -27,14 +27,13 @@
             <c:forEach var="cart" items="${cartList }">
                 <tr class="cartlistdetail">
                     <td><input type="checkbox"></td>
-                    <td><img src="image/${cart.prodName }.jpg" alt="pizza">
-                    <td><a href="#">${cart.prodName }</a><span
-                        class="cartlistsmartstore">pizza</span>
-                        <p>${cart.prodName }</p> <span class="price">${cart.prodPrice }</span><span
+                    <td><img src="image/${cart.prodName }.jpg" alt="pizza"><a href="productControl.do}">${cart.prodName }</a>
+                    </td><td>
+                        <span class="price">${cart.prodPrice }</span><span
                         ${cart.prodPrice }></span></td>
-                    <td>${cart.prodPrice }</td>
                     <td>${cart.count }</td>
                     <td>${cart.count*cart.prodPrice }</td>
+                   
                     <td>
                         <form action="cartDelete.do">
                             <input type=hidden name=id value='${logId }'> <input
@@ -47,9 +46,7 @@
         </table>
 
         <h1>총 가격: ${aPrice }</h1>
-        <form>
             <button type=submit>결제하기</button>
-        </form>
 
     </section>
 </body>
