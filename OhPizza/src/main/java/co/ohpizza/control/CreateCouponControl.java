@@ -11,7 +11,7 @@ import co.ohpizza.service.CouponService;
 import co.ohpizza.service.CouponServiceImpl;
 import co.ohpizza.vo.CouponVO;
 
-public class createCouponControl implements Control {
+public class CreateCouponControl implements Control {
 
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
