@@ -24,5 +24,7 @@ public interface MemberService {
 
 	// 회원 정보변경
 	boolean modMember(String id);
-
+	
+	// 회원 정보 가져오기
+	MemberVO infoMember(String id);
 }

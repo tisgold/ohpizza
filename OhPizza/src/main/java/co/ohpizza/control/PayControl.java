@@ -9,54 +9,50 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import co.ohpizza.common.Control;
+import co.ohpizza.service.MemberService;
+import co.ohpizza.service.MemberServiceImpl;
 import co.ohpizza.service.OrderListService;
 import co.ohpizza.service.OrderListServiceImpl;
 import co.ohpizza.service.OrderService;
 import co.ohpizza.service.OrderServiceImpl;
+import co.ohpizza.vo.MemberVO;
 import co.ohpizza.vo.OrderVO;
 import co.ohpizza.vo.OrderlistVO;
 
-public class CartControl implements Control {
+public class PayControl implements Control {
 
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		String id = req.getParameter("id");
-		
+
 		OrderService osvc = new OrderServiceImpl();
 		
 		List<OrderlistVO> cart = new ArrayList<OrderlistVO>();
-		
-		if(osvc.checkOrder(id)) {
 		
 		OrderVO ovo = osvc.selectOrder(id);
 		
 		OrderListService olsvc = new OrderListServiceImpl();
 		
+		MemberService msvc = new MemberServiceImpl();
+		
+		MemberVO mvo = msvc.infoMember(id);
+		
+		
+		
 		cart = olsvc.selectOrderListL(ovo.getOrdNo());
 		
-		System.out.println(cart);
+		int aPrice = ovo.getPrice();
 		
-		
-		// aPrice = 총 가격 합 
-		int aPrice = 0;
-		
-		aPrice = ovo.getPrice();
+		req.setAttribute("member", mvo);
 		
 		req.setAttribute("cartList", cart);
 		
 		req.setAttribute("aPrice", aPrice);
 		
-		req.getRequestDispatcher("product/cartList.tiles").forward(req, resp);}
 		
-		else {
-			osvc.addOrder(id);
+		req.getRequestDispatcher("product/pay.tiles").forward(req, resp);
+		
 
-			req.setAttribute("cartList", cart);
-			
-			
-			req.getRequestDispatcher("product/cartList.tiles").forward(req, resp);
-		}
 	}
 
 }

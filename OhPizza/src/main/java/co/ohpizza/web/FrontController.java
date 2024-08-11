@@ -57,6 +57,7 @@ import co.ohpizza.control.NewmenuControl;
 import co.ohpizza.control.OrderControl;
 
 import co.ohpizza.control.OrderListControl;
+import co.ohpizza.control.PayControl;
 
 public class FrontController extends HttpServlet {
 	Map<String, Control> map;
@@ -150,6 +151,9 @@ public class FrontController extends HttpServlet {
 		
 		// 장바구니 품목 삭제
 		map.put("/cartDelete.do", new CartDeleteControl());
+		
+		// 결제창 이동
+		map.put("/pay.do", new PayControl());
 
   }
 

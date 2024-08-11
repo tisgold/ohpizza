@@ -65,5 +65,11 @@
 		set address = #{address}
 		where mem_id = #{id}
 	</update>
+	
+	<select id="infoMember" parameterType="string" resultType="co.ohpizza.vo.MemberVO">
+		select *
+		from tbl_member
+		where mem_id = #{MEM_ID}
+	</select>
 
 </mapper>

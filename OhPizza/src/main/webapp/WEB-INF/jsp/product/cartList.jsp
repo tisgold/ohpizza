@@ -8,6 +8,7 @@
 <link href="css/cartList.css" rel="stylesheet">
 <body>
     <section class="cart">
+    
         <div class="cartinformation">
             <ul>
                 <li>장바구니 상품은 최대 30일간 저장됩니다.</li>
@@ -16,7 +17,7 @@
                     바랍니다.</li>
             </ul>
         </div>
-        <table class="cartlist" action="cartDelete.do">
+        <table class="cartlist">
             <tr>
                 <th><input type="checkbox"></th>
                 <th>제품명</th>
@@ -26,12 +27,15 @@
             </tr>
             <c:forEach var="cart" items="${cartList }">
                 <tr class="cartlistdetail">
-                    <td><input type="checkbox"></td>
-                    <td><img src="image/${cart.prodName }.jpg" alt="pizza"><a href="productControl.do}">${cart.prodName }</a>
+                    <td><input type="checkbox" value="${cart }" class="clist" onclick='getCheckboxValue()'></td>
+                    <td><img src="image/${cart.prodName }.jpg" alt="pizza"><a href="productInfo.do?prodNo=${cart.prodNo }">${cart.prodName }</a>
                     </td><td>
                         <span class="price">${cart.prodPrice }</span><span
                         ${cart.prodPrice }></span></td>
+                        
+                        
                     <td>${cart.count }</td>
+                    
                     <td>${cart.count*cart.prodPrice }</td>
                    
                     <td>
@@ -44,9 +48,14 @@
                 </tr>
             </c:forEach>
         </table>
-
+		<form action="pay.do">
+			<input type=hidden name=id value='${logId }'>
+			<input type=hidden name=cart value='${cartList }'>
+			<input type=hidden name=price value='${aPrice }'>
         <h1>총 가격: ${aPrice }</h1>
             <button type=submit>결제하기</button>
-
+		</form>
     </section>
 </body>
+
+<script src="js/checkCart.js"></script>

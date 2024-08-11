@@ -47,5 +47,11 @@ public class MemberServiceImpl implements MemberService {
 		return false;
 	}
 
+	@Override
+	public MemberVO infoMember(String id) {
+		// TODO Auto-generated method stub
+		return mapper.infoMember(id);
+	}
+
   
 }
