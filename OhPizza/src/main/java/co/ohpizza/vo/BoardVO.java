@@ -12,4 +12,9 @@ public class BoardVO {
 	private String complaint; //complaint
 	private String answer; //answer
 	private String memId; //mem_id
+	private String boardType; // board type ('R', 'C')
+	
+	public String boardDate() {
+		return boardDate.substring(0, 10);
+	} 
 }

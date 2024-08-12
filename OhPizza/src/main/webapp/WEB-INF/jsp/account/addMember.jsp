@@ -8,13 +8,19 @@
 <link href="css/addMember.css" rel="stylesheet">
 </head>
 <body>
+<section class="bg-white p-3 p-md-4 p-xl-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-9 col-lg-7 col-xl-6 col-xxl-5">
+        <div class="card border-0 shadow-sm rounded-4">
+          <div class="card-body p-3 p-md-4 p-xl-5">
 
 	<form action="createMember.do" method="POST" class="joinForm"
 		onsubmit="DoJoinForm__submit(this); return false;">
 
 		<!-- 1. 로고 -->
 		<a href="http://localhost/OhPizza/index.html"><img class="logo"
-			src="./images/lee.jpg"></a>
+			src="./images/ohPizzaLoge.jpg"></a>
 
 		<!--  필드 -->
 		<div class="field">
@@ -68,6 +74,12 @@
 		<input type="submit" value="가입하기" class="btn">
 
 	</form>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</section>
 </body>
 <!-- <link href="WEB-INF/layout/footer.jsp"  rel="stylesheet"> 
 <tiles:insertAttribute name="footer" /> -->

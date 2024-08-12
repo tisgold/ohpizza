@@ -26,8 +26,7 @@ public class InquiryControl implements Control {
 		
 		req.setAttribute("inquiryList", inquiryList);
 		
-		req.getRequestDispatcher("user/inquiryList.tiles")//
-		.forward(req, resp);
+		req.getRequestDispatcher("user/inquiryList.tiles").forward(req, resp);
 
 	}
 

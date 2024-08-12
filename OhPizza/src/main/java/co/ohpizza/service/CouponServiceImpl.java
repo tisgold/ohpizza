@@ -32,5 +32,5 @@ public class CouponServiceImpl implements CouponService {
 	public boolean addMemCoupon(MemCouponVO mcvo) {
 		return mapper.insertMemCoupon(mcvo) == 1;
 	}
-
+	
 }

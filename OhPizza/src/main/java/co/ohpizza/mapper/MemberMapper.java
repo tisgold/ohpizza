@@ -28,5 +28,8 @@ public interface MemberMapper {
 	
 	// 멤버 정보변경
 	int updateMember(MemberVO mvo);
+	
+	// 멤버 정보
+	MemberVO infoMember(String id);
 
 }
