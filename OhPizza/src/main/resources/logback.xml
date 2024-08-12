@@ -7,7 +7,7 @@
       <pattern>%5level [%thread] - %msg%n</pattern>
     </encoder>
   </appender>
-
+ 
   <logger name="co.ohpizza.mapper.MemberMapper">
     <level value="debug"/>
   </logger>
