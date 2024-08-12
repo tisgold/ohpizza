@@ -33,6 +33,7 @@
 						<div class="container-fluid">
 							<a class="navbar-brand" href="#"> <img
 								src="images/ohPizzaLoge.jpg" alt="" width="200" height="90"
+
 								class="d-inline-block align-text-top">
 
 							</a>
@@ -45,7 +46,7 @@
 					aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				
+
 				<!--바로주문-->
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -113,19 +114,17 @@
 									</div>
 								</nav>
 						</a></li>
-					
-						<!-- <form class="d-flex">
+						<form class="d-flex">
 							<button class="btn btn-outline-black-50"
 								onclick="location.href = 'orderList.do'" type="submit">
 								<i class="bi-cart-fill me-1"></i> Cart <span
 									class="badge bg-dark text-dark ms-1 rounded-pill">0</span>
 							</button>
-						</form> -->
 					</ul>
 				</div>
 			</div>
 		</nav>
-		<!-- 이미지 슬라이드 -->
+            <!-- 이미지 슬라이드 -->
 		<div id="carouselExampleControls" class="carousel slide"
 			data-bs-ride="carousel">
 			<div class="carousel-inner">
@@ -153,8 +152,6 @@
 				<span class="visually-hidden">Next</span>
 			</button>
 		</div>
-		
-		
 		<!-- quickMenu -->
 		<nav>
 			<ul id="quickmenu">
@@ -234,17 +231,25 @@
 								<div class="d-flex align-items-end justify-content-between">
 									<div class="d-flex align-items-center">
 									
+            						<!--<img class="rounded-circle me-3"
+											src="https://dummyimage.com/40x40/ced4da/6c757d" alt="..." />
+										<div class="small">
+											<div class="fw-bold">Evelyn Martinez</div>
+											<div class="text-muted">April 2, 2023 &middot; 10 min
+												read</div>
+										</div> -->
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
+
 				</div>
 	</main>
-	<!-- 추천메뉴 -->
-	
-	<!-- Footer-->
-	<footer class="bg-white py-4 mt-auto">
+        <!-- Footer-->
+				<footer class="bg-white py-4 mt-auto">
 					<div class="container px-5">
 						<div
 							class="row align-items-center justify-content-between flex-column flex-sm-row">
