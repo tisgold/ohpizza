@@ -23,7 +23,7 @@ public class BoardListControl implements Control {
 		
 		//조회수 증가
 		String boardView = req.getParameter("boardView");
-		if(BoardServiceList.viewIncrease(Integer.parseInt(boardView)));
+		//if(BoardServiceList.viewIncrease(Integer.parseInt(boardView)));
 		
 		//게시판 출력
 		//기본 페이지의 번호는 1번으로 한다.
