@@ -24,9 +24,8 @@ public class CouponServiceImpl implements CouponService {
 	}
 
 	@Override
-	public List<CouponVO> couponList() {
-		// TODO Auto-generated method stub
-		return null;
+	public boolean addCoupon(CouponVO coupon) {
+		return mapper.insertCoupon(coupon) == 1;
 	}
 
 	@Override

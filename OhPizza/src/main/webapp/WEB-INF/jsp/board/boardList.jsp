@@ -3,6 +3,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <h1>게시판 페이지</h1>
 <!-- body -->
+<!-- Sidebar -->
+	<a href="boardForm.do"><button class="btn btn-warning" type="submit">글쓰기</button></a>
 <div class="boardList">
 	<table class="table table-striped">
 		<thead>
@@ -15,10 +17,10 @@
 			</tr>
 		</thead>
 		<tbody>
-			<c:forEach var="board" items="${pageOut }" varStatus="stat">
+			<c:forEach var="board" items="${boardList }" varStatus="stat">
 				<tr>
-					<th scope="row">${stat.count }</th>
-					<td>${board.boardTitle }</td>
+					<th scope="row">${board.boardNo }</th>
+					<td><a href="boardDetail.do?bno=${board.boardNo }&id=${board.memId }">${board.boardTitle }</a></td>
 					<td>${board.memId }</td>
 					<td>${board.boardDate }</td>
 					<td>${board.boardView }</td>
@@ -33,7 +35,7 @@
 
 <!-- end Sidebar -->
 <!-- pageNumbering -->
-<p>${pageOut }</p>
+<!-- <p>${pageOut }</p> -->
 <!-- 페이징 -->
 <nav aria-label="Page navigation example">
    <ul class="pagination justify-content-center">
