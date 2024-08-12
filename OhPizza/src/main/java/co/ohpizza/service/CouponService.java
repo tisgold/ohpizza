@@ -14,4 +14,5 @@ public interface CouponService {
 	List<CouponVO> couponList(); // 쿠폰 리스트 출력
 	
 	boolean addMemCoupon(MemCouponVO mcvo);
+	
 }
