@@ -50,5 +50,11 @@ public class MemberServiceImpl implements MemberService {
 	public boolean modMember(MemberVO mvo) {
 		return mapper.updateMember(mvo) == 1;
 	}
+
+	@Override
+	public MemberVO infoMember(String id) {
+		// TODO Auto-generated method stub
+		return mapper.infoMember(id);
+	}
   
 }

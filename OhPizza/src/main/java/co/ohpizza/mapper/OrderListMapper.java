@@ -20,4 +20,7 @@ public interface OrderListMapper {
 	int countOrderList(int ordNo);
 	
 	int deleteOrderList(int listNo);
+	
+	int modifyOlcnt(@Param("count")int count, 
+					@Param("listNo")int listNo);
 }

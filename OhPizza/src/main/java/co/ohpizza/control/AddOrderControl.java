@@ -63,6 +63,15 @@ public class AddOrderControl implements Control {
 			int ordNo = osvc.selectOrder(memId).getOrdNo();
 			olsvc.addOrderList(Integer.toString(ordNo), prodNo, cnt, price, prodName);
 			
+			List<OrderlistVO> oList = olsvc.selectOrderListL(ordNo);
+			for(OrderlistVO o: oList) {
+				System.out.println(o.getCount() +"  " + o.getProdPrice());
+				int a = o.getCount()*o.getProdPrice();				
+				fullPrice += a;
+				System.out.println(fullPrice);
+			}
+			osvc.priceOrder(fullPrice, ordNo);
+			
 			resp.sendRedirect("productList.do");
 		}
 		
