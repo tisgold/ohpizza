@@ -73,6 +73,7 @@ a {
 			</c:choose>
 		</div>
 	</div>
+	
 	<!-- Page content wrapper-->
 	<div id="page-content-wrapper">
 		<section class="py-5">
