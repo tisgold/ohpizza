@@ -25,6 +25,8 @@ import co.ohpizza.control.AddBoardControl;
 import co.ohpizza.control.AddMemCouponControl;
 
 import co.ohpizza.control.AddCouponControl;
+import co.ohpizza.control.AddInquiryControl;
+import co.ohpizza.control.AddInquiryShowControl;
 import co.ohpizza.control.CreateCouponControl;
 import co.ohpizza.control.DeleteMemberControl;
 
@@ -69,7 +71,6 @@ public class FrontController extends HttpServlet {
 	public void init(ServletConfig config) throws ServletException {
 		// 상품목록
 		map.put("/productList.do", new ProductListControl());
-
 		// 상품상세
 		map.put("/productInfo.do", new ProductControl());
 
@@ -124,6 +125,10 @@ public class FrontController extends HttpServlet {
 		map.put("/myCoupon.do", new CouponListControl());
 		// 내 문의 내역 확인하는 기능
 		map.put("/inquiry.do", new InquiryControl());
+		// 내 문의 등록 화면
+		map.put("/addInquiryShow.do", new AddInquiryShowControl());
+		// 내 문의 등록
+		map.put("/addInquiry.do", new AddInquiryControl());
 		// 정보수정 화면
 		map.put("/showMemInfo.do", new ShowMemInfoControl());
 		// 정보수정
@@ -143,7 +148,6 @@ public class FrontController extends HttpServlet {
 
 		// 장바구니 담기 누름.
 		map.put("/addOrder.do", new AddOrderControl());
-
 		
 		// 장바구니 숫자 추가
 		map.put("/cartNo.do", new CartNoControl());

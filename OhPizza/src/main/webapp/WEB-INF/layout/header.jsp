@@ -52,10 +52,10 @@
 				</a></li>
 				<!--메뉴-->
 				<!--매장-->
-				<li class="nav-item"><a class="nav-link" href="event.do">
+				<li class="nav-item"><a class="nav-link" href="#">
 						<nav class="navbar navbar-light bg-white">
 							<div class="container-fluid">
-								<a class="navbar-brand" href="event.do"> <img
+								<a class="navbar-brand" href="#"> <img
 									src="images/menu3.jpg" alt="" width="150" height="60"
 									class="d-inline-block align-text-top">
 
@@ -65,10 +65,10 @@
 				</a></li>
 				<!--매장-->
 				<!--이벤트-->
-				<li class="nav-item"><a class="nav-link" href="boardList.do">
+				<li class="nav-item"><a class="nav-link" href="event.do">
 						<nav class="navbar navbar-light bg-white">
 							<div class="container-fluid">
-								<a class="navbar-brand" href="boardList.do"> <img
+								<a class="navbar-brand" href="event.do"> <img
 									src="images/menu4.jpg" alt="" width="150" height="60"
 									class="d-inline-block align-text-top">
 
@@ -77,6 +77,19 @@
 						</nav>
 				</a></li>
 				<!--이벤트-->
+				<!--게시판-->
+						<li class="nav-item"><a class="nav-link" href="boardList.do">
+								<nav class="navbar navbar-light bg-white">
+									<div class="container-fluid">
+										<a class="navbar-brand" href="boardList.do"> <img
+											src="images/board_icon.jpg" alt="" width="150" height="50"
+											class="d-inline-block align-text-top">
+
+										</a>
+									</div>
+								</nav>
+						</a></li>
+						<!--게시판-->
 				<!--마이미피-->
 				<li class="nav-item"><a class="nav-link" href="myPage.do">
 						<nav class="navbar navbar-light bg-white">

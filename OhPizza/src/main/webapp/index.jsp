@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
+<html lang="ko">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport"
@@ -28,7 +29,7 @@
 		<!--ohpizza로고-->
 			<nav class="navbar navbar-expand-lg navbar-dark bg-white">
 			<div class="container px-5">
-				<a class="navbar-brand" href="index.html">
+				<a class="navbar-brand" href="index.jsp">
 					<nav class="navbar navbar-light bg-white">
 						<div class="container-fluid">
 							<a class="navbar-brand" href="#"> <img
@@ -50,10 +51,10 @@
 				<!--바로주문-->
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-						<li class="nav-item"><a class="nav-link" href="index.html">
+						<li class="nav-item"><a class="nav-link" href="index.jsp">
 								<nav class="navbar navbar-light bg-white">
 									<div class="container-fluid">
-										<a class="navbar-brand" href="index.html"> <img
+										<a class="navbar-brand" href="index.jsp"> <img
 											src="images/menu1.jpg" alt="" width="150" height="60"
 											class="d-inline-block align-text-top">
 
@@ -77,10 +78,10 @@
 						</a></li>
 						<!--메뉴-->
 						<!--매장-->
-						<li class="nav-item"><a class="nav-link" href="event.do">
+						<li class="nav-item"><a class="nav-link" href="#">
 								<nav class="navbar navbar-light bg-white">
 									<div class="container-fluid">
-										<a class="navbar-brand" href="event.do"> <img
+										<a class="navbar-brand" href="#"> <img
 											src="images/menu3.jpg" alt="" width="150" height="60"
 											class="d-inline-block align-text-top">
 
@@ -90,10 +91,10 @@
 						</a></li>
 						<!--매장-->
 						<!--이벤트-->
-						<li class="nav-item"><a class="nav-link" href="boardList.do">
+						<li class="nav-item"><a class="nav-link" href="event.do">
 								<nav class="navbar navbar-light bg-white">
 									<div class="container-fluid">
-										<a class="navbar-brand" href="boardList.do"> <img
+										<a class="navbar-brand" href="event.do"> <img
 											src="images/menu4.jpg" alt="" width="150" height="60"
 											class="d-inline-block align-text-top">
 
@@ -102,6 +103,19 @@
 								</nav>
 						</a></li>
 						<!--이벤트-->
+						<!--게시판-->
+						<li class="nav-item"><a class="nav-link" href="boardList.do">
+								<nav class="navbar navbar-light bg-white">
+									<div class="container-fluid">
+										<a class="navbar-brand" href="boardList.do"> <img
+											src="images/board_icon.jpg" alt="" width="150" height="50"
+											class="d-inline-block align-text-top">
+
+										</a>
+									</div>
+								</nav>
+						</a></li>
+						<!--게시판-->
 						<!--마이미피-->
 						<li class="nav-item"><a class="nav-link" href="myPage.do">
 								<nav class="navbar navbar-light bg-white">
