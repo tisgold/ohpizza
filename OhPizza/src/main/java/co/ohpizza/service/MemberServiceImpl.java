@@ -11,15 +11,22 @@ import co.ohpizza.vo.MemberVO;
 public class MemberServiceImpl implements MemberService {
 	SqlSession sqlSession = DataSource.getInstance().openSession(true);
 	MemberMapper mapper = sqlSession.getMapper(MemberMapper.class);
-
-	@Override
-	public MemberVO loginCheck(String id, String pw) {
-		return mapper.selectMember(id, pw);
-	}
-
+	
+	// 멤버 리스트(Admin)
 	@Override
 	public List<MemberVO> memberList(String orderBy, String auth) {
 		return mapper.selectList(orderBy, auth);
+	}
+	
+	// 멤버 삭제(Admin)
+	@Override
+	public boolean delMember(String id) {
+		return mapper.deleteMember(id) == 1;
+	}
+	
+	@Override
+	public MemberVO loginCheck(String id, String pw) {
+		return mapper.checkMember(id, pw);
 	}
 
 	// 회원가입
@@ -28,16 +35,20 @@ public class MemberServiceImpl implements MemberService {
 		return mapper.insertMember(mvo) == 1;
 	}
 
-  // 김수호
-  // id중복체크
+	// 김수호
+	// id중복체크
 	@Override
 	public boolean duplicateId(String id) {
 		return mapper.selectId(id) == 0;
 	}
 
-  public boolean modMember(String id) {
-		// TODO Auto-generated method stub
-		return false;
+	@Override
+	public MemberVO showMember(String id) {
+		return mapper.selectMember(id);
+	}
+	
+	public boolean modMember(MemberVO mvo) {
+		return mapper.updateMember(mvo) == 1;
 	}
   
 }

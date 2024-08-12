@@ -17,7 +17,7 @@
 					<div class="list-group list-group-flush">
 						<a
 							class="list-group-item list-group-item-action list-group-item-light p-3"
-							href="newmenu.do" target="_blank">신제품 소개</a> <a
+							href="newmenu.do?img=thehiden">신제품 소개</a> <a
 							class="list-group-item list-group-item-action list-group-item-light p-3"
 							href="eventsProgress.do">진행중 이벤트</a> <a
 							class="list-group-item list-group-item-action list-group-item-light p-3"

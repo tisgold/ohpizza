@@ -16,10 +16,14 @@
   	where mem_id = #{id}
   </select>
   
-  <select id="getCoupon" resultType="co.ohpizza.vo.CouponVO">
-    select *
-    from tbl_coupon
-    order by coupon_name
-  </select>  
+  <insert id="insertCoupon" parameterType="co.ohpizza.vo.CouponVO">
+  	insert into tbl_coupon (coupon_name, discount)
+  	values (#{couponName}, #{discount})
+  </insert>
+  
+  <insert id="insertMemCoupon" parameterType="co.ohpizza.vo.MemCouponVO">
+  	insert into tbl_mem_coupon (MEM_ID, COUPON_NAME)
+  	values (#{memId}, #{couponName}) 	
+  </insert>
   
 </mapper>

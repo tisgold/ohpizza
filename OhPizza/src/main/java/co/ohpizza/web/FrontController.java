@@ -13,21 +13,35 @@ import javax.servlet.http.HttpServletResponse;
 import co.ohpizza.common.Control;
 import co.ohpizza.control.LoginCheckControl;
 import co.ohpizza.control.LoginControl;
+import co.ohpizza.control.LogoutControl;
 import co.ohpizza.control.MemberListControl;
 import co.ohpizza.control.ProductControl;
 import co.ohpizza.control.ProductListControl;
 import co.ohpizza.control.ShowMemInfoControl;
 import co.ohpizza.control.UpdateMemInfoControl;
+
+import co.ohpizza.control.AddBoardControl;
+
+import co.ohpizza.control.AddMemCouponControl;
+
+import co.ohpizza.control.AddCouponControl;
+import co.ohpizza.control.CreateCouponControl;
+import co.ohpizza.control.DeleteMemberControl;
+
 import co.ohpizza.control.AddMemberControl;
 import co.ohpizza.control.AddOrderControl;
+import co.ohpizza.control.BoardDetailControl;
+import co.ohpizza.control.BoardFormControl;
 import co.ohpizza.control.BoardListControl;
-
+import co.ohpizza.control.CartControl;
+import co.ohpizza.control.CartDeleteControl;
+import co.ohpizza.control.CartNoControl;
 import co.ohpizza.control.ClosedEventControl;
-
 
 import co.ohpizza.control.CouponListControl;
 
 import co.ohpizza.control.CreateMemberControl;
+import co.ohpizza.control.DeleteMeControl;
 import co.ohpizza.control.EventControl;
 
 import co.ohpizza.control.IdCheckControl;
@@ -36,13 +50,11 @@ import co.ohpizza.control.EventsProgress;
 
 import co.ohpizza.control.FindPassControl;
 
-
 import co.ohpizza.control.InquiryControl;
 
 import co.ohpizza.control.MypageControl;
 import co.ohpizza.control.NewmenuControl;
 
-import co.ohpizza.control.OrderControl;
 
 import co.ohpizza.control.OrderListControl;
 
@@ -65,6 +77,8 @@ public class FrontController extends HttpServlet {
 		map.put("/login.do", new LoginControl());
 		// 로그인 체크
 		map.put("/loginCheck.do", new LoginCheckControl());
+		// 로그아웃
+		map.put("/logout.do", new LogoutControl());
 
 		// 비밀번호 찾기 화면
 		map.put("/findPass.do", new FindPassControl());
@@ -78,52 +92,69 @@ public class FrontController extends HttpServlet {
 		map.put("/idCheck.do", new IdCheckControl());
 
 		// 이벤트
-		map.put("/event.do", new EventControl());
-
+		map.put("/event.do", new EventControl());	
 		// 이벤트 신메뉴
 		map.put("/newmenu.do", new NewmenuControl());
-
+		// 종료된 이벤트
+		map.put("/closedEvent.do", new ClosedEventControl());	
+		// 유저 쿠폰 발급
+		map.put("/addMemCoupon.do", new AddMemCouponControl());
+		
+		
 		// 게시판
 		map.put("/boardList.do", new BoardListControl());
-
-		// 나의오피
-		map.put("/myPage.do", new MypageControl());
-		// 내주문내역
-		map.put("/myOrders.do", new OrderListControl());
-
-		// 멤버 리스트 (Admin 로그인 시)
-		map.put("/memberList.do", new MemberListControl());
-		
-		// 종료된 이벤트
-		map.put("/closedEvent.do", new ClosedEventControl());
 
 		// 진행중인 이벤트 (쿠폰 발행 이벤트)
 		map.put("/eventsProgress.do", new EventsProgress());
 
-		// 게시판
+		// 게시판 리스트
 		map.put("/boardList.do", new BoardListControl());
-
+		//게시물 상세 페이지
+		map.put("/boardDetail.do", new BoardDetailControl());
+		//게시글 쓰는 폼
+		map.put("/boardForm.do",new BoardFormControl());
+		//게시글 쓰기
+		map.put("/addBoard.do", new AddBoardControl());
+		
 		// 나의오피
 		map.put("/myPage.do", new MypageControl());
 		// 내주문내역
 		map.put("/myOrder.do", new OrderListControl());
 		// 쿠폰 리스트
 		map.put("/myCoupon.do", new CouponListControl());
-
-    // 정보수정 화면
+		// 내 문의 내역 확인하는 기능
+		map.put("/inquiry.do", new InquiryControl());
+		// 정보수정 화면
 		map.put("/showMemInfo.do", new ShowMemInfoControl());
 		// 정보수정
 		map.put("/updateMemInfo.do", new UpdateMemInfoControl());
+		// 회원탈퇴
+		map.put("/deleteMe.do", new DeleteMeControl());
 		
-		// 멤버 리스트 (Admin 로그인 시)
+		// Admin 기능들
+		// 멤버 리스트
 		map.put("/memberList.do", new MemberListControl());
+		// 멤버 삭제
+		map.put("/deleteMember.do", new DeleteMemberControl());
+		// 쿠폰 등록 화면
+		map.put("/addCoupon.do", new AddCouponControl());
+		// 쿠폰 등록
+		map.put("/createCoupon.do", new CreateCouponControl());
 
 		// 장바구니 담기 누름.
 		map.put("/addOrder.do", new AddOrderControl());
 
-		// 내 문의 내역 확인하는 기능
-		map.put("/inquiry.do", new InquiryControl());
-	}
+		
+		// 장바구니 숫자 추가
+		map.put("/cartNo.do", new CartNoControl());
+		
+		// 장바구니 창
+		map.put("/cart.do", new CartControl());
+		
+		// 장바구니 품목 삭제
+		map.put("/cartDelete.do", new CartDeleteControl());
+
+  }
 
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

@@ -45,7 +45,7 @@ public class AddOrderControl implements Control {
 		// 해당 id의 주문상태가 c인 order가 존재할 경우 
 		if(osvc.checkOrder(memId)) {
 			int ordNo = osvc.selectOrder(memId).getOrdNo();
-			olsvc.addOrderList(ordNo, Integer.parseInt(prodNo), Integer.parseInt(cnt), Integer.parseInt(price));
+			olsvc.addOrderList(Integer.toString(ordNo), prodNo, cnt, price, prodName);
 			
 			List<OrderlistVO> oList = olsvc.selectOrderListL(ordNo);
 			for(OrderlistVO o: oList) {
@@ -61,7 +61,7 @@ public class AddOrderControl implements Control {
 		// 해당 id의 주문상태가 c인 order가 없을 경우
 			osvc.addOrder(memId);
 			int ordNo = osvc.selectOrder(memId).getOrdNo();
-			olsvc.addOrderList(ordNo, Integer.parseInt(prodNo), Integer.parseInt(cnt), Integer.parseInt(price));
+			olsvc.addOrderList(Integer.toString(ordNo), prodNo, cnt, price, prodName);
 			
 			resp.sendRedirect("productList.do");
 		}

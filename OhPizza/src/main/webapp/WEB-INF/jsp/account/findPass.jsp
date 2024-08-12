@@ -38,7 +38,6 @@
                     <label for="이메일" class="form-label">이메일</label>
                   </div>
                 </div>
-                
                 <div class="col-12">
                   <div class="d-grid">
                     <button class="btn bsb-btn-2xl btn-primary" type="submit">비밀번호 재발급</button>

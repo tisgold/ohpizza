@@ -15,7 +15,7 @@ public class LoginControl implements Control {
 
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		req.getRequestDispatcher("user/login.tiles").forward(req, resp);
+		req.getRequestDispatcher("account/login.tiles").forward(req, resp);
 	}
 
 }

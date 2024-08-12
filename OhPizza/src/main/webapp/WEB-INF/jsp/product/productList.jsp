@@ -112,16 +112,15 @@ a {
 														</div>
 														<!-- Product price-->
 														<form action="addOrder.do">
-															<input type=hidden name=prodName
-																value='${product.prodName }'> <input type=hidden
-																name=memId value='${logId }'> <input type=hidden
-																name=type value='${type }'> <input type=hidden
-																name=grade value='${grade }'> <input type=hidden
-																name=cnt value="1"> <input type=hidden
-																name=prodNo value='${product.prodNo }'> <input
-																type=radio name=price value='${product.priceM }' checked>
-															M ${product.priceM } <input type=radio name=price
-																value='${product.priceL }'> L ${product.priceL }
+															<input type=hidden name=prodName value='${product.prodName }'> 
+																<input type=hidden name=memId value='${logId }'> 
+																<input type=hidden name=type value='${type }'> 
+																<input type=hidden name=grade value='${grade }'> 
+																<input type=hidden name=cnt value="1"> 
+																<input type=hidden name=prodNo value='${product.prodNo }'> 
+																<input type=radio name=price value='${product.priceM }' checked>
+																M ${product.priceM } 
+																<input type=radio name=price value='${product.priceL }'> L ${product.priceL }
 															<p></p>
 															<button type=submit>Add to cart</button>
 														</form>
