@@ -16,7 +16,6 @@ public class BoardDetailControl implements Control {
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
 		String bno = req.getParameter("bno");
-		String id = req.getParameter("id");
 		
 		BoardService boardService = new BoardServiceImpl();
 		

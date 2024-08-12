@@ -26,7 +26,7 @@ public class AddBoardControl implements Control {
 		board.setMemId(id);
 
 		BoardService BoardService = new BoardServiceImpl();
-		System.out.println(BoardService.insertViewBoard(board));
+		//System.out.println(BoardService.insertViewBoard(board));
 
 		if (BoardService.insertViewBoard(board)) {
 			resp.sendRedirect("boardList.do");

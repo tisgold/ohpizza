@@ -15,4 +15,8 @@ public interface BoardMapper {
 	BoardVO boardDetail(int bno);
 	//게시물 작성하는 기능
 	int insertViewBoard(BoardVO boardInfo);
+	//게시물 삭제하는 기능
+	int removeBoard(int boardNo);
+	//조회수를 증가시키는 기능
+	int viewIncrease(int boardNo);
 }
