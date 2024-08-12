@@ -8,6 +8,7 @@ import java.util.Map;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import co.ohpizza.common.Control;
 import co.ohpizza.service.CouponService;
@@ -17,7 +18,9 @@ public class CouponListControl implements Control {
 
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String id = req.getParameter("id");
+		HttpSession session = req.getSession(false);
+		String id = (String) session.getAttribute("logId");
+		
 		CouponService svc = new CouponServiceImpl();
 		List<String> names = svc.memberCouponList(id);
 		Map<String, String> coupons = new HashMap<>();

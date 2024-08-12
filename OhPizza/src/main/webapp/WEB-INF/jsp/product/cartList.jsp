@@ -67,3 +67,4 @@
 		</body>
 
 		<script src="js/checkCart.js"></script>
+

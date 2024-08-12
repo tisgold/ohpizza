@@ -13,20 +13,31 @@ import javax.servlet.http.HttpServletResponse;
 import co.ohpizza.common.Control;
 import co.ohpizza.control.LoginCheckControl;
 import co.ohpizza.control.LoginControl;
+import co.ohpizza.control.LogoutControl;
 import co.ohpizza.control.MemberListControl;
+
 import co.ohpizza.control.UpPcntControl;
+import co.ohpizza.control.MondayEvent;
+
 import co.ohpizza.control.ProductControl;
 import co.ohpizza.control.ProductListControl;
 import co.ohpizza.control.ShowMemInfoControl;
+import co.ohpizza.control.SubscriptionCoupon;
 import co.ohpizza.control.UpdateMemInfoControl;
+
+import co.ohpizza.control.AddMemCouponListControl;
+import co.ohpizza.control.tuesdayEvent;
+import co.ohpizza.control.AddMemCoupShowControl;
 
 import co.ohpizza.control.AddBoardControl;
 
 import co.ohpizza.control.AddMemCouponControl;
 
-import co.ohpizza.control.addCouponControl;
-import co.ohpizza.control.createCouponControl;
-import co.ohpizza.control.deleteMemberControl;
+import co.ohpizza.control.AddCouponControl;
+import co.ohpizza.control.AddInquiryControl;
+import co.ohpizza.control.AddInquiryShowControl;
+import co.ohpizza.control.CreateCouponControl;
+import co.ohpizza.control.DeleteMemberControl;
 
 import co.ohpizza.control.AddMemberControl;
 import co.ohpizza.control.AddOrderControl;
@@ -41,8 +52,12 @@ import co.ohpizza.control.ClosedEventControl;
 import co.ohpizza.control.CouponListControl;
 
 import co.ohpizza.control.CreateMemberControl;
+
 import co.ohpizza.control.DiscountCouponControl;
 import co.ohpizza.control.DownPcntControl;
+
+import co.ohpizza.control.DeleteMeControl;
+
 import co.ohpizza.control.EventControl;
 
 import co.ohpizza.control.IdCheckControl;
@@ -56,7 +71,6 @@ import co.ohpizza.control.InquiryControl;
 import co.ohpizza.control.MypageControl;
 import co.ohpizza.control.NewmenuControl;
 
-import co.ohpizza.control.OrderControl;
 
 import co.ohpizza.control.OrderListControl;
 import co.ohpizza.control.PayControl;
@@ -72,7 +86,6 @@ public class FrontController extends HttpServlet {
 	public void init(ServletConfig config) throws ServletException {
 		// 상품목록
 		map.put("/productList.do", new ProductListControl());
-
 		// 상품상세
 		map.put("/productInfo.do", new ProductControl());
 
@@ -80,6 +93,8 @@ public class FrontController extends HttpServlet {
 		map.put("/login.do", new LoginControl());
 		// 로그인 체크
 		map.put("/loginCheck.do", new LoginCheckControl());
+		// 로그아웃
+		map.put("/logout.do", new LogoutControl());
 
 		// 비밀번호 찾기 화면
 		map.put("/findPass.do", new FindPassControl());
@@ -97,7 +112,9 @@ public class FrontController extends HttpServlet {
 		// 이벤트 신메뉴
 		map.put("/newmenu.do", new NewmenuControl());
 		// 종료된 이벤트
-		map.put("/closedEvent.do", new ClosedEventControl());	
+		map.put("/closedEvent.do", new ClosedEventControl());
+		// 유저 가입 쿠폰 발급화면
+		map.put("/addMemCoupShow.do", new AddMemCoupShowControl());
 		// 유저 쿠폰 발급
 		map.put("/addMemCoupon.do", new AddMemCouponControl());
 		
@@ -107,6 +124,14 @@ public class FrontController extends HttpServlet {
 
 		// 진행중인 이벤트 (쿠폰 발행 이벤트)
 		map.put("/eventsProgress.do", new EventsProgress());
+		// 진행중인 이벤트 
+		map.put("/addMemCopon.do", new AddMemCouponListControl());
+		// 화요일 이벤트 
+		map.put("/tuesdayEvent.do", new tuesdayEvent());
+		// 가입기념쿠폰
+		map.put("/SubscriptionCoupon.do", new SubscriptionCoupon());
+		// 월요일쿠폰
+		map.put("/MondayEvent.do", new MondayEvent());
 
 		// 게시판 리스트
 		map.put("/boardList.do", new BoardListControl());
@@ -123,27 +148,31 @@ public class FrontController extends HttpServlet {
 		map.put("/myOrder.do", new OrderListControl());
 		// 쿠폰 리스트
 		map.put("/myCoupon.do", new CouponListControl());
-
+		// 내 문의 내역 확인하는 기능
+		map.put("/inquiry.do", new InquiryControl());
+		// 내 문의 등록 화면
+		map.put("/addInquiryShow.do", new AddInquiryShowControl());
+		// 내 문의 등록
+		map.put("/addInquiry.do", new AddInquiryControl());
 		// 정보수정 화면
 		map.put("/showMemInfo.do", new ShowMemInfoControl());
 		// 정보수정
 		map.put("/updateMemInfo.do", new UpdateMemInfoControl());
+		// 회원탈퇴
+		map.put("/deleteMe.do", new DeleteMeControl());
 		
 		// Admin 기능들
 		// 멤버 리스트
 		map.put("/memberList.do", new MemberListControl());
 		// 멤버 삭제
-		map.put("/deleteMember.do", new deleteMemberControl());
+		map.put("/deleteMember.do", new DeleteMemberControl());
 		// 쿠폰 등록 화면
-		map.put("/addCoupon.do", new addCouponControl());
+		map.put("/addCoupon.do", new AddCouponControl());
 		// 쿠폰 등록
-		map.put("/createCoupon.do", new createCouponControl());
+		map.put("/createCoupon.do", new CreateCouponControl());
 
 		// 장바구니 담기 누름.
 		map.put("/addOrder.do", new AddOrderControl());
-
-		// 내 문의 내역 확인하는 기능
-		map.put("/inquiry.do", new InquiryControl());
 		
 		// 장바구니 숫자 추가
 		map.put("/cartNo.do", new CartNoControl());
