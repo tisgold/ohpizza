@@ -35,5 +35,11 @@ public class OrderListServiceImpl implements OrderListService{
 		return mapper.deleteOrderList(listNo) == 1;
 	}
 
+	@Override
+	public boolean modifyOlcnt(int count, int listNo) {
+		// TODO Auto-generated method stub
+		return mapper.modifyOlcnt(count, listNo)==1;
+	}
+
 	
 }

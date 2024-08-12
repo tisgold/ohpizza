@@ -23,34 +23,36 @@ public class PayControl implements Control {
 
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String id = req.getParameter("id");
-
-		OrderService osvc = new OrderServiceImpl();
+//		String id = req.getParameter("id");
+//
+//		OrderService osvc = new OrderServiceImpl();
+//		
+//		List<OrderlistVO> cart = new ArrayList<OrderlistVO>();
+//		
+//		OrderVO ovo = osvc.selectOrder(id);
+//		
+//		OrderListService olsvc = new OrderListServiceImpl();
+//		
+//		MemberService msvc = new MemberServiceImpl();
+//		
+//		MemberVO mvo = msvc.infoMember(id);
+//		
+//		
+//		
+//		cart = olsvc.selectOrderListL(ovo.getOrdNo());
+//		
+//		int aPrice = ovo.getPrice();
+//		
+//		req.setAttribute("member", mvo);
+//		
+//		req.setAttribute("cartList", cart);
+//		
+//		req.setAttribute("aPrice", aPrice);
+//		
+//		
+//		req.getRequestDispatcher("product/pay.tiles").forward(req, resp);
 		
-		List<OrderlistVO> cart = new ArrayList<OrderlistVO>();
 		
-		OrderVO ovo = osvc.selectOrder(id);
-		
-		OrderListService olsvc = new OrderListServiceImpl();
-		
-		MemberService msvc = new MemberServiceImpl();
-		
-		MemberVO mvo = msvc.infoMember(id);
-		
-		
-		
-		cart = olsvc.selectOrderListL(ovo.getOrdNo());
-		
-		int aPrice = ovo.getPrice();
-		
-		req.setAttribute("member", mvo);
-		
-		req.setAttribute("cartList", cart);
-		
-		req.setAttribute("aPrice", aPrice);
-		
-		
-		req.getRequestDispatcher("product/pay.tiles").forward(req, resp);
 		
 
 	}

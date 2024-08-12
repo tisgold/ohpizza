@@ -22,39 +22,38 @@ public class CartControl implements Control {
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String id = req.getParameter("id");
-		
+
 		OrderService osvc = new OrderServiceImpl();
-		
+
 		List<OrderlistVO> cart = new ArrayList<OrderlistVO>();
-		
-		if(osvc.checkOrder(id)) {
-		
-		OrderVO ovo = osvc.selectOrder(id);
-		
-		OrderListService olsvc = new OrderListServiceImpl();
-		
-		cart = olsvc.selectOrderListL(ovo.getOrdNo());
-		
-		System.out.println(cart);
-		
-		
-		// aPrice = 총 가격 합 
-		int aPrice = 0;
-		
-		aPrice = ovo.getPrice();
-		
-		req.setAttribute("cartList", cart);
-		
-		req.setAttribute("aPrice", aPrice);
-		
-		req.getRequestDispatcher("product/cartList.tiles").forward(req, resp);}
-		
+
+		if (osvc.checkOrder(id)) {
+
+			OrderVO ovo = osvc.selectOrder(id);
+
+			OrderListService olsvc = new OrderListServiceImpl();
+
+			cart = olsvc.selectOrderListL(ovo.getOrdNo());
+
+			System.out.println(cart);
+
+			// aPrice = 총 가격 합
+			int aPrice = 0;
+
+			aPrice = ovo.getPrice();
+
+			req.setAttribute("cartList", cart);
+
+			req.setAttribute("aPrice", aPrice);
+
+			req.getRequestDispatcher("product/cartList.tiles").forward(req, resp);
+		}
+
 		else {
 			osvc.addOrder(id);
 
 			req.setAttribute("cartList", cart);
-			
-			
+
 			req.getRequestDispatcher("product/cartList.tiles").forward(req, resp);
 		}
 	}

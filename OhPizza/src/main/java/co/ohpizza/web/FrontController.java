@@ -14,6 +14,7 @@ import co.ohpizza.common.Control;
 import co.ohpizza.control.LoginCheckControl;
 import co.ohpizza.control.LoginControl;
 import co.ohpizza.control.MemberListControl;
+import co.ohpizza.control.UpPcntControl;
 import co.ohpizza.control.ProductControl;
 import co.ohpizza.control.ProductListControl;
 import co.ohpizza.control.ShowMemInfoControl;
@@ -41,6 +42,7 @@ import co.ohpizza.control.CouponListControl;
 
 import co.ohpizza.control.CreateMemberControl;
 import co.ohpizza.control.DiscountCouponControl;
+import co.ohpizza.control.DownPcntControl;
 import co.ohpizza.control.EventControl;
 
 import co.ohpizza.control.IdCheckControl;
@@ -154,7 +156,11 @@ public class FrontController extends HttpServlet {
 		
 		// 결제창 이동
 		map.put("/pay.do", new PayControl());
-
+		
+		// 장바구니 수량 변경
+		map.put("/UpPcnt.do", new UpPcntControl());
+		
+		map.put("/downPcnt.do", new DownPcntControl());
   }
 
 	@Override
