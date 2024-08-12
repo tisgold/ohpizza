@@ -6,6 +6,7 @@ import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import co.ohpizza.common.Control;
 import co.ohpizza.service.BoardService;
@@ -16,23 +17,17 @@ public class InquiryControl implements Control {
 
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		BoardService BoardService = new BoardServiceImpl();
-
-		String id= req.getParameter("id");
+		HttpSession session = req.getSession(false);
+		String id = (String) session.getAttribute("logId");
 		
-		List<BoardVO> inquiryList = BoardService.inquiryList(id);
+		BoardService bsv = new BoardServiceImpl();
 		
-//		System.out.println(inquiryList);
+		List<BoardVO> inquiryList = bsv.inquiryList(id);
 		
 		req.setAttribute("inquiryList", inquiryList);
 		
-		req.getRequestDispatcher("board/inquiryList.tiles")//
+		req.getRequestDispatcher("user/inquiryList.tiles")//
 		.forward(req, resp);
-		
-		
-		
-		
-		
 
 	}
 

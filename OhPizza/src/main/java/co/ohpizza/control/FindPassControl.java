@@ -12,7 +12,7 @@ public class FindPassControl implements Control {
 
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		req.getRequestDispatcher("user/findPass.tiles").forward(req, resp);
+		req.getRequestDispatcher("account/findPass.tiles").forward(req, resp);
 
 	}
 
