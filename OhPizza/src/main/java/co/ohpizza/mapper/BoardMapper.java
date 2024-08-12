@@ -16,10 +16,16 @@ public interface BoardMapper {
 	
 	//게시물 작성하는 기능
 	int insertViewBoard(BoardVO boardInfo);
+
+	//게시물 삭제하는 기능
+	int removeBoard(int boardNo);
+	//조회수를 증가시키는 기능
+	int viewIncrease(int boardNo);
 	
 	//문의 사항 리스트 출력
 	List<BoardVO> inquiryList(String memId);
 	
 	//문의 사항 등록
 	int insertInquiry(BoardVO bvo);
+
 }

@@ -26,12 +26,10 @@
 		</tr>
 		<tr>
 			<td colspan="4" align="center"><c:choose>
-					<c:when test="${logid == boardDetail.memId }">
-						<input class="btn btn-danger" type="submit" value="삭제화면">
+					<c:when test="${logId == boardDetail.memId }">
 						<button class="btn btn-warning" type="button">수정화면</button>
 					</c:when>
 					<c:otherwise>
-						<input class="btn btn-danger" disabled type="submit" value="삭제화면">
 						<button class="btn btn-warning" disabled type="button">수정화면</button>
 					</c:otherwise>
 				</c:choose></td>

@@ -33,6 +33,15 @@ public class BoardServiceImpl implements BoardService {
 	}
 
 	@Override
+	public boolean removeBoard(int boardNo) {
+		return mapper.removeBoard(boardNo) == 1;
+	}
+  
+	@Override
+	public boolean viewIncrease(int boardNo) {
+		return mapper.viewIncrease(boardNo) == 1;
+
+	@Override
 	public List<BoardVO> inquiryList(String MemId) {
 		return mapper.inquiryList(MemId);
 	}
