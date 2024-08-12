@@ -44,7 +44,7 @@ public class AlertControl {
 	    }
 	}
 	
-	// 아림창 띄우고 원하는 화면으로 이동
+	// 알림창 띄우고 원하는 화면으로 이동
 	public static void alertAndGo(HttpServletResponse response, String msg, String url) {
 	    try {
 	        response.setContentType("text/html; charset=utf-8");

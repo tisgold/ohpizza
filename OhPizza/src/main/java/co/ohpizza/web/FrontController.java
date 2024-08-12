@@ -15,10 +15,16 @@ import co.ohpizza.control.LoginCheckControl;
 import co.ohpizza.control.LoginControl;
 import co.ohpizza.control.LogoutControl;
 import co.ohpizza.control.MemberListControl;
+import co.ohpizza.control.MondayEvent;
 import co.ohpizza.control.ProductControl;
 import co.ohpizza.control.ProductListControl;
 import co.ohpizza.control.ShowMemInfoControl;
+import co.ohpizza.control.SubscriptionCoupon;
 import co.ohpizza.control.UpdateMemInfoControl;
+
+import co.ohpizza.control.AddMemCouponListControl;
+import co.ohpizza.control.tuesdayEvent;
+import co.ohpizza.control.AddMemCoupShowControl;
 
 import co.ohpizza.control.AddBoardControl;
 
@@ -97,7 +103,9 @@ public class FrontController extends HttpServlet {
 		// 이벤트 신메뉴
 		map.put("/newmenu.do", new NewmenuControl());
 		// 종료된 이벤트
-		map.put("/closedEvent.do", new ClosedEventControl());	
+		map.put("/closedEvent.do", new ClosedEventControl());
+		// 유저 가입 쿠폰 발급화면
+		map.put("/addMemCoupShow.do", new AddMemCoupShowControl());
 		// 유저 쿠폰 발급
 		map.put("/addMemCoupon.do", new AddMemCouponControl());
 		
@@ -107,6 +115,14 @@ public class FrontController extends HttpServlet {
 
 		// 진행중인 이벤트 (쿠폰 발행 이벤트)
 		map.put("/eventsProgress.do", new EventsProgress());
+		// 진행중인 이벤트 
+		map.put("/addMemCopon.do", new AddMemCouponListControl());
+		// 화요일 이벤트 
+		map.put("/tuesdayEvent.do", new tuesdayEvent());
+		// 가입기념쿠폰
+		map.put("/SubscriptionCoupon.do", new SubscriptionCoupon());
+		// 월요일쿠폰
+		map.put("/MondayEvent.do", new MondayEvent());
 
 		// 게시판 리스트
 		map.put("/boardList.do", new BoardListControl());
