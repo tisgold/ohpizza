@@ -31,7 +31,7 @@
 		</a>
 	</div>
 	<div>
-		<a href="addMemCoupon.do">
+		<a href="couponList.do">
 			<button type="button">
 				<img src="images/20coupon.jpg" width="500px" height="300px"
 					align="middle" alt="가입기념쿠폰">

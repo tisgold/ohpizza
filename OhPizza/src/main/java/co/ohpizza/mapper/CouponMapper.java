@@ -2,6 +2,8 @@ package co.ohpizza.mapper;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Param;
+
 import co.ohpizza.vo.CouponVO;
 import co.ohpizza.vo.MemCouponVO;
 
@@ -21,5 +23,9 @@ public interface CouponMapper {
 	
 	// 회원 쿠폰 발급 (kangwonjun)
 	int insertMemCoupon(MemCouponVO mcv);
+	
+	// 회원 쿠폰 중복 확인 
+	int duplicateCoupon(@Param("mem_id")String memId,
+						@Param("coupon_name")String couponName);
 
 }
