@@ -20,9 +20,6 @@ public class BoardListControl implements Control {
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		BoardService BoardServiceList = new BoardServiceImpl();
-	
-		//조회수 증가
-		
 
 		//게시판 출력
 		//기본 페이지의 번호는 1번으로 한다.
@@ -37,7 +34,7 @@ public class BoardListControl implements Control {
 		//총 게시물 수를 구하기 위한 식
 		int totalCnt = BoardServiceList.totalPage();
 		//pageDTO의 생성자에 넣어줄 매개변수
-		PageDTO pageDTO = new PageDTO(Integer.parseInt(page),totalCnt);
+		PageDTO pageDTO = new PageDTO(Integer.parseInt(page), totalCnt , 5);
 		//jsp에 넘겨줄 값
 		req.setAttribute("pageOut", pageDTO);
 		System.out.println(pageDTO);

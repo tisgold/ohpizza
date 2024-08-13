@@ -21,6 +21,10 @@ public class BoardServiceImpl implements BoardService {
 	public int totalPage() {
 		return mapper.totalPage();
 	}
+	@Override
+	public int inquirypage() {
+		return mapper.inquirypage();
+	}
 
 	@Override
 	public BoardVO boardDetail(int bno) {
@@ -43,12 +47,16 @@ public class BoardServiceImpl implements BoardService {
 	}
 
 	@Override
-	public List<BoardVO> inquiryList(String MemId) {
-		return mapper.inquiryList(MemId);
+	public List<BoardVO> inquiryList(String page, String MemId) {
+		return mapper.inquiryList(page, MemId);
 	}
 	
 	@Override
 	public boolean addInquiry(BoardVO bvo) {
 		return mapper.insertInquiry(bvo) == 1;
+	}
+	@Override
+	public List<BoardVO> adminAnswerList(BoardVO bvo) {
+		return mapper.adminAnswerList(bvo);
 	}
 }

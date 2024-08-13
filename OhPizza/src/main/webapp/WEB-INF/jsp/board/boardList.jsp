@@ -33,7 +33,7 @@
 					<td><a
 						href="boardDetail.do?bno=${board.boardNo }&id=${board.memId }">${board.boardTitle }</a></td>
 					<td>${board.memId }</td>
-					<td>${board.boardDate }</td>
+					<td>${board.boardDate() }</td>
 					<td>${board.boardView }</td>
 					<td>
 					<c:choose>
@@ -76,7 +76,7 @@
 		<!-- prev 페이지 -->
 		<c:if test="${pageOut.preview }">
 			<li class="page-item"><a class="page-link"
-				href="boardList.do?pageNum=${pageOut.page - 1 }"
+				href="boardList.do?pageNum=${pageOut.page - 10 }"
 				aria-label="Previous"> <span aria-hidden="true">&laquo;</span>
 			</a></li>
 		</c:if>
@@ -98,7 +98,7 @@
 		<!-- next 페이지 -->
 		<c:if test="${pageOut.isNext()}">
 			<li class="page-item"><a class="page-link"
-				href="boardList.do?pageNum=${pageOut.page + 1 }" aria-label="Next">
+				href="boardList.do?pageNum=${pageOut.page + 10 }" aria-label="Next">
 					<span aria-hidden="true">&raquo;</span>
 			</a></li>
 		</c:if>

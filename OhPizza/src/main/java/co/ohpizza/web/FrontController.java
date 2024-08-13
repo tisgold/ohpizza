@@ -42,6 +42,7 @@ import co.ohpizza.control.DeleteMemberControl;
 
 import co.ohpizza.control.AddMemberControl;
 import co.ohpizza.control.AddOrderControl;
+import co.ohpizza.control.AdminAnswerListControl;
 import co.ohpizza.control.BoardDetailControl;
 import co.ohpizza.control.BoardFormControl;
 import co.ohpizza.control.BoardListControl;
@@ -67,7 +68,7 @@ import co.ohpizza.control.EventsProgress;
 
 import co.ohpizza.control.FindPassControl;
 
-import co.ohpizza.control.InquiryControl;
+import co.ohpizza.control.InquiryListControl;
 
 import co.ohpizza.control.MypageControl;
 import co.ohpizza.control.NewmenuControl;
@@ -130,6 +131,7 @@ public class FrontController extends HttpServlet {
 		// 월요일쿠폰
 		map.put("/MondayEvent.do", new MondayEvent());
 
+		//게시판 기능
 		// 게시판 리스트
 		map.put("/boardList.do", new BoardListControl());
 		//게시물 상세 페이지
@@ -140,7 +142,6 @@ public class FrontController extends HttpServlet {
 		map.put("/addBoard.do", new AddBoardControl());
 		//게시글 삭제
 		map.put("/removeBoard.do", new RemoveBoardControl());
-		//조회수를 증가시키는 기능
 		
 		// 나의오피
 		map.put("/myPage.do", new MypageControl());
@@ -149,7 +150,7 @@ public class FrontController extends HttpServlet {
 		// 쿠폰 리스트
 		map.put("/myCoupon.do", new CouponListControl());
 		// 내 문의 내역 확인하는 기능
-		map.put("/inquiry.do", new InquiryControl());
+		map.put("/inquiryList.do", new InquiryListControl());
 		// 내 문의 등록 화면
 		map.put("/addInquiryShow.do", new AddInquiryShowControl());
 		// 내 문의 등록
@@ -170,6 +171,8 @@ public class FrontController extends HttpServlet {
 		map.put("/addCoupon.do", new AddCouponControl());
 		// 쿠폰 등록
 		map.put("/createCoupon.do", new CreateCouponControl());
+		//관리자용 문의 게시판 출력 기능
+		map.put("/adminAnswerList.do", new AdminAnswerListControl());
 
 		// 장바구니 담기 누름.
 		map.put("/addOrder.do", new AddOrderControl());

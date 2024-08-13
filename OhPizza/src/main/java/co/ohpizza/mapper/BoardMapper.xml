@@ -21,11 +21,33 @@
     ]]>
      and board_type = 'R'
 	</select>
-
+	
+  <select id="inquiryList" resultType="co.ohpizza.vo.BoardVO">
+	select  *
+	  from (select rownum rn, a.*
+	  from (select *
+	  from tbl_board
+	  order by board_no desc ) a ) b
+	  where b.rn > (#{page} - 1) * 5
+    <![CDATA[
+      and   b.rn <= (#{page} * 5)	    
+    ]]>
+      and board_type = 'C'
+      and mem_id = #{memId}
+      order by board_date DESC
+	</select>
 
 	<select id="totalPage" resultType="int">
 		select count(1)
 		from tbl_board
+		where board_type = 'R'
+	</select>
+	
+	<select id="inquirypage" resultType="int">
+	    select count(1)
+		from tbl_board
+		where mem_id = #{memId}
+		and board_type = 'C'
 	</select>
 
 	<select id="boardDetail" resultType="co.ohpizza.vo.BoardVO">
@@ -51,22 +73,24 @@
 	set board_view = board_view + 1
 	where board_no = ${board_no}
 	</update>
-
-
-  <select id="inquiryList" resultType="co.ohpizza.vo.BoardVO">
-		select board_title,
-		complaint,
-		answer,
-		board_date
-		from tbl_board
-		where mem_id = #{memId}
-		and board_type = 'C'
-		order by board_date DESC
-	</select>
 	
 	<insert id="insertInquiry" parameterType="co.ohpizza.vo.BoardVO">
 		insert into tbl_board (board_no, board_title, complaint, board_type, mem_id)
 		values (board_seq.nextval, #{boardTitle}, #{complaint}, 'C', #{memId})
 	</insert>
+	
+	<select id="adminAnswerList" resultType="co.ohpizza.vo.BoardVO">
+		select  *
+	  from (select rownum rn, a.*
+	  from (select *
+	  from tbl_board
+	  order by board_no desc ) a ) b
+	  where b.rn > (#{page} - 1) * 5
+    <![CDATA[
+      and   b.rn <= (#{page} * 5)	    
+    ]]>
+      and board_type = 'C'
+      order by board_date DESC
+	</select>
 
 </mapper>
