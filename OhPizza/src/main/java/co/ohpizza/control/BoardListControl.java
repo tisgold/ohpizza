@@ -20,11 +20,10 @@ public class BoardListControl implements Control {
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		BoardService BoardServiceList = new BoardServiceImpl();
-		
+	
 		//조회수 증가
-		String boardView = req.getParameter("boardView");
-		if(BoardServiceList.viewIncrease(Integer.parseInt(boardView)));
 		
+
 		//게시판 출력
 		//기본 페이지의 번호는 1번으로 한다.
 		String page = req.getParameter("pageNum");

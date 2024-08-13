@@ -8,12 +8,11 @@ import javax.servlet.http.HttpServletResponse;
 
 import co.ohpizza.common.Control;
 
-public class EventsProgress implements Control {
+public class AddMemCoupShowControl implements Control {
 
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		req.getRequestDispatcher("user/addMemCouponList.tiles").forward(req, resp);
-
+		req.getRequestDispatcher("user/welcomeCoupon.tiles").forward(req, resp);
 	}
 
 }

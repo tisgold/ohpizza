@@ -20,6 +20,7 @@ public class BoardDetailControl implements Control {
 		BoardService boardService = new BoardServiceImpl();
 		
 		BoardVO boardDetail = boardService.boardDetail(Integer.parseInt(bno));
+		boardService.viewIncrease(Integer.parseInt(bno));
 		
 		req.setAttribute("boardDetail", boardDetail);
 		
