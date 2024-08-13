@@ -8,19 +8,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import co.ohpizza.common.Control;
-import co.ohpizza.service.CouponService;
-import co.ohpizza.service.CouponServiceImpl;
-import co.ohpizza.vo.CouponVO;
+import co.ohpizza.service.StoreService;
+import co.ohpizza.service.StoreServiceImpl;
+import co.ohpizza.vo.StoreVO;
 
-public class CouponListControl implements Control {
+public class StoreListControl implements Control {
 
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		CouponService csv = new CouponServiceImpl();
-		List<CouponVO> couponList = csv.couponList();
+		StoreService ssv = new StoreServiceImpl();
+		List<StoreVO> stores = ssv.storeList();
 		
-		req.setAttribute("coupons", couponList);
-		req.getRequestDispatcher("admin/couponList.tiles").forward(req, resp);
+		req.setAttribute("stores", stores);
+		req.getRequestDispatcher("admin/storeList.tiles").forward(req, resp);
 
 	}
 

@@ -3,7 +3,18 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="co.ohpizza.mapper.CouponMapper">
-
+	
+  <select id="selectCoupons" resultType="co.ohpizza.vo.CouponVO">
+    select *
+    from tbl_coupon
+    order by coupon_name
+  </select>
+  
+  <delete id="removeCoupon" parameterType="string">
+    delete tbl_coupon
+    where coupon_name = #{name}
+  </delete>
+  
   <select id="selectCoupon" parameterType="string" resultType="string">
     select discount
     from tbl_coupon
@@ -25,6 +36,5 @@
   	insert into tbl_mem_coupon (MEM_ID, COUPON_NAME)
   	values (#{memId}, #{couponName}) 	
   </insert>
-  
   
 </mapper>

@@ -31,6 +31,10 @@
   <logger name="co.ohpizza.mapper.CouponMapper">
     <level value="debug"/>
   </logger>
+  
+  <logger name="co.ohpizza.mapper.StoreMapper">
+    <level value="debug"/>
+  </logger>
 
   <root level="error">
     <appender-ref ref="stdout"/>

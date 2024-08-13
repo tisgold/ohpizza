@@ -23,6 +23,7 @@ import co.ohpizza.control.ProductControl;
 import co.ohpizza.control.ProductListControl;
 import co.ohpizza.control.RemoveBoardControl;
 import co.ohpizza.control.ShowMemInfoControl;
+import co.ohpizza.control.StoreListControl;
 import co.ohpizza.control.SubscriptionCoupon;
 import co.ohpizza.control.UpdateMemInfoControl;
 
@@ -39,9 +40,10 @@ import co.ohpizza.control.AddInquiryControl;
 import co.ohpizza.control.AddInquiryShowControl;
 import co.ohpizza.control.CreateCouponControl;
 import co.ohpizza.control.DeleteMemberControl;
-
+import co.ohpizza.control.DeleteStoreControl;
 import co.ohpizza.control.AddMemberControl;
 import co.ohpizza.control.AddOrderControl;
+import co.ohpizza.control.AddStoreControl;
 import co.ohpizza.control.BoardDetailControl;
 import co.ohpizza.control.BoardFormControl;
 import co.ohpizza.control.BoardListControl;
@@ -49,11 +51,12 @@ import co.ohpizza.control.CartControl;
 import co.ohpizza.control.CartDeleteControl;
 import co.ohpizza.control.CartNoControl;
 import co.ohpizza.control.ClosedEventControl;
-
 import co.ohpizza.control.CouponListControl;
+import co.ohpizza.control.MyCouponControl;
 
 import co.ohpizza.control.CreateMemberControl;
-
+import co.ohpizza.control.CreateStoreControl;
+import co.ohpizza.control.DeleteCouponControl;
 import co.ohpizza.control.DiscountCouponControl;
 import co.ohpizza.control.DownPcntControl;
 
@@ -147,7 +150,7 @@ public class FrontController extends HttpServlet {
 		// 내주문내역
 		map.put("/myOrder.do", new OrderListControl());
 		// 쿠폰 리스트
-		map.put("/myCoupon.do", new CouponListControl());
+		map.put("/myCoupon.do", new MyCouponControl());
 		// 내 문의 내역 확인하는 기능
 		map.put("/inquiry.do", new InquiryControl());
 		// 내 문의 등록 화면
@@ -166,10 +169,22 @@ public class FrontController extends HttpServlet {
 		map.put("/memberList.do", new MemberListControl());
 		// 멤버 삭제
 		map.put("/deleteMember.do", new DeleteMemberControl());
+		// 쿠폰 리스트
+		map.put("/couponList.do", new CouponListControl());
+		// 쿠폰 삭제
+		map.put("/deleteCoupon.do", new DeleteCouponControl());
 		// 쿠폰 등록 화면
 		map.put("/addCoupon.do", new AddCouponControl());
 		// 쿠폰 등록
 		map.put("/createCoupon.do", new CreateCouponControl());
+		// 매장 정보 확인
+		map.put("/storeList.do", new StoreListControl());
+		// 매장 삭제
+		map.put("/deleteStore.do", new DeleteStoreControl());
+		// 매장 등록 화면
+		map.put("/addStore.do", new AddStoreControl());
+		// 매장 등록
+		map.put("/createStore.do", new CreateStoreControl());
 
 		// 장바구니 담기 누름.
 		map.put("/addOrder.do", new AddOrderControl());

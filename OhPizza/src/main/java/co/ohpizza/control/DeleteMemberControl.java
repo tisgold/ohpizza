@@ -30,7 +30,7 @@ public class DeleteMemberControl implements Control {
 		}
 		
 		if(msv.delMember(id)) {
-			msg = "계정 " + id + " 삭제 완료!";
+			msg = id + " 계정 삭제 완료!";
 		}
 		else {
 			msg = "계정 삭제 중 오류 발생!";
