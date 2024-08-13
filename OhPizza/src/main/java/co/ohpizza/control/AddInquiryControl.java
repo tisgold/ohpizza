@@ -22,12 +22,12 @@ public class AddInquiryControl implements Control {
 		String id = (String) session.getAttribute("logId");
 	
 		String title = req.getParameter("title");
-		String inquiry = req.getParameter("inquiry");
+		String question = req.getParameter("question");
 		
 		BoardVO board = new BoardVO();
 		board.setMemId(id);
 		board.setBoardTitle(title);
-		board.setComplaint(inquiry);
+		board.setQuestion(question);
 		
 		BoardService bsv = new BoardServiceImpl();
 		

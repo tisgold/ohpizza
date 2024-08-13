@@ -10,6 +10,7 @@
                 <a class="nav-link" href="addCoupon.do">쿠폰등록</a>
                 <a class="nav-link" href="storeList.do">매장목록</a>
                 <a class="nav-link" href="addStore.do">매장등록</a>
+                <a class="nav-link" href="adminAnswerList.do">고객 문의목록</a>
             </nav>
         </div>
     </div>

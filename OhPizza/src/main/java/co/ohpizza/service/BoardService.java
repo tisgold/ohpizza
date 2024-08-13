@@ -11,6 +11,9 @@ public interface BoardService {
 	//총 게시물 갯수를 구하기 위한 기능
 	int totalPage();
 	
+	//건의 사항용 총 게시물
+	int inquirypage();
+	
 	//게시물 번호를 기준으로 게시물 상세 페이지로 이동하는 기능
 	BoardVO boardDetail(int bno);
 	
@@ -19,12 +22,20 @@ public interface BoardService {
 
 	//게시물 삭제하는 기능
 	boolean removeBoard(int boardNo);
+	
 	//조회수를 증가시키는 기능
 	boolean viewIncrease(int boardNo);
 	
 	//멤버 아이디를 기준으로 건의사항을 출력하기 위한 기능
-	List<BoardVO> inquiryList(String MemId);
+	List<BoardVO> inquiryList(String page, String MemId);
 	
 	//멤버 아이디를 기준으로 건의사항 등록
 	boolean addInquiry(BoardVO bvo);
+	
+	//관리자용 문의사항 답변 게시물 출력 기능
+    List<BoardVO> adminAnswerList(String page);
+    
+    //C타입 게시물 총 건수
+  	int totalCntTypeC();
 }
+

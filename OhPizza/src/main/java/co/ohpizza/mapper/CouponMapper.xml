@@ -37,4 +37,5 @@
   	values (#{memId}, #{couponName}) 	
   </insert>
   
+  
 </mapper>

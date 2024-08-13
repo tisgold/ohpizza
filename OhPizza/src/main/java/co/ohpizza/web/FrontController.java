@@ -23,7 +23,9 @@ import co.ohpizza.control.ProductControl;
 import co.ohpizza.control.ProductListControl;
 import co.ohpizza.control.RemoveBoardControl;
 import co.ohpizza.control.ShowMemInfoControl;
+
 import co.ohpizza.control.StoreListControl;
+
 import co.ohpizza.control.SubscriptionCoupon;
 import co.ohpizza.control.UpdateMemInfoControl;
 
@@ -43,7 +45,11 @@ import co.ohpizza.control.DeleteMemberControl;
 import co.ohpizza.control.DeleteStoreControl;
 import co.ohpizza.control.AddMemberControl;
 import co.ohpizza.control.AddOrderControl;
+
+import co.ohpizza.control.AdminAnswerListControl;
+
 import co.ohpizza.control.AddStoreControl;
+import co.ohpizza.control.AdminAnswerFormControl;
 import co.ohpizza.control.BoardDetailControl;
 import co.ohpizza.control.BoardFormControl;
 import co.ohpizza.control.BoardListControl;
@@ -55,8 +61,10 @@ import co.ohpizza.control.CouponListControl;
 import co.ohpizza.control.MyCouponControl;
 
 import co.ohpizza.control.CreateMemberControl;
+
 import co.ohpizza.control.CreateStoreControl;
 import co.ohpizza.control.DeleteCouponControl;
+
 import co.ohpizza.control.DiscountCouponControl;
 import co.ohpizza.control.DownPcntControl;
 
@@ -70,7 +78,7 @@ import co.ohpizza.control.EventsProgress;
 import co.ohpizza.control.FinalBuyControl;
 import co.ohpizza.control.FindPassControl;
 
-import co.ohpizza.control.InquiryControl;
+import co.ohpizza.control.InquiryListControl;
 
 import co.ohpizza.control.MypageControl;
 import co.ohpizza.control.NewmenuControl;
@@ -133,6 +141,7 @@ public class FrontController extends HttpServlet {
 		// 월요일쿠폰
 		map.put("/MondayEvent.do", new MondayEvent());
 
+		//게시판 기능
 		// 게시판 리스트
 		map.put("/boardList.do", new BoardListControl());
 		//게시물 상세 페이지
@@ -143,7 +152,7 @@ public class FrontController extends HttpServlet {
 		map.put("/addBoard.do", new AddBoardControl());
 		//게시글 삭제
 		map.put("/removeBoard.do", new RemoveBoardControl());
-		//조회수를 증가시키는 기능
+
 		
 		// 나의오피
 		map.put("/myPage.do", new MypageControl());
@@ -152,7 +161,7 @@ public class FrontController extends HttpServlet {
 		// 쿠폰 리스트
 		map.put("/myCoupon.do", new MyCouponControl());
 		// 내 문의 내역 확인하는 기능
-		map.put("/inquiry.do", new InquiryControl());
+		map.put("/inquiryList.do", new InquiryListControl());
 		// 내 문의 등록 화면
 		map.put("/addInquiryShow.do", new AddInquiryShowControl());
 		// 내 문의 등록
@@ -177,6 +186,11 @@ public class FrontController extends HttpServlet {
 		map.put("/addCoupon.do", new AddCouponControl());
 		// 쿠폰 등록
 		map.put("/createCoupon.do", new CreateCouponControl());
+		//관리자용 문의 게시판 출력 기능
+		map.put("/adminAnswerList.do", new AdminAnswerListControl());
+		//관리자용 문의 폼
+		map.put("/adminAnswerForm.do", new AdminAnswerFormControl());
+		
 		// 매장 정보 확인
 		map.put("/storeList.do", new StoreListControl());
 		// 매장 삭제
@@ -185,6 +199,7 @@ public class FrontController extends HttpServlet {
 		map.put("/addStore.do", new AddStoreControl());
 		// 매장 등록
 		map.put("/createStore.do", new CreateStoreControl());
+
 
 		// 장바구니 담기 누름.
 		map.put("/addOrder.do", new AddOrderControl());

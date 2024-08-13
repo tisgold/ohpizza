@@ -33,7 +33,7 @@
 					<td><a
 						href="boardDetail.do?bno=${board.boardNo }&id=${board.memId }">${board.boardTitle }</a></td>
 					<td>${board.memId }</td>
-					<td>${board.boardDate }</td>
+					<td>${board.boardDate() }</td>
 					<td>${board.boardView }</td>
 					<td>
 					<c:choose>
