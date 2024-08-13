@@ -59,4 +59,6 @@ public class BoardServiceImpl implements BoardService {
 	public List<BoardVO> adminAnswerList(BoardVO bvo) {
 		return mapper.adminAnswerList(bvo);
 	}
+	
+	
 }

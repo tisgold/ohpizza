@@ -7,10 +7,17 @@
 		<tr>
 			<th scope="col">#</th>
 			<th scope="col">등록일자</th>
+<<<<<<< HEAD
 			<th scope="col">건의사항</th>
+=======
+			<th scope="col">제목</th>
+>>>>>>> refs/heads/main
 			<th scope="col">건의내용</th>
 			<th scope="col">답변</th>
+<<<<<<< HEAD
 			<!-- <th scope="col">등록 ID</th> -->
+=======
+>>>>>>> refs/heads/main
 		</tr>
 	</thead>
 	<tbody>
@@ -21,7 +28,10 @@
 				<td scope="row">${inquiry.boardTitle }</td>
 				<td scope="row">${inquiry.complaint }</td>
 				<td scope="row">${inquiry.answer }</td>
+<<<<<<< HEAD
 				<!-- <td scope="row">${inquiry.memId }</td> -->
+=======
+>>>>>>> refs/heads/main
 			</tr>
 		</c:forEach>
 	</tbody>
