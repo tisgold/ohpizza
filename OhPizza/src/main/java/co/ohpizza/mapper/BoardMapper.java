@@ -33,7 +33,10 @@ public interface BoardMapper {
 	//문의 사항 등록
 	int insertInquiry(BoardVO bvo);
 	
-	//관리자용 문의사항 답변 게시물 출력 기능
-	List<BoardVO> adminAnswerList(BoardVO bvo);
-
+	//관리자용 문의사항 답변 게시물 리스트 출력 기능
+	List<BoardVO> adminAnswerList(String page);
+	
+	//C타입 게시물 총 건수
+	int totalCntTypeC();
+	
 }

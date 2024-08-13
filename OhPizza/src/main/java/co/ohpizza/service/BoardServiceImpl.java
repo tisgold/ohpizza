@@ -56,8 +56,12 @@ public class BoardServiceImpl implements BoardService {
 		return mapper.insertInquiry(bvo) == 1;
 	}
 	@Override
-	public List<BoardVO> adminAnswerList(BoardVO bvo) {
-		return mapper.adminAnswerList(bvo);
+	public List<BoardVO> adminAnswerList(String page) {
+		return mapper.adminAnswerList(page);
+	}
+	@Override
+	public int totalCntTypeC() {
+		return mapper.totalCntTypeC();
 	}
 	
 	

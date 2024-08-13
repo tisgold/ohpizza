@@ -18,7 +18,7 @@ public class BoardListControl implements Control {
 
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
+		req.setCharacterEncoding("UTF-8");
 		BoardService BoardServiceList = new BoardServiceImpl();
 		//게시판 출력
 		//기본 페이지의 번호는 1번으로 한다.

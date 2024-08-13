@@ -20,7 +20,6 @@ public class BoardDetailControl implements Control {
 
 		String bno = req.getParameter("bno");
 		
-		
 		BoardVO boardDetail = boardService.boardDetail(Integer.parseInt(bno));
 		//조회수를 증가시키는 기능
 		boardService.viewIncrease(Integer.parseInt(bno));

@@ -49,6 +49,12 @@
 		where mem_id = #{memId}
 		and board_type = 'C'
 	</select>
+	
+	<select id="totalCntTypeC" parameterType="int">
+	select count(1)
+	from tbl_board
+     where board_type = 'C'
+	</select>
 
 	<select id="boardDetail" resultType="co.ohpizza.vo.BoardVO">
 		select *
@@ -73,22 +79,10 @@
 	set board_view = board_view + 1
 	where board_no = ${board_no}
 	</update>
-
-  <select id="inquiryList" resultType="co.ohpizza.vo.BoardVO">
-		select board_title,
-		complaint,
-		answer,
-		board_date
-		from tbl_board
-		where mem_id = #{memId}
-		and board_type = 'C'
-		order by board_date DESC
-	</select>
-
 	
 	<insert id="insertInquiry" parameterType="co.ohpizza.vo.BoardVO">
-		insert into tbl_board (board_no, board_title, complaint, board_type, mem_id)
-		values (board_seq.nextval, #{boardTitle}, #{complaint}, 'C', #{memId})
+		insert into tbl_board (board_no, board_title, question, board_type, mem_id)
+		values (board_seq.nextval, #{boardTitle}, #{question}, 'C', #{memId})
 	</insert>
 	
 	<select id="adminAnswerList" resultType="co.ohpizza.vo.BoardVO">

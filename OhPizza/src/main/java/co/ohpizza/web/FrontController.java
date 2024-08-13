@@ -49,7 +49,7 @@ import co.ohpizza.control.AddOrderControl;
 import co.ohpizza.control.AdminAnswerListControl;
 
 import co.ohpizza.control.AddStoreControl;
-
+import co.ohpizza.control.AdminAnswerFormControl;
 import co.ohpizza.control.BoardDetailControl;
 import co.ohpizza.control.BoardFormControl;
 import co.ohpizza.control.BoardListControl;
@@ -152,6 +152,7 @@ public class FrontController extends HttpServlet {
 		map.put("/addBoard.do", new AddBoardControl());
 		//게시글 삭제
 		map.put("/removeBoard.do", new RemoveBoardControl());
+
 		
 		// 나의오피
 		map.put("/myPage.do", new MypageControl());
@@ -185,10 +186,11 @@ public class FrontController extends HttpServlet {
 		map.put("/addCoupon.do", new AddCouponControl());
 		// 쿠폰 등록
 		map.put("/createCoupon.do", new CreateCouponControl());
-
 		//관리자용 문의 게시판 출력 기능
 		map.put("/adminAnswerList.do", new AdminAnswerListControl());
-
+		//관리자용 문의 폼
+		map.put("/adminAnswerForm.do", new AdminAnswerFormControl());
+		
 		// 매장 정보 확인
 		map.put("/storeList.do", new StoreListControl());
 		// 매장 삭제
