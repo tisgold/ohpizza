@@ -1,5 +1,5 @@
 package co.ohpizza.common;
 
-public class test {
-
+public class Test {
+	
 }

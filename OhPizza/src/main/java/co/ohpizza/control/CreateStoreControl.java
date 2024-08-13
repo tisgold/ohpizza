@@ -23,14 +23,16 @@ public class CreateStoreControl implements Control {
 		String address_detail = req.getParameter("address_detail");
 		address += " " + address_detail;
 		String locName = req.getParameter("locName");
+		float lati = Float.parseFloat(req.getParameter("lat"));
+		float longi = Float.parseFloat(req.getParameter("long"));
 		
 		StoreVO store = new StoreVO();
 		store.setStrName(name);
 		store.setPhone(phone);
 		store.setAddress(address);
 		store.setLocName(locName);
-		
-		System.out.println(store);
+		store.setLatitude(lati);
+		store.setLongitude(longi);
 		
 		StoreService ssv = new StoreServiceImpl();
 		
