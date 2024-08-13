@@ -67,7 +67,7 @@ import co.ohpizza.control.EventControl;
 import co.ohpizza.control.IdCheckControl;
 
 import co.ohpizza.control.EventsProgress;
-
+import co.ohpizza.control.FinalBuyControl;
 import co.ohpizza.control.FindPassControl;
 
 import co.ohpizza.control.InquiryControl;
@@ -205,6 +205,9 @@ public class FrontController extends HttpServlet {
 		map.put("/UpPcnt.do", new UpPcntControl());
 		
 		map.put("/downPcnt.do", new DownPcntControl());
+		
+		// 최종 결제 버튼 눌렀을 때
+		map.put("/finalBuy.do", new FinalBuyControl());
   }
 
 	@Override

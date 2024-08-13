@@ -44,4 +44,27 @@ public class OrderServiceImpl implements OrderService {
 		return mapper.priceOrder(price, ordNo);
 	}
 
+
+	@Override
+	public boolean addPOrder(OrderVO ovo) {
+		// TODO Auto-generated method stub
+		return mapper.addPOrder(ovo) == 1;
+	}
+
+
+	@Override
+	public OrderVO selectPOrder(String memId) {
+		// TODO Auto-generated method stub
+		return mapper.selectPOrder(memId);
+	}
+
+
+	@Override
+	public int updateOrder(int ordNo) {
+		// TODO Auto-generated method stub
+		return mapper.updateOrder(ordNo);
+	}
+	
+	
+
 }
