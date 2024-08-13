@@ -41,5 +41,17 @@ public class OrderListServiceImpl implements OrderListService{
 		return mapper.modifyOlcnt(count, listNo)==1;
 	}
 
+	@Override
+	public OrderlistVO selectOrderList(int listNo) {
+		// TODO Auto-generated method stub
+		return mapper.selectOrderList(listNo);
+	}
+
+	@Override
+	public int updateOrderList(int ordNo, int listNo) {
+		// TODO Auto-generated method stub
+		return mapper.updateOrderList(ordNo, listNo);
+	}
+
 	
 }
