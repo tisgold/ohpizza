@@ -32,5 +32,11 @@ public class CouponServiceImpl implements CouponService {
 	public boolean addMemCoupon(MemCouponVO mcvo) {
 		return mapper.insertMemCoupon(mcvo) == 1;
 	}
+
+	@Override
+	public int duplicateCoupon(String memId, String couponName) {
+		return mapper.duplicateCoupon(memId, couponName);
+	}
+
 	
 }

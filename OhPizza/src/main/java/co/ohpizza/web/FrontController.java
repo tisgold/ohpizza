@@ -49,7 +49,7 @@ import co.ohpizza.control.CartControl;
 import co.ohpizza.control.CartDeleteControl;
 import co.ohpizza.control.CartNoControl;
 import co.ohpizza.control.ClosedEventControl;
-
+import co.ohpizza.control.CouponList;
 import co.ohpizza.control.CouponListControl;
 
 import co.ohpizza.control.CreateMemberControl;
@@ -129,6 +129,9 @@ public class FrontController extends HttpServlet {
 		map.put("/SubscriptionCoupon.do", new SubscriptionCoupon());
 		// 월요일쿠폰
 		map.put("/MondayEvent.do", new MondayEvent());
+		// 쿠폰 리스트
+		map.put("/couponList.do", new CouponList());
+		
 
 		// 게시판 리스트
 		map.put("/boardList.do", new BoardListControl());
