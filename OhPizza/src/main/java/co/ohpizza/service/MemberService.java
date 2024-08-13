@@ -25,7 +25,11 @@ public interface MemberService {
 	// 회원 정보
 	MemberVO showMember(String id);
 
-	// 회원 정보변경
+	
+	// 회원 정보 가져오기
+	MemberVO infoMember(String id);
+  
+  // 회원 정보변경
 	boolean modMember(MemberVO mvo);
 
 }

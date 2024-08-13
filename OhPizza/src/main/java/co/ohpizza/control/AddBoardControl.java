@@ -20,15 +20,15 @@ public class AddBoardControl implements Control {
 		String review = req.getParameter("review");
 		String id = req.getParameter("memID");
 
-		BoardVO BoardVO = new BoardVO();
-		BoardVO.setBoardTitle(title);
-		BoardVO.setReview(review);
-		BoardVO.setMemId(id);
+		BoardVO board = new BoardVO();
+		board.setBoardTitle(title);
+		board.setReview(review);
+		board.setMemId(id);
 
 		BoardService BoardService = new BoardServiceImpl();
-		System.out.println(BoardService.insertViewBoard(BoardVO));
+		//System.out.println(BoardService.insertViewBoard(board));
 
-		if (BoardService.insertViewBoard(BoardVO)) {
+		if (BoardService.insertViewBoard(board)) {
 			resp.sendRedirect("boardList.do");
 		}else {
 			resp.sendRedirect("boardForm.do");

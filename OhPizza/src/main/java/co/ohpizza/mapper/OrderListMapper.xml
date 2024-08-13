@@ -25,4 +25,10 @@
 		delete tbl_orderlist
 		where list_no = #{listNo}
 	</delete>
+	
+	<update id="modifyOlcnt" parameterType="int">
+		update tbl_orderlist
+		set count = ${count}
+		where list_No = ${listNo}
+	</update>
 </mapper>

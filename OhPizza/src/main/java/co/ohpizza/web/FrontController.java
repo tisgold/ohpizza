@@ -15,16 +15,28 @@ import co.ohpizza.control.LoginCheckControl;
 import co.ohpizza.control.LoginControl;
 import co.ohpizza.control.LogoutControl;
 import co.ohpizza.control.MemberListControl;
+
+import co.ohpizza.control.UpPcntControl;
+import co.ohpizza.control.MondayEvent;
+
 import co.ohpizza.control.ProductControl;
 import co.ohpizza.control.ProductListControl;
+import co.ohpizza.control.RemoveBoardControl;
 import co.ohpizza.control.ShowMemInfoControl;
+import co.ohpizza.control.SubscriptionCoupon;
 import co.ohpizza.control.UpdateMemInfoControl;
+
+import co.ohpizza.control.AddMemCouponListControl;
+import co.ohpizza.control.tuesdayEvent;
+import co.ohpizza.control.AddMemCoupShowControl;
 
 import co.ohpizza.control.AddBoardControl;
 
 import co.ohpizza.control.AddMemCouponControl;
 
 import co.ohpizza.control.AddCouponControl;
+import co.ohpizza.control.AddInquiryControl;
+import co.ohpizza.control.AddInquiryShowControl;
 import co.ohpizza.control.CreateCouponControl;
 import co.ohpizza.control.DeleteMemberControl;
 
@@ -41,7 +53,12 @@ import co.ohpizza.control.ClosedEventControl;
 import co.ohpizza.control.CouponListControl;
 
 import co.ohpizza.control.CreateMemberControl;
+
+import co.ohpizza.control.DiscountCouponControl;
+import co.ohpizza.control.DownPcntControl;
+
 import co.ohpizza.control.DeleteMeControl;
+
 import co.ohpizza.control.EventControl;
 
 import co.ohpizza.control.IdCheckControl;
@@ -57,6 +74,7 @@ import co.ohpizza.control.NewmenuControl;
 
 
 import co.ohpizza.control.OrderListControl;
+import co.ohpizza.control.PayControl;
 
 public class FrontController extends HttpServlet {
 	Map<String, Control> map;
@@ -69,7 +87,6 @@ public class FrontController extends HttpServlet {
 	public void init(ServletConfig config) throws ServletException {
 		// 상품목록
 		map.put("/productList.do", new ProductListControl());
-
 		// 상품상세
 		map.put("/productInfo.do", new ProductControl());
 
@@ -96,16 +113,22 @@ public class FrontController extends HttpServlet {
 		// 이벤트 신메뉴
 		map.put("/newmenu.do", new NewmenuControl());
 		// 종료된 이벤트
-		map.put("/closedEvent.do", new ClosedEventControl());	
+		map.put("/closedEvent.do", new ClosedEventControl());
+		// 유저 가입 쿠폰 발급화면
+		map.put("/addMemCoupShow.do", new AddMemCoupShowControl());
 		// 유저 쿠폰 발급
 		map.put("/addMemCoupon.do", new AddMemCouponControl());
-		
-		
-		// 게시판
-		map.put("/boardList.do", new BoardListControl());
 
 		// 진행중인 이벤트 (쿠폰 발행 이벤트)
 		map.put("/eventsProgress.do", new EventsProgress());
+		// 진행중인 이벤트 
+		map.put("/addMemCopon.do", new AddMemCouponListControl());
+		// 화요일 이벤트 
+		map.put("/tuesdayEvent.do", new tuesdayEvent());
+		// 가입기념쿠폰
+		map.put("/SubscriptionCoupon.do", new SubscriptionCoupon());
+		// 월요일쿠폰
+		map.put("/MondayEvent.do", new MondayEvent());
 
 		// 게시판 리스트
 		map.put("/boardList.do", new BoardListControl());
@@ -115,6 +138,9 @@ public class FrontController extends HttpServlet {
 		map.put("/boardForm.do",new BoardFormControl());
 		//게시글 쓰기
 		map.put("/addBoard.do", new AddBoardControl());
+		//게시글 삭제
+		map.put("/removeBoard.do", new RemoveBoardControl());
+		//조회수를 증가시키는 기능
 		
 		// 나의오피
 		map.put("/myPage.do", new MypageControl());
@@ -124,6 +150,10 @@ public class FrontController extends HttpServlet {
 		map.put("/myCoupon.do", new CouponListControl());
 		// 내 문의 내역 확인하는 기능
 		map.put("/inquiry.do", new InquiryControl());
+		// 내 문의 등록 화면
+		map.put("/addInquiryShow.do", new AddInquiryShowControl());
+		// 내 문의 등록
+		map.put("/addInquiry.do", new AddInquiryControl());
 		// 정보수정 화면
 		map.put("/showMemInfo.do", new ShowMemInfoControl());
 		// 정보수정
@@ -143,7 +173,6 @@ public class FrontController extends HttpServlet {
 
 		// 장바구니 담기 누름.
 		map.put("/addOrder.do", new AddOrderControl());
-
 		
 		// 장바구니 숫자 추가
 		map.put("/cartNo.do", new CartNoControl());
@@ -153,7 +182,14 @@ public class FrontController extends HttpServlet {
 		
 		// 장바구니 품목 삭제
 		map.put("/cartDelete.do", new CartDeleteControl());
-
+		
+		// 결제창 이동
+		map.put("/pay.do", new PayControl());
+		
+		// 장바구니 수량 변경
+		map.put("/UpPcnt.do", new UpPcntControl());
+		
+		map.put("/downPcnt.do", new DownPcntControl());
   }
 
 	@Override

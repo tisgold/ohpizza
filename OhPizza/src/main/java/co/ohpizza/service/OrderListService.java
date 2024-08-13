@@ -15,4 +15,7 @@ public interface OrderListService {
 	
 	// 장바구니 삭제
 	boolean deleteOrderList(int listNo);
+	
+	// 장바구니 품목 수량 변경
+	boolean modifyOlcnt(int count, int listNo);
 }
