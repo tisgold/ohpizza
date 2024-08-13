@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!-- Login 6 - Bootstrap Brain Component -->
-<section class="bg-primary p-3 p-md-4 p-xl-5">
+<section class="bg-white p-3 p-md-4 p-xl-5">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-12 col-md-9 col-lg-7 col-xl-6 col-xxl-5">
@@ -12,9 +12,6 @@
               <div class="col-12">
                 <div class="mb-5">
                   <h3>비밀번호 재발급</h3>
-                    <c:if test="${!empty msg }">
-	  	  			  <p>${msg }</p>
-				    </c:if>
                 </div>
               </div>
             </div>
@@ -40,7 +37,7 @@
                 </div>
                 <div class="col-12">
                   <div class="d-grid">
-                    <button class="btn bsb-btn-2xl btn-primary" type="submit">비밀번호 재발급</button>
+                    <button class="btn bsb-btn-2xl btn-danger" type="submit">비밀번호 재발급</button>
                   </div>
                 </div>
               </div>

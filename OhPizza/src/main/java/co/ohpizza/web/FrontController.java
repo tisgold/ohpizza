@@ -66,7 +66,6 @@ import co.ohpizza.control.CreateMemberControl;
 import co.ohpizza.control.CreateStoreControl;
 import co.ohpizza.control.DeleteCouponControl;
 
-import co.ohpizza.control.DiscountCouponControl;
 import co.ohpizza.control.DownPcntControl;
 
 import co.ohpizza.control.DeleteMeControl;
@@ -116,7 +115,6 @@ public class FrontController extends HttpServlet {
 		map.put("/addMember.do", new AddMemberControl());
 		// 회원가입 (멤버 추가)
 		map.put("/createMember.do", new CreateMemberControl());
-
 		// 회원가입 (id중복체크)
 		map.put("/idCheck.do", new IdCheckControl());
 
