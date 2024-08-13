@@ -162,15 +162,19 @@
 		<!-- quickMenu -->
 		<nav>
 			<ul id="quickmenu">
-				<li><a href="login.do">로그인</a></li>
+				<c:choose>
+                  <c:when test="${empty logId }">
+                    <li><a href="login.do">로그인</a></li>
+                  </c:when>
+                  <c:otherwise>
+                    <li><a href="logout.do">로그아웃</a></li>
+                  </c:otherwise>
+                </c:choose>
 				<li><a href="addMember.do">회원가입</a></li>
 				<li><a href="#">장바구니</a></li>
-				
 			</ul>
 		</nav>
 		<!-- quickMenu -->
-		
-		
 		
 		<!-- 추천메뉴-->
 			<section class="py-5">
