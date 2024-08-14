@@ -30,7 +30,7 @@ import co.ohpizza.control.SubscriptionCoupon;
 import co.ohpizza.control.UpdateMemInfoControl;
 
 import co.ohpizza.control.AddMemCouponListControl;
-import co.ohpizza.control.tuesdayEvent;
+import co.ohpizza.control.TuesdayEvent;
 import co.ohpizza.control.AddMemCoupShowControl;
 
 import co.ohpizza.control.AddBoardControl;
@@ -135,7 +135,8 @@ public class FrontController extends HttpServlet {
 		// 진행중인 이벤트 
 		map.put("/addMemCopon.do", new AddMemCouponListControl());
 		// 화요일 이벤트 
-		map.put("/tuesdayEvent.do", new tuesdayEvent());
+
+		map.put("/tuesdayEvent.do", new TuesdayEvent());
 		// 가입기념쿠폰
 		map.put("/SubscriptionCoupon.do", new SubscriptionCoupon());
 		// 월요일쿠폰

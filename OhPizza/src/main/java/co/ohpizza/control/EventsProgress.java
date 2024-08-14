@@ -13,6 +13,7 @@ public class EventsProgress implements Control {
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.getRequestDispatcher("event/addMemCouponList.tiles").forward(req, resp);
+		req.getRequestDispatcher("event/eventProgress.tiles").forward(req, resp);
 
 	}
 
