@@ -19,25 +19,8 @@ public class EventControl implements Control {
 
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String prodNo = req.getParameter("prodNo");
 
-		ProductVO pvo = new ProductVO();
-		ProductService svc = new ProductServiceImpl();
-//		if(svc.productList(prodNo)) {
-//			resp.sendRedirect(prodNo);;
-//		}
-//		else {
-//			resp.sendRedirect("newmenu.do?pvo=" + pvo);
-//		}
-
-		req.setAttribute("prod", pvo);
-		req.getRequestDispatcher("product/event.tiles").forward(req, resp);
+		req.getRequestDispatcher("event/newMenu.tiles").forward(req, resp);
 	}
 
 }
-//if(svc.modifyBoard(p)) {
-//	resp.sendRedirect("boardList.do");
-//}
-//else {
-//	resp.sendRedirect("updateBoard.do?bno=" + bno);
-//}

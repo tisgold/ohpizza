@@ -28,7 +28,7 @@ public class AddMemCouponControl implements Control {
 		mcvo.setCouponName(couponName);
 
 		String msg = null;
-		String url = "eventsProgress.do";
+		String url = "event.do";
 		CouponService csv = new CouponServiceImpl();
 
 		// 중복 발급 체크
