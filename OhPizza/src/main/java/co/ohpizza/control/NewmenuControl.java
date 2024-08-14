@@ -17,8 +17,10 @@ public class NewmenuControl implements Control {
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String img = req.getParameter("img");
 		req.setAttribute("img", img);
-		req.getRequestDispatcher("product/newMenu.tiles").forward(req, resp);
 		
+		
+		
+		req.getRequestDispatcher("event/newMenu.tiles").forward(req, resp);
 	}
 
 }

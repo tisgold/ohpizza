@@ -12,7 +12,7 @@ public class AddMemCoupShowControl implements Control {
 
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		req.getRequestDispatcher("user/welcomeCoupon.tiles").forward(req, resp);
+		req.getRequestDispatcher("event/welcomeCoupon.tiles").forward(req, resp);
 	}
 
 }

@@ -135,11 +135,11 @@ public class FrontController extends HttpServlet {
 		// 진행중인 이벤트 
 		map.put("/addMemCopon.do", new AddMemCouponListControl());
 		// 화요일 이벤트 
-		map.put("/tuesdayEvent.do", new tuesdayEvent());
-		// 가입기념쿠폰
-		map.put("/SubscriptionCoupon.do", new SubscriptionCoupon());
-		// 월요일쿠폰
-		map.put("/MondayEvent.do", new MondayEvent());
+//		map.put("/tuesdayEvent.do", new tuesdayEvent());
+//		// 가입기념쿠폰
+//		map.put("/SubscriptionCoupon.do", new SubscriptionCoupon());
+//		// 월요일쿠폰
+//		map.put("/MondayEvent.do", new MondayEvent());
 		// 쿠폰 리스트
 		map.put("/couponList.do", new CouponList());
 		

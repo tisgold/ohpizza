@@ -14,7 +14,7 @@ public class AddMemCouponListControl implements Control {
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		
-		req.getRequestDispatcher("user/addMemCouponList.tiles").forward(req, resp);
+		req.getRequestDispatcher("event/addMemCouponList.tiles").forward(req, resp);
 	}
 
 }

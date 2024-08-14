@@ -8,10 +8,9 @@
   <div class="border-end bg-white" id="sidebar-wrapper">
 	<div class="sidebar-heading border-bottom bg-light"></div>
       <div class="list-group list-group-flush">
-          <a class="list-group-item list-group-item-action list-group-item-light p-3" href="newmenu.do?img=thehiden">신제품 소개</a>
-          <a class="list-group-item list-group-item-action list-group-item-light p-3" href="eventsProgress.do">진행중 이벤트</a>
+          <a class="list-group-item list-group-item-action list-group-item-light p-3" href="newmenu.do">신제품 소개</a>
+          <a class="list-group-item list-group-item-action list-group-item-light p-3" href="addMemCouponList.do">진행중 이벤트</a>
           <a class="list-group-item list-group-item-action list-group-item-light p-3" href="closedEvent.do">종료된 이벤트</a>
-          <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">할인안내</a>
       </div>
   </div>
 </div>
