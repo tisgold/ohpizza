@@ -5,10 +5,6 @@
 <input type="hidden" name="bno" value="${bno }">
 <table class="table">
 	<tr>
-		<th>제목</th>
-		<td><input class="form-control" type="text" name="title"></td>
-	</tr>
-	<tr>
 		<th>문의 내용</th>
 		<td><input class="form-control" type="text" readonly value="${question }"></td>
 	</tr>

@@ -16,7 +16,7 @@
 			    </div>
 			    <div class="col-12">
 			      <div class="form-floating mb-3">
-			        <textarea class="form-control" name="inquiry" id="inquiry"
+			        <textarea class="form-control" name="question" id="question"
 			        cols="100" rows="5" placeholder="문의내용 입력" required>
 			        </textarea>
 			        <label for="문의내용" class="form-label">문의내용</label>

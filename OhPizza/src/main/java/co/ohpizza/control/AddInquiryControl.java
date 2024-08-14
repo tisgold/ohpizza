@@ -32,7 +32,7 @@ public class AddInquiryControl implements Control {
 		BoardService bsv = new BoardServiceImpl();
 		
 		String msg = null;
-		String url = "inquiry.do";
+		String url = "inquiryList.do";
 		if(bsv.addInquiry(board)) {
 			msg = "문의가 등록되었습니다!";
 		}

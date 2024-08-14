@@ -17,6 +17,7 @@ public class AdminAnswerControl implements Control {
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp)//
 			throws ServletException, IOException {
+			req.setCharacterEncoding("UTF-8");
 
 		BoardService boardservice = new BoardServiceImpl();
 
