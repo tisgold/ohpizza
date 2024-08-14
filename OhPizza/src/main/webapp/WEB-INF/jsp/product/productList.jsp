@@ -97,7 +97,7 @@ a {
 												<div class="badge bg-dark text-white position-absolute"
 													style="top: 0.5rem; right: 0.5rem">Sale</div>
 												<!-- Product image-->
-												<img class="card-img-top" src="images/${product.image }"
+												<img class="card-img-top" src="${product.image }"
 													alt="..." />
 												<!-- Product details-->
 												<div class="card-body p-4">
@@ -145,7 +145,7 @@ a {
 												<div class="badge bg-dark text-white position-absolute"
 													style="top: 0.5rem; right: 0.5rem">Sale</div>
 												<!-- Product image-->
-												<img class="card-img-top" src="images/${product.image }"
+												<img class="card-img-top" src="${product.image }"
 													alt="..." />
 												<!-- Product details-->
 												<div class="card-body p-4">
@@ -193,7 +193,7 @@ a {
 												<div class="badge bg-dark text-white position-absolute"
 													style="top: 0.5rem; right: 0.5rem">Sale</div>
 												<!-- Product image-->
-												<img class="card-img-top" src="images/${product.image }"
+												<img class="card-img-top" src="${product.image }"
 													alt="..." />
 												<!-- Product details-->
 												<div class="card-body p-4">
@@ -246,7 +246,7 @@ a {
 										<div class="badge bg-dark text-white position-absolute"
 											style="top: 0.5rem; right: 0.5rem">Sale</div>
 										<!-- Product image-->
-										<img class="card-img-top" src="images/${product.image }"
+										<img class="card-img-top" src="${product.image }"
 											alt="..." />
 										<!-- Product details-->
 										<div class="card-body p-4">
@@ -296,7 +296,7 @@ a {
 										<div class="badge bg-dark text-white position-absolute"
 											style="top: 0.5rem; right: 0.5rem">Sale</div>
 										<!-- Product image-->
-										<img class="card-img-top" src="images/${product.image }"
+										<img class="card-img-top" src="${product.image }"
 											alt="..." />
 										<!-- Product details-->
 										<div class="card-body p-4">
@@ -350,7 +350,7 @@ a {
 												<div class="badge bg-dark text-white position-absolute"
 													style="top: 0.5rem; right: 0.5rem">Sale</div>
 												<!-- Product image-->
-												<img class="card-img-top" src="images/${product.image }"
+												<img class="card-img-top" src="${product.image }"
 													alt="..." />
 												<!-- Product details-->
 												<div class="card-body p-4">
@@ -397,7 +397,7 @@ a {
 												<div class="badge bg-dark text-white position-absolute"
 													style="top: 0.5rem; right: 0.5rem">Sale</div>
 												<!-- Product image-->
-												<img class="card-img-top" src="images/${product.image }"
+												<img class="card-img-top" src="${product.image }"
 													alt="..." />
 												<!-- Product details-->
 												<div class="card-body p-4">
@@ -444,7 +444,7 @@ a {
 												<div class="badge bg-dark text-white position-absolute"
 													style="top: 0.5rem; right: 0.5rem">Hot</div>
 												<!-- Product image-->
-												<img class="card-img-top" src="images/${product.image }"
+												<img class="card-img-top" src="${product.image }"
 													alt="..." />
 												<!-- Product details-->
 												<div class="card-body p-4">
@@ -486,7 +486,7 @@ a {
 												<div class="badge bg-dark text-white position-absolute"
 													style="top: 0.5rem; right: 0.5rem">Sale</div>
 												<!-- Product image-->
-												<img class="card-img-top" src="images/${product.image }"
+												<img class="card-img-top" src="${product.image }"
 													alt="..." />
 												<!-- Product details-->
 												<div class="card-body p-4">
@@ -642,7 +642,7 @@ a {
 												<div class="badge bg-dark text-white position-absolute"
 													style="top: 0.5rem; right: 0.5rem">Sale</div>
 												<!-- Product image-->
-												<img class="card-img-top" src="images/${product.image }"
+												<img class="card-img-top" src="${product.image }"
 													alt="..." />
 												<!-- Product details-->
 												<div class="card-body p-4">
@@ -690,7 +690,7 @@ a {
 												<div class="badge bg-dark text-white position-absolute"
 													style="top: 0.5rem; right: 0.5rem">Sale</div>
 												<!-- Product image-->
-												<img class="card-img-top" src="images/${product.image }"
+												<img class="card-img-top" src="${product.image }"
 													alt="..." />
 												<!-- Product details-->
 												<div class="card-body p-4">
@@ -738,7 +738,7 @@ a {
 												<div class="badge bg-dark text-white position-absolute"
 													style="top: 0.5rem; right: 0.5rem">Sale</div>
 												<!-- Product image-->
-												<img class="card-img-top" src="images/${product.image }"
+												<img class="card-img-top" src="${product.image }"
 													alt="..." />
 												<!-- Product details-->
 												<div class="card-body p-4">
@@ -791,7 +791,7 @@ a {
 										<div class="badge bg-dark text-white position-absolute"
 											style="top: 0.5rem; right: 0.5rem">Sale</div>
 										<!-- Product image-->
-										<img class="card-img-top" src="images/${product.image }"
+										<img class="card-img-top" src="${product.image }"
 											alt="..." />
 										<!-- Product details-->
 										<div class="card-body p-4">
@@ -841,7 +841,7 @@ a {
 										<div class="badge bg-dark text-white position-absolute"
 											style="top: 0.5rem; right: 0.5rem">Sale</div>
 										<!-- Product image-->
-										<img class="card-img-top" src="images/${product.image }"
+										<img class="card-img-top" src="${product.image }"
 											alt="..." />
 										<!-- Product details-->
 										<div class="card-body p-4">
@@ -895,7 +895,7 @@ a {
 												<div class="badge bg-dark text-white position-absolute"
 													style="top: 0.5rem; right: 0.5rem">Sale</div>
 												<!-- Product image-->
-												<img class="card-img-top" src="images/${product.image }"
+												<img class="card-img-top" src="${product.image }"
 													alt="..." />
 												<!-- Product details-->
 												<div class="card-body p-4">
@@ -942,7 +942,7 @@ a {
 												<div class="badge bg-dark text-white position-absolute"
 													style="top: 0.5rem; right: 0.5rem">Sale</div>
 												<!-- Product image-->
-												<img class="card-img-top" src="images/${product.image }"
+												<img class="card-img-top" src="${product.image }"
 													alt="..." />
 												<!-- Product details-->
 												<div class="card-body p-4">
@@ -989,7 +989,7 @@ a {
 												<div class="badge bg-dark text-white position-absolute"
 													style="top: 0.5rem; right: 0.5rem">Hot</div>
 												<!-- Product image-->
-												<img class="card-img-top" src="images/${product.image }"
+												<img class="card-img-top" src="${product.image }"
 													alt="..." />
 												<!-- Product details-->
 												<div class="card-body p-4">
@@ -1031,7 +1031,7 @@ a {
 												<div class="badge bg-dark text-white position-absolute"
 													style="top: 0.5rem; right: 0.5rem">Sale</div>
 												<!-- Product image-->
-												<img class="card-img-top" src="images/${product.image }"
+												<img class="card-img-top" src="${product.image }"
 													alt="..." />
 												<!-- Product details-->
 												<div class="card-body p-4">

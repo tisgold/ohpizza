@@ -18,7 +18,7 @@ a {
 				<!--  history.back()을 사용하면 이전페이지로 돌아감  -->
 				<a href="productList.do?type=${prod.prodType }">목록으로</a>
 				<p></p>
-				<img class="card-img-top mb-5 mb-md-0" src="images/${prod.image}"
+				<img class="card-img-top mb-5 mb-md-0" src="${prod.image}"
 					alt="..." />
 			</div>
 			<div class="col-md-6">

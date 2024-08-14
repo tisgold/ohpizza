@@ -13,7 +13,7 @@ public class tuesdayEvent implements Control {
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		req.getRequestDispatcher("user/tuesdayEvent.tiles").forward(req, resp);
+		req.getRequestDispatcher("event/tuesdayEvent.tiles").forward(req, resp);
 
 	}
 

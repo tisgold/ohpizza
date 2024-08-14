@@ -31,7 +31,7 @@ public class EventControl implements Control {
 //		}
 
 		req.setAttribute("prod", pvo);
-		req.getRequestDispatcher("product/event.tiles").forward(req, resp);
+		req.getRequestDispatcher("event/event.tiles").forward(req, resp);
 	}
 
 }

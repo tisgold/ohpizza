@@ -139,6 +139,7 @@ public class FrontController extends HttpServlet {
 		map.put("/SubscriptionCoupon.do", new SubscriptionCoupon());
 		// 월요일쿠폰
 		map.put("/MondayEvent.do", new MondayEvent());
+		
 		// 쿠폰 리스트
 		map.put("/couponList.do", new CouponList());
 		

@@ -137,7 +137,7 @@
 			<div class="carousel-inner">
 				<div class="carousel-item active">
 					<a
-						href="http://localhost/OhPizza/productInfo.do?type=pizza&prodNo=10000001">
+						href="productInfo.do?type=pizza&prodNo=10000002">
 						<img src="images/mainEvent3.jpg" class="d-block w-100" alt="...">
 					</a>
 				</div>
@@ -194,7 +194,7 @@
 							<div class="card-body p-4">
 								<div class="badge bg-primary bg-danger rounded-pill mb-2">HOT!</div>
 								<a class="text-decoration-none link-dark stretched-link"
-									href="http://localhost/OhPizza/productInfo.do?type=pizza&prodNo=10000001"><h5 class="card-title mb-3">시크릿가든</h5></a>
+									href="productInfo.do?type=pizza&prodNo=10000001"><h5 class="card-title mb-3">시크릿가든</h5></a>
 								<p class="card-text mb-0">S케이준치킨과 시금치로 더 라이트하고 담백하게 즐길 수 있는
 									웰빙 피자! ‘시크릿가든’</p>
 							</div>
@@ -209,11 +209,11 @@
 					</div>
 					<div class="col-lg-4 mb-5">
 						<div class="card h-100 shadow border-0">
-							<img class="card-img-top" src="images/sphotato.jpg" alt="..." />
+							<img class="card-img-top" src="https://cdn.mrpizza.co.kr/2011/uploadV1/product_new/20243792316094.jpg" alt="..." />
 							<div class="card-body p-4">
 								<div class="badge bg-primary bg-danger rounded-pill mb-2">HOT!</div>
 								<a class="text-decoration-none link-dark stretched-link"
-									href="#!"><h5 class="card-title mb-3">더 히든 시크릿</h5></a>
+									href="productInfo.do?type=pizza&prodNo=10000002"><h5 class="card-title mb-3">더 히든 시크릿</h5></a>
 								<p class="card-text mb-0">한 판에 즐기는 2가지 히든 메뉴의 환상의 콜라보! 프레시한
 									마르게리따에 숨겨진 비밀 레시피! 씬도우의 바삭함과 색다른 조합으로 부담없는 담백함이 매력인 피자! 바질소스의
 									후토핑으로 풍미는 UP! 도우와 도우사이 토핑과 치즈가 들어간 샌드 피자!</p>
@@ -233,7 +233,7 @@
 							<div class="card-body p-4">
 								<div class="badge bg-primary bg-danger rounded-pill mb-2">HOT!</div>
 								<a class="text-decoration-none link-dark stretched-link"
-									href="http://localhost/OhPizza/productInfo.do?type=pizza&prodNo=10000002"><h5 class="card-title mb-3">햄벅한새우</h5></a>
+									href="productInfo.do?type=pizza&prodNo=10000003"><h5 class="card-title mb-3">햄벅한새우</h5></a>
 								<p class="card-text mb-0">치즈 햄버거와 마요 콘새우의 행복한 맛남! 히코리BBQ소스의
 									치즈 햄버거 토핑과 치즈시즈닝이 뿌려진 탱글탱글한 마요 콘새우 토핑의 사이좋은 반반 조화 풍미가득한 비프와
 									프레쉬한 씨푸드가 드리는 완벽한 만족감을 직접 느껴보세요!</p>

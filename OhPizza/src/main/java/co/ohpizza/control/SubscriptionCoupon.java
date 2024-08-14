@@ -17,7 +17,7 @@ public class SubscriptionCoupon implements Control {
 		
 		
 		
-		req.getRequestDispatcher("user/SubscriptionCoupon.tiles").forward(req, resp);
+		req.getRequestDispatcher("event/SubscriptionCoupon.tiles").forward(req, resp);
 
 	}
 
