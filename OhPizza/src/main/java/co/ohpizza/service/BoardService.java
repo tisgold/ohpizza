@@ -37,5 +37,8 @@ public interface BoardService {
     
     //C타입 게시물 총 건수
   	int totalCntTypeC();
+  	
+	//관리자용 답변 
+	boolean adminAnswer(BoardVO boardvo);
 }
 

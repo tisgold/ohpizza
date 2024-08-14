@@ -49,7 +49,8 @@ import co.ohpizza.control.AddOrderControl;
 import co.ohpizza.control.AdminAnswerListControl;
 
 import co.ohpizza.control.AddStoreControl;
-import co.ohpizza.control.AdminAnswerFormControl;
+import co.ohpizza.control.AdminAnswerControl;
+import co.ohpizza.control.AdminAnswerForm;
 import co.ohpizza.control.BoardDetailControl;
 import co.ohpizza.control.BoardFormControl;
 import co.ohpizza.control.BoardListControl;
@@ -191,8 +192,10 @@ public class FrontController extends HttpServlet {
 		map.put("/createCoupon.do", new CreateCouponControl());
 		//관리자용 문의 게시판 출력 기능
 		map.put("/adminAnswerList.do", new AdminAnswerListControl());
-		//관리자용 문의 폼
-		map.put("/adminAnswerForm.do", new AdminAnswerFormControl());
+		//관리자용 답변 추가 기능
+		map.put("/adminAnswer.do", new AdminAnswerControl());
+		//관리자용 답변 추가 폼
+		map.put("/adminAnswerForm.do", new AdminAnswerForm());
 		
 		// 매장 정보 확인
 		map.put("/storeList.do", new StoreListControl());

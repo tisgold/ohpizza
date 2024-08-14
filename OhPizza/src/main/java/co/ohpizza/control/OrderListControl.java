@@ -22,7 +22,7 @@ public class OrderListControl implements Control {
 		
 		OrderService svc = new OrderServiceImpl();
 		
-		List<OrderVO> list = svc.orderList(id);
+		List<OrderVO> list = svc.orderEList(id);
 		req.setAttribute("orders", list);
 		req.getRequestDispatcher("user/orderList.tiles").forward(req, resp);
 

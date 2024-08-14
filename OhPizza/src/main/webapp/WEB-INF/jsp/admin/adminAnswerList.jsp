@@ -8,7 +8,8 @@
 				<th scope="col">작성일</th>
 				<th scope="col">제목</th>
 				<th scope="col">작성자</th>
-				<th scope="col">처리상태</th>
+				<th scope="col">답변</th>
+				<th scope="col">답변 상태</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -17,7 +18,14 @@
 					<td>${adminList.boardDate() }</td>
 					<td><a href="adminAnswerList.do?pageNum=${adminList.boardNo }" style="text-decoration-line: none; color:black">${adminList.boardTitle }</a></td>
 					<td>${adminList.memId }</td>
-					<td></td>
+					<c:choose>
+					<c:when test="${adminList.answer == null }">
+					<td><button onclick="location.href='adminAnswerForm.do?bno=${adminList.boardNo }'">답변하기</button></td>
+					</c:when>
+					<c:otherwise>
+					<td>${adminList.answer }</td>
+					</c:otherwise>
+					</c:choose>
 				</tr>
 			</c:forEach>
 		</tbody>

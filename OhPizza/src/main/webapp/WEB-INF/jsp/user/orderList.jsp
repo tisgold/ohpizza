@@ -21,7 +21,7 @@
 	       <td>${order.orderDate() }</td>
 	       <td>${order.ordNo }</td>
 	       <td>${order.price } 원</td>
-	       <td>${order.price } 원</td>
+	       <td>0 원</td>
 	       <td>${order.price } 원</td>
 	       <td>${order.locName }</td>
 	     </tr>
