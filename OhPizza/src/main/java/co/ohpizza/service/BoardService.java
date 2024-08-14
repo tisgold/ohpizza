@@ -12,7 +12,7 @@ public interface BoardService {
 	int totalPage();
 	
 	//건의 사항용 총 게시물
-	int inquirypage();
+	int inquirypage(String memId);
 	
 	//게시물 번호를 기준으로 게시물 상세 페이지로 이동하는 기능
 	BoardVO boardDetail(int bno);

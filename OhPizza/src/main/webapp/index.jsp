@@ -76,7 +76,7 @@
 						<li class="nav-item"><a class="nav-link" href="#">
 							<nav class="navbar navbar-light bg-white">
 								<div class="container-fluid">
-									<a class="navbar-brand" href="#"> <img
+									<a class="navbar-brand" href="storeList.do"> <img
 									src="images/menu3.jpg" alt="" width="150" height="60"
 									class="d-inline-block align-text-top">
 									</a>

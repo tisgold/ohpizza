@@ -25,7 +25,7 @@ public class InquiryListControl implements Control {
 		BoardService boardService = new BoardServiceImpl();
 		String page = req.getParameter("page");
 		page = page == null ? "1" : page;
-		int totalCnt = boardService.inquirypage();
+		int totalCnt = boardService.inquirypage(id);
 		PageDTO pageDTO = new PageDTO(Integer.parseInt(page), totalCnt, 5);	
 		System.out.println(page);
 		

@@ -14,7 +14,7 @@ public interface BoardMapper {
 	int totalPage();
 	
 	//건의 사항용 총 게시물
-    int inquirypage();
+    int inquirypage(String memId);
 	
 	//게시물 상세화면 출력
 	BoardVO boardDetail(int bno);

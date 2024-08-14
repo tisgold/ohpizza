@@ -16,6 +16,7 @@ public class AddBoardControl implements Control {
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp)//
 	throws ServletException, IOException {
+		req.setCharacterEncoding("UTF-8");
 
 		String title = req.getParameter("title");
 		String review = req.getParameter("review");

@@ -22,8 +22,8 @@ public class BoardServiceImpl implements BoardService {
 		return mapper.totalPage();
 	}
 	@Override
-	public int inquirypage() {
-		return mapper.inquirypage();
+	public int inquirypage(String memId) {
+		return mapper.inquirypage(memId);
 	}
 
 	@Override

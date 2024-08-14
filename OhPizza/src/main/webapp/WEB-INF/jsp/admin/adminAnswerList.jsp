@@ -9,7 +9,6 @@
 				<th scope="col">제목</th>
 				<th scope="col">작성자</th>
 				<th scope="col">답변</th>
-				<th scope="col">답변 상태</th>
 			</tr>
 		</thead>
 		<tbody>
