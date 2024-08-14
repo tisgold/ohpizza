@@ -25,8 +25,6 @@ public class AdminAnswerFormControl implements Control {
 		boardvo.setBoardTitle(title);
 		boardvo.setAnswer(answer);
 		
-		if(boardservice.)
-		
 
 	}
 
