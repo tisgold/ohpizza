@@ -8,7 +8,11 @@ import co.ohpizza.vo.CouponVO;
 import co.ohpizza.vo.MemCouponVO;
 
 public interface CouponMapper {
-	// 쿠폰 등록(Admin)
+	// 쿠폰 전체 목록 (Admin)
+	List<CouponVO> selectCoupons();
+	// 쿠폰 삭제 (Admin)
+	int removeCoupon(String name);
+	// 쿠폰 등록 (Admin)
 	int insertCoupon(CouponVO coupon);
 	
 	// 쿠폰 할인율

@@ -49,8 +49,6 @@ public class LoginCheckControl implements Control {
 			System.out.println("권한을 지정하세요!");
 		}
 		
-//		req.getRequestDispatcher("product/productList.tiles").forward(req, resp);
-
 	}
 
 }

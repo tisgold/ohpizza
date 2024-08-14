@@ -15,9 +15,10 @@
        </div>
      </div>
      <div class="col-12">
-       <div class="d-grid">
+       <!-- <div class="d-grid"> -->
          <button class="btn bsb-btn-2xl btn-primary" type="submit">쿠폰등록</button>
-       </div>
+         <button class="btn bsb-btn-2xl btn-secondary" type="submit">등록취소</button>
+       <!-- </div> -->
      </div>
    </div>
 </form>
