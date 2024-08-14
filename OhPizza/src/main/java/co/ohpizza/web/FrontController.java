@@ -57,6 +57,7 @@ import co.ohpizza.control.CartControl;
 import co.ohpizza.control.CartDeleteControl;
 import co.ohpizza.control.CartNoControl;
 import co.ohpizza.control.ClosedEventControl;
+import co.ohpizza.control.CouponList;
 import co.ohpizza.control.CouponListControl;
 import co.ohpizza.control.MyCouponControl;
 
@@ -65,7 +66,6 @@ import co.ohpizza.control.CreateMemberControl;
 import co.ohpizza.control.CreateStoreControl;
 import co.ohpizza.control.DeleteCouponControl;
 
-import co.ohpizza.control.DiscountCouponControl;
 import co.ohpizza.control.DownPcntControl;
 
 import co.ohpizza.control.DeleteMeControl;
@@ -75,7 +75,7 @@ import co.ohpizza.control.EventControl;
 import co.ohpizza.control.IdCheckControl;
 
 import co.ohpizza.control.EventsProgress;
-
+import co.ohpizza.control.FinalBuyControl;
 import co.ohpizza.control.FindPassControl;
 
 import co.ohpizza.control.InquiryListControl;
@@ -115,7 +115,6 @@ public class FrontController extends HttpServlet {
 		map.put("/addMember.do", new AddMemberControl());
 		// 회원가입 (멤버 추가)
 		map.put("/createMember.do", new CreateMemberControl());
-
 		// 회원가입 (id중복체크)
 		map.put("/idCheck.do", new IdCheckControl());
 
@@ -140,6 +139,9 @@ public class FrontController extends HttpServlet {
 		map.put("/SubscriptionCoupon.do", new SubscriptionCoupon());
 		// 월요일쿠폰
 		map.put("/MondayEvent.do", new MondayEvent());
+		// 쿠폰 리스트
+		map.put("/couponList.do", new CouponList());
+		
 
 		//게시판 기능
 		// 게시판 리스트
@@ -220,6 +222,9 @@ public class FrontController extends HttpServlet {
 		map.put("/UpPcnt.do", new UpPcntControl());
 		
 		map.put("/downPcnt.do", new DownPcntControl());
+		
+		// 최종 결제 버튼 눌렀을 때
+		map.put("/finalBuy.do", new FinalBuyControl());
   }
 
 	@Override

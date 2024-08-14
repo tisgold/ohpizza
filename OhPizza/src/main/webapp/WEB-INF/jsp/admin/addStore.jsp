@@ -30,15 +30,25 @@
 	 </div>	
      <div class="col-12">
        <div class="form-floating mb-3">
+         <input type="text" class="form-control" name="lat" id="lat" placeholder="위도 입력" required>
+         <label for="위도" class="form-label">위도</label>
+       </div>
+     </div>
+     <div class="col-12">
+       <div class="form-floating mb-3">
+         <input type="text" class="form-control" name="long" id="long" placeholder="경도 입력" required>
+         <label for="경도" class="form-label">경도</label>
+       </div>
+     </div>
+     <div class="col-12">
+       <div class="form-floating mb-3">
          <input type="text" class="form-control" name="locName" id="locName" placeholder="지점명 입력" required>
          <label for="지점명" class="form-label">지점명</label>
        </div>
      </div>
      <div class="col-12">
-       
          <button class="btn bsb-btn-2xl btn-primary" type="submit">매장등록</button>
          <button class="btn bsb-btn-2xl btn-secondary" type="submit">등록취소</button>
-       
      </div>
    </div>
 </form>

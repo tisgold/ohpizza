@@ -21,5 +21,8 @@ public interface CouponService {
 	
 	// 회원 쿠폰 발급 (kangwonjun)
 	boolean addMemCoupon(MemCouponVO mcvo);
+	
+	// 쿠폰 중복 발급 확인
+	int duplicateCoupon(String memId, String couponName);
 
 }

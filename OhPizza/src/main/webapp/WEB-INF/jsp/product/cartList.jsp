@@ -27,8 +27,8 @@
 					<tbody>
 						<c:forEach var="cart" items="${cartList }">
 							<tr class="cartlistdetail">
-								<td><input type="checkbox" value="${cart }" name="clist" onclick='priceCart()'></td>
-								<td><img src="image/${cart.prodName }.jpg" alt="pizza">
+								<td><input type="checkbox" value="${cart }" name="clist" onclick='checkCart()'><input type="hidden" value=${cart.listNo }></td>
+								<td><!--<img src="image/${cart.prodName }.jpg" alt="pizza">-->
 									<a href="productInfo.do?prodNo=${cart.prodNo }">${cart.prodName }</a>
 								</td>
 								<td><span class="price">${cart.prodPrice }</span></td>
@@ -55,13 +55,13 @@
 					</tbody>
 				</table>
 
-				<form action="pay.do">
+				<div>
 					<input type=hidden name=id value='${logId }'>
 					<input type=hidden name=cart value='${cartList }'>
 					<input type=hidden name=price value='${aPrice }'>
-					<h1>총 가격: ${json }</h1>
-					<button type=button onclick='checkCart()'>결제하기</button>
-				</form>
+					<h1>총 가격: </h1><h1 id=aPrice></h1>
+					<button type=button onclick='priceCart()'>결제하기</button>
+				</div>
 			</section>
 
 		</body>

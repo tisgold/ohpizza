@@ -16,8 +16,8 @@
   </delete>
   
   <insert id="insertStore" parameterType="co.ohpizza.vo.StoreVO">
-    insert into tbl_store (str_name, address, phone, loc_name)
-    values (#{strName}, #{address}, #{phone}, #{locName})
+    insert into tbl_store (str_name, address, phone, loc_name, latitude, longitude)
+    values (#{strName}, #{address}, #{phone}, #{locName}, #{latitude}, #{longitude})
   </insert>
 
 </mapper>

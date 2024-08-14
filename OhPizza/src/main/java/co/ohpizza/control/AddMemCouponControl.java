@@ -30,14 +30,31 @@ public class AddMemCouponControl implements Control {
 		String msg = null;
 		String url = "eventsProgress.do";
 		CouponService csv = new CouponServiceImpl();
-		
-		if (csv.addMemCoupon(mcvo)) {
-			msg = "성공적으로 발행되었습니다.";
+
+		// 중복 발급 체크
+		if (csv.duplicateCoupon(id, couponName) < 1) {
+			if(csv.addMemCoupon(mcvo)) {
+				msg = "성공적으로 발행되었습니다.";
+			}else {
+				msg = "발행중 오류가 발생했습니다.";
+			}
 		} else {
-			msg = "오류가발생했습니다.";
-			url = "addMemCoupShow.do";
+			msg = "이미 발행되었습니다.";
 		}
 		AlertControl.alertAndGo(resp, msg, url);
+		
+//		else {
+//			msg = "중복된 쿠폰입니다.";
+//		}
 
+//		// 쿠폰 발급
+//		if (csv.addMemCoupon(mcvo)) {
+//			msg = "성공적으로 발행되었습니다.";
+//		} else {
+//			msg = "오류가발생했습니다.";
+//			url = "addMemCoupShow.do";
+//		}
+//		AlertControl.alertAndGo(resp, msg, url);
+//	}
 	}
 }
