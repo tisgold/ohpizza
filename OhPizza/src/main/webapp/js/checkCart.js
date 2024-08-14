@@ -91,7 +91,25 @@ function checkCart() {
 	})
 
 	document.getElementById('aPrice').innerHTML = allPrice;
-
+	
+	chCheck();
 
 }
 
+function allCheck(e) {
+	const query = 'input[name="clist"]';
+	document.querySelectorAll(query).forEach((c) => {
+		c.checked = e.checked;
+	})
+	checkCart();
+}
+
+function chCheck() {
+	  const aCheck = document.getElementById('aCheck');
+		const query = 'input[name="clist"]';
+	document.querySelectorAll(query).forEach((c) => {
+		if(c.checked === false){
+		 	aCheck.checked = false;
+		}	
+	})
+}

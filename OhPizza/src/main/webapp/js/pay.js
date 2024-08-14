@@ -4,6 +4,7 @@
 
 function buy(){
 	
+	
 	let listNoL = [];
 	
 	let lastPrice = document.querySelector('input[name="aPrice"]').value;
