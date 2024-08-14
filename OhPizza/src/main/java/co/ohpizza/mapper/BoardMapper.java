@@ -39,5 +39,8 @@ public interface BoardMapper {
 	//C타입 게시물 총 건수
 	int totalCntTypeC();
 	
+	//관리자용 답변 
+	int adminAnswer(BoardVO boardvo);
+	
 	
 }
