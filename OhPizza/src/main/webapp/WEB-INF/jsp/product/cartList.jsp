@@ -15,16 +15,16 @@
 				</div>
 				<table class="cartlist">
 					<thead>
+					</thead>
+
+					<tbody>
 						<tr>
-							<th><input type="checkbox"></th>
+							<th><input type="checkbox" id="aCheck" onclick='allCheck(this)'></th>
 							<th>제품명</th>
 							<th>가격</th>
 							<th>개수</th>
 							<th>총가격</th>
 						</tr>
-					</thead>
-
-					<tbody>
 						<c:forEach var="cart" items="${cartList }">
 							<tr class="cartlistdetail">
 								<td><input type="checkbox" value="${cart }" name="clist" onclick='checkCart()'><input type="hidden" value=${cart.listNo }></td>
@@ -59,7 +59,7 @@
 					<input type=hidden name=id value='${logId }'>
 					<input type=hidden name=cart value='${cartList }'>
 					<input type=hidden name=price value='${aPrice }'>
-					<h1>총 가격: </h1><h1 id=aPrice></h1>
+					<h1>총 가격: </h1><h1 id=aPrice>0</h1>
 					<button type=button onclick='priceCart()'>결제하기</button>
 				</div>
 			</section>

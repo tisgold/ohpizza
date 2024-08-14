@@ -25,4 +25,5 @@ public interface OrderService {
 
 	int updateOrder(int ordNo);
 
+	List<OrderVO> orderEList(String memId);
 }

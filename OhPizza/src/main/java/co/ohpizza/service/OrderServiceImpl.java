@@ -64,6 +64,13 @@ public class OrderServiceImpl implements OrderService {
 		// TODO Auto-generated method stub
 		return mapper.updateOrder(ordNo);
 	}
+
+
+	@Override
+	public List<OrderVO> orderEList(String memId) {
+		// TODO Auto-generated method stub
+		return mapper.orderEList(memId);
+	}
 	
 	
 

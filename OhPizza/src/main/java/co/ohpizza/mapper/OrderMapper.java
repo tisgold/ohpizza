@@ -27,4 +27,6 @@ public interface OrderMapper {
 	OrderVO selectPOrder(String memId);
 
 	int updateOrder(int ordNo);
+	
+	List<OrderVO> orderEList(String memId);
 }
