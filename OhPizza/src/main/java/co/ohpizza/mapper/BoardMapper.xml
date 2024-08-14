@@ -98,5 +98,9 @@
       and board_type = 'C'
       order by board_date DESC
 	</select>
+	
+	<update id="adminAnswer" parameterType="int">
+	update into tbl_board
+	</update>
 
 </mapper>

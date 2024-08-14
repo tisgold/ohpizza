@@ -39,4 +39,5 @@ public interface BoardMapper {
 	//C타입 게시물 총 건수
 	int totalCntTypeC();
 	
+	
 }
