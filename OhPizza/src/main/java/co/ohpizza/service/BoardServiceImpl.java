@@ -63,6 +63,9 @@ public class BoardServiceImpl implements BoardService {
 	public int totalCntTypeC() {
 		return mapper.totalCntTypeC();
 	}
-	
+	@Override
+	public boolean adminAnswer(BoardVO boardvo) {
+		return mapper.adminAnswer(boardvo) == 1;
+	}
 	
 }

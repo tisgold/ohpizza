@@ -11,7 +11,6 @@
 			<th scope="col">제목</th>
 			<th scope="col">문의내용</th>
 			<th scope="col">답변</th>
-
 			<!-- <th scope="col">등록 ID</th> -->
 		</tr>
 	</thead>

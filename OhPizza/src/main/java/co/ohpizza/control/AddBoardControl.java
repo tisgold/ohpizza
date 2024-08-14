@@ -14,7 +14,8 @@ import co.ohpizza.vo.BoardVO;
 public class AddBoardControl implements Control {
 
 	@Override
-	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	public void exec(HttpServletRequest req, HttpServletResponse resp)//
+	throws ServletException, IOException {
 
 		String title = req.getParameter("title");
 		String review = req.getParameter("review");
