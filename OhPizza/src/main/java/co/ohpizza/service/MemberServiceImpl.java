@@ -29,6 +29,11 @@ public class MemberServiceImpl implements MemberService {
 		return mapper.checkMember(id, pw);
 	}
 
+	@Override
+	public String getPassword(MemberVO mvo) {
+		return mapper.findPass(mvo);
+	}
+	
 	// 회원가입
 	@Override
 	public boolean newMember(MemberVO mvo) {

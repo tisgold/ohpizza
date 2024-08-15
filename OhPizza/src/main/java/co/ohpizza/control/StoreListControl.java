@@ -19,15 +19,21 @@ public class StoreListControl implements Control {
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		HttpSession session = req.getSession(false);
 		String id = (String) session.getAttribute("logId");
+		
 		StoreService ssv = new StoreServiceImpl();
 		List<StoreVO> stores = ssv.storeList();
 		
 		req.setAttribute("stores", stores);
-		if(id.equals("admin")) {
-			req.getRequestDispatcher("admin/storeList.tiles").forward(req, resp);
+		if(id == null) {
+			req.getRequestDispatcher("store/storeList.tiles").forward(req, resp);
 		}
 		else {
-			req.getRequestDispatcher("store/storeList.tiles").forward(req, resp);
+			if(id.equals("admin")) {
+				req.getRequestDispatcher("admin/storeList.tiles").forward(req, resp);
+			}
+			else {
+				req.getRequestDispatcher("store/storeList.tiles").forward(req, resp);
+			}
 		}
 
 	}

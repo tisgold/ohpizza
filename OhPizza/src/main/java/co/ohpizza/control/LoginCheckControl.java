@@ -25,10 +25,6 @@ public class LoginCheckControl implements Control {
 		MemberVO mvo = msv.loginCheck(id, pw);
 
 		if(mvo == null) {
-			// 메세지를 "아이디와 비밀번호를 확인하세요!"
-			// req.setAttribute("msg", "아이디와 비밀번호를 확인하세요!");
-			// req.getRequestDispatcher("account/login.tiles").forward(req, resp);
-			
 			String msg = "아이디와 비밀번호를 확인하세요!";
 			String url = "login.do";
 			AlertControl.alertAndGo(resp, msg, url);
@@ -46,7 +42,8 @@ public class LoginCheckControl implements Control {
 			resp.sendRedirect("memberList.do");
 		}
 		else {
-			System.out.println("권한을 지정하세요!");
+			String msg = "권한을 지정하세요!";
+			AlertControl.alert(resp, msg);
 		}
 		
 	}

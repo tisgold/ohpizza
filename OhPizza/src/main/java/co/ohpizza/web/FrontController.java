@@ -17,7 +17,6 @@ import co.ohpizza.control.LogoutControl;
 import co.ohpizza.control.MemberListControl;
 
 import co.ohpizza.control.UpPcntControl;
-import co.ohpizza.control.MondayEvent;
 
 import co.ohpizza.control.ProductControl;
 import co.ohpizza.control.ProductListControl;
@@ -26,12 +25,7 @@ import co.ohpizza.control.ShowMemInfoControl;
 
 import co.ohpizza.control.StoreListControl;
 
-import co.ohpizza.control.SubscriptionCoupon;
 import co.ohpizza.control.UpdateMemInfoControl;
-
-import co.ohpizza.control.AddMemCouponListControl;
-import co.ohpizza.control.TuesdayEvent;
-import co.ohpizza.control.AddMemCoupShowControl;
 
 import co.ohpizza.control.AddBoardControl;
 
@@ -58,13 +52,14 @@ import co.ohpizza.control.CartControl;
 import co.ohpizza.control.CartDeleteControl;
 import co.ohpizza.control.CartNoControl;
 import co.ohpizza.control.ClosedEventControl;
-import co.ohpizza.control.CouponList;
 import co.ohpizza.control.CouponListControl;
 import co.ohpizza.control.MyCouponControl;
 
 import co.ohpizza.control.CreateMemberControl;
 
 import co.ohpizza.control.CreateStoreControl;
+import co.ohpizza.control.CurrentEventControl;
+import co.ohpizza.control.ShowCurrEventControl;
 import co.ohpizza.control.DeleteCouponControl;
 
 import co.ohpizza.control.DownPcntControl;
@@ -75,14 +70,12 @@ import co.ohpizza.control.EventControl;
 
 import co.ohpizza.control.IdCheckControl;
 
-import co.ohpizza.control.EventsProgress;
 import co.ohpizza.control.FinalBuyControl;
 import co.ohpizza.control.FindPassControl;
-
+import co.ohpizza.control.GetPassControl;
 import co.ohpizza.control.InquiryListControl;
 
 import co.ohpizza.control.MypageControl;
-import co.ohpizza.control.NewmenuControl;
 
 
 import co.ohpizza.control.OrderListControl;
@@ -111,6 +104,8 @@ public class FrontController extends HttpServlet {
 
 		// 비밀번호 찾기 화면
 		map.put("/findPass.do", new FindPassControl());
+		// 비밀번호 재발급(입력) 구현
+		map.put("/getPass.do", new GetPassControl());
 		
 		
 		// 회원가입 화면
@@ -120,33 +115,17 @@ public class FrontController extends HttpServlet {
 		// 회원가입 (id중복체크)
 		map.put("/idCheck.do", new IdCheckControl());
 
-		// 이벤트
-		map.put("/event.do", new EventControl());	
-		// 이벤트 신메뉴
-		map.put("/newmenu.do", new NewmenuControl());
-		// 종료된 이벤트
-		map.put("/closedEvent.do", new ClosedEventControl());
-		// 유저 가입 쿠폰 발급화면
-		map.put("/addMemCoupShow.do", new AddMemCoupShowControl());
+		// 이벤트 (신메뉴 페이지)
+		map.put("/event.do", new EventControl());
+		// 진행중인 이벤트 화면
+		map.put("/showCurrEvent.do", new ShowCurrEventControl());
+		// 진행중인 이벤트
+		map.put("/currentEvent.do", new CurrentEventControl());
 		// 유저 쿠폰 발급
 		map.put("/addMemCoupon.do", new AddMemCouponControl());
-
-		// 진행중인 이벤트 (쿠폰 발행 이벤트)
-		map.put("/eventsProgress.do", new EventsProgress());
-		// 진행중인 이벤트 
-		map.put("/addMemCopon.do", new AddMemCouponListControl());
-		// 화요일 이벤트 
-
-		map.put("/tuesdayEvent.do", new TuesdayEvent());
-		// 가입기념쿠폰
-		map.put("/SubscriptionCoupon.do", new SubscriptionCoupon());
-		// 월요일쿠폰
-		map.put("/MondayEvent.do", new MondayEvent());
+		// 종료된 이벤트
+		map.put("/closedEvent.do", new ClosedEventControl());
 		
-		// 쿠폰 리스트
-		map.put("/couponList.do", new CouponList());
-		
-
 		//게시판 기능
 		// 게시판 리스트
 		map.put("/boardList.do", new BoardListControl());

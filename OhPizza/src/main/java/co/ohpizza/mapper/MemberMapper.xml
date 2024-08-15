@@ -22,12 +22,22 @@
 		where mem_id = #{id}
 	</delete>
 	
+	<!-- 로그인 체크 -->
 	<select id="checkMember" parameterType="string"
 		resultType="co.ohpizza.vo.MemberVO">
 		select *
 		from tbl_member
 		where mem_id = #{id}
 		and mem_pw = #{pw}
+	</select>
+	
+	<!-- 비빌번호 찾기 -->
+	<select id="findPass" parameterType="co.ohpizza.vo.MemberVO" resultType="string">
+		select mem_pw
+		from tbl_member
+		where mem_id = #{memId}
+		and mem_name = #{memName}
+		and email = #{email}
 	</select>
 	
 	<!-- 회원가입 -->

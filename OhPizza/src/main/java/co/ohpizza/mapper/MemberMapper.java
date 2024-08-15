@@ -16,6 +16,9 @@ public interface MemberMapper {
 	// 로그인 체크
 	MemberVO checkMember(@Param("id") String id, @Param("pw") String pw); // xml에서 사용
 	
+	// 비밀번호 찾기
+	String findPass(MemberVO mvo);
+	
 	// 회원가입
 	int insertMember(MemberVO mvo);
 	
