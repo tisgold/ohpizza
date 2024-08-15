@@ -23,6 +23,8 @@
         <!-- Navigation-->
         <tiles:insertAttribute name="header" />
         <!-- Body -->
+        <tiles:insertAttribute name="menu" />
+        <!-- Body -->
         <tiles:insertAttribute name="body" />
         </main>
         <!-- Footer-->

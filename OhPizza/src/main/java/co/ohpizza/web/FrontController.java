@@ -112,6 +112,7 @@ public class FrontController extends HttpServlet {
 		// 비밀번호 찾기 화면
 		map.put("/findPass.do", new FindPassControl());
 		
+		
 		// 회원가입 화면
 		map.put("/addMember.do", new AddMemberControl());
 		// 회원가입 (멤버 추가)

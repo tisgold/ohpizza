@@ -19,6 +19,7 @@
 <!-- Core theme CSS (includes Bootstrap)-->
 <link href="css/styles.css" rel="stylesheet" />
 <link href="css/indexSidebar.css" rel="stylesheet" />
+
 </head>
 <body class="d-flex flex-column h-100">
 	<main class="flex-shrink-0">
@@ -32,7 +33,7 @@
 					<nav class="navbar navbar-light bg-white">
 						<div class="container-fluid">
 							<a class="navbar-brand" href="index.jsp"> <img
-							src="images/ohPizzaLoge.jpg" alt="" width="180" height="80"
+							src="images/ohPizzaLoge.jpg" alt="" width="200" height="90"
 							class="d-inline-block align-text-top">
 							</a>
 						</div>
@@ -64,7 +65,7 @@
 							<nav class="navbar navbar-light bg-white">
 								<div class="container-fluid">
 									<a class="navbar-brand" href="productList.do"> <img
-									src="images/menu2.jpg" alt="" width="125" height="50"
+									src="images/menu2.jpg" alt="" width="150" height="60"
 									class="d-inline-block align-text-top">
 									</a>
 								</div>
@@ -76,7 +77,7 @@
 							<nav class="navbar navbar-light bg-white">
 								<div class="container-fluid">
 									<a class="navbar-brand" href="storeList.do"> <img
-									src="images/menu3.jpg" alt="" width="125" height="50"
+									src="images/menu3.jpg" alt="" width="150" height="60"
 									class="d-inline-block align-text-top">
 									</a>
 								</div>
@@ -88,7 +89,7 @@
 							<nav class="navbar navbar-light bg-white">
 								<div class="container-fluid">
 									<a class="navbar-brand" href="event.do"> <img
-									src="images/menu4.jpg" alt="" width="125" height="50"
+									src="images/menu4.jpg" alt="" width="150" height="60"
 									class="d-inline-block align-text-top">
 									</a>
 								</div>
@@ -100,7 +101,7 @@
 							<nav class="navbar navbar-light bg-white">
 								<div class="container-fluid">
 									<a class="navbar-brand" href="boardList.do"> <img
-									src="images/board.jpg" alt="" width="125" height="45"
+									src="images/board_icon.jpg" alt="" width="150" height="50"
 									class="d-inline-block align-text-top">
 									</a>
 								</div>
@@ -112,44 +113,20 @@
 							<nav class="navbar navbar-light bg-white">
 								<div class="container-fluid">
 									<a class="navbar-brand" href="myPage.do"> <img
-									src="images/menu5.jpg" alt="" width="125" height="50"
+									src="images/menu5.jpg" alt="" width="150" height="60"
 									class="d-inline-block align-text-top">
 									</a>
 								</div>
 							</nav>
 						</a></li>
-						<!--마이오피-->
-						<!--장바구니-->
-						<li class="nav-item">
-						  <c:choose>
-						    <c:when test="${NULL != logId }">
-						      <a class="nav-link" href="cart.do?id=${logId }">
-							    <nav class="navbar navbar-light bg-white">
-								  <div class="container-fluid">
-									<a class="navbar-brand" href="cart.do?id=${logId }"> <img
-									src="images/basket.jpg" alt="" width="125" height="45"
-									class="d-inline-block align-text-top">
-									</a>
-								  </div>
-							    </nav>
-							  </a>
-							</c:when>
-						    <c:otherwise>
-						      <a class="nav-link" href="#">
-							    <nav class="navbar navbar-light bg-white">
-								  <div class="container-fluid">
-									<a class="navbar-brand" href="#"> <img
-									src="images/basket.jpg" alt="" width="125" height="45"
-									class="d-inline-block align-text-top"
-									onclick="alert('로그인이 필요합니다.');">
-									</a>
-								  </div>
-							    </nav>
-							  </a>
-							</c:otherwise>
-						  </c:choose> 
-						</li>
-						<!--장바구니-->
+						
+						<form class="d-flex">
+							<button class="btn btn-outline-black-50"
+								onclick="location.href = 'orderList.do'" type="submit">
+								<i class="bi-cart-fill me-1"></i> Cart <span
+									class="badge bg-dark text-dark ms-1 rounded-pill">0</span>
+							</button>
+						</form>
 					</ul>
 				</div>
 			</div>
@@ -194,14 +171,7 @@
                   </c:otherwise>
                 </c:choose>
 				<li><a href="addMember.do">회원가입</a></li>
-				<c:choose>
-                  <c:when test="${empty logId }">
-                    <li><a href="#"><span onclick="alert('로그인이 필요합니다.');">장바구니</span></a></li>
-                  </c:when>
-                  <c:otherwise>
-                    <li><a href="cart.do?id=${logId }">장바구니</a></li>
-                  </c:otherwise>
-                </c:choose>
+				<li><a href="#">장바구니</a></li>
 			</ul>
 		</nav>
 		<!-- quickMenu -->
