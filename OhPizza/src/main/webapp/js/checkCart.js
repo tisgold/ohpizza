@@ -30,6 +30,8 @@ document.querySelectorAll('.minus_btn').forEach(btn => {
 		let listNo = this.parentElement.children[1].value;
 		let count = this.parentElement.children[2].value;
 		console.log(listNo, count);
+		
+		if (parseInt(count) > 1) {
 
 		fetch('downPcnt.do?listNo=' + listNo + '&count=' + count)
 			.then(result => result.json())
@@ -38,8 +40,10 @@ document.querySelectorAll('.minus_btn').forEach(btn => {
 				this.parentElement.children[2].value = parseInt(count) - 1;
 				this.parentElement.parentElement.children[4].innerHTML = this.parentElement.parentElement.children[2].children[0].innerHTML * (parseInt(count) - 1);
 				checkCart();
+				
 			})
 			.catch(err => console.log(err))
+		}
 
 	})
 });
