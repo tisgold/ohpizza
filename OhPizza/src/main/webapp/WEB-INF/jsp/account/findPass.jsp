@@ -11,11 +11,11 @@
             <div class="row">
               <div class="col-12">
                 <div class="mb-5">
-                  <h3>비밀번호 재발급</h3>
+                  <h3>비밀번호 확인</h3>
                 </div>
               </div>
             </div>
-            <form action="regenPass.do" method="post">
+            <form action="getPass.do" method="post">
               <div class="row gy-3 overflow-hidden">
                 <div class="col-12">
                   <div class="form-floating mb-3">
@@ -37,7 +37,7 @@
                 </div>
                 <div class="col-12">
                   <div class="d-grid">
-                    <button class="btn bsb-btn-2xl btn-danger" type="submit">비밀번호 재발급</button>
+                    <button class="btn bsb-btn-2xl btn-danger" type="submit">비밀번호 확인</button>
                   </div>
                 </div>
               </div>

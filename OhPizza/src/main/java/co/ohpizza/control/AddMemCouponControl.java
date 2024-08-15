@@ -30,7 +30,13 @@ public class AddMemCouponControl implements Control {
 		String msg = null;
 		String url = "event.do";
 		CouponService csv = new CouponServiceImpl();
-
+		
+		if(id == null || id.isEmpty()) {
+			msg = "로그인이 필요합니다!";
+			url = "login.do";
+			AlertControl.alertAndGo(resp, msg, url);
+			return;
+		}
 		// 중복 발급 체크
 		if (csv.duplicateCoupon(id, couponName) < 1) {
 			if(csv.addMemCoupon(mcvo)) {
@@ -42,19 +48,6 @@ public class AddMemCouponControl implements Control {
 			msg = "이미 발행되었습니다.";
 		}
 		AlertControl.alertAndGo(resp, msg, url);
-		
-//		else {
-//			msg = "중복된 쿠폰입니다.";
-//		}
 
-//		// 쿠폰 발급
-//		if (csv.addMemCoupon(mcvo)) {
-//			msg = "성공적으로 발행되었습니다.";
-//		} else {
-//			msg = "오류가발생했습니다.";
-//			url = "addMemCoupShow.do";
-//		}
-//		AlertControl.alertAndGo(resp, msg, url);
-//	}
 	}
 }

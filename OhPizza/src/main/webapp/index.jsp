@@ -19,7 +19,6 @@
 <!-- Core theme CSS (includes Bootstrap)-->
 <link href="css/styles.css" rel="stylesheet" />
 <link href="css/indexSidebar.css" rel="stylesheet" />
-
 </head>
 <body class="d-flex flex-column h-100">
 	<main class="flex-shrink-0">
@@ -33,7 +32,7 @@
 					<nav class="navbar navbar-light bg-white">
 						<div class="container-fluid">
 							<a class="navbar-brand" href="index.jsp"> <img
-							src="images/ohPizzaLoge.jpg" alt="" width="200" height="90"
+							src="images/ohPizzaLoge.jpg" alt="" width="180" height="80"
 							class="d-inline-block align-text-top">
 							</a>
 						</div>
@@ -65,7 +64,7 @@
 							<nav class="navbar navbar-light bg-white">
 								<div class="container-fluid">
 									<a class="navbar-brand" href="productList.do"> <img
-									src="images/menu2.jpg" alt="" width="150" height="60"
+									src="images/menu2.jpg" alt="" width="125" height="50"
 									class="d-inline-block align-text-top">
 									</a>
 								</div>
@@ -77,7 +76,7 @@
 							<nav class="navbar navbar-light bg-white">
 								<div class="container-fluid">
 									<a class="navbar-brand" href="storeList.do"> <img
-									src="images/menu3.jpg" alt="" width="150" height="60"
+									src="images/menu3.jpg" alt="" width="125" height="50"
 									class="d-inline-block align-text-top">
 									</a>
 								</div>
@@ -89,7 +88,7 @@
 							<nav class="navbar navbar-light bg-white">
 								<div class="container-fluid">
 									<a class="navbar-brand" href="event.do"> <img
-									src="images/menu4.jpg" alt="" width="150" height="60"
+									src="images/menu4.jpg" alt="" width="125" height="50"
 									class="d-inline-block align-text-top">
 									</a>
 								</div>
@@ -101,7 +100,7 @@
 							<nav class="navbar navbar-light bg-white">
 								<div class="container-fluid">
 									<a class="navbar-brand" href="boardList.do"> <img
-									src="images/board_icon.jpg" alt="" width="150" height="50"
+									src="images/board.jpg" alt="" width="125" height="45"
 									class="d-inline-block align-text-top">
 									</a>
 								</div>
@@ -113,20 +112,44 @@
 							<nav class="navbar navbar-light bg-white">
 								<div class="container-fluid">
 									<a class="navbar-brand" href="myPage.do"> <img
-									src="images/menu5.jpg" alt="" width="150" height="60"
+									src="images/menu5.jpg" alt="" width="125" height="50"
 									class="d-inline-block align-text-top">
 									</a>
 								</div>
 							</nav>
 						</a></li>
-
-						<form class="d-flex">
-							<button class="btn btn-outline-black-50"
-								onclick="location.href = 'orderList.do'" type="submit">
-								<i class="bi-cart-fill me-1"></i> Cart <span
-									class="badge bg-dark text-dark ms-1 rounded-pill">0</span>
-							</button>
-						</form>
+						<!--마이오피-->
+						<!--장바구니-->
+						<li class="nav-item">
+						  <c:choose>
+						    <c:when test="${NULL != logId }">
+						      <a class="nav-link" href="cart.do?id=${logId }">
+							    <nav class="navbar navbar-light bg-white">
+								  <div class="container-fluid">
+									<a class="navbar-brand" href="cart.do?id=${logId }"> <img
+									src="images/basket.jpg" alt="" width="125" height="45"
+									class="d-inline-block align-text-top">
+									</a>
+								  </div>
+							    </nav>
+							  </a>
+							</c:when>
+						    <c:otherwise>
+						      <a class="nav-link" href="#">
+							    <nav class="navbar navbar-light bg-white">
+								  <div class="container-fluid">
+									<a class="navbar-brand" href="#"> <img
+									src="images/basket.jpg" alt="" width="125" height="45"
+									class="d-inline-block align-text-top"
+									onclick="alert('로그인이 필요합니다.');">
+									</a>
+								  </div>
+							    </nav>
+							  </a>
+							</c:otherwise>
+						  </c:choose> 
+						</li>
+						<!--장바구니-->
 					</ul>
 				</div>
 			</div>
@@ -171,7 +194,14 @@
                   </c:otherwise>
                 </c:choose>
 				<li><a href="addMember.do">회원가입</a></li>
-				<li><a href="#">장바구니</a></li>
+				<c:choose>
+                  <c:when test="${empty logId }">
+                    <li><a href="#"><span onclick="alert('로그인이 필요합니다.');">장바구니</span></a></li>
+                  </c:when>
+                  <c:otherwise>
+                    <li><a href="cart.do?id=${logId }">장바구니</a></li>
+                  </c:otherwise>
+                </c:choose>
 			</ul>
 		</nav>
 		<!-- quickMenu -->
@@ -258,27 +288,26 @@
 				</div>
 			</section>
 			
-				
 	</main>
-        <!-- Footer-->
-				<footer class="bg-white py-4 mt-auto">
-					<div class="container px-5">
-						<div
-							class="row align-items-center justify-content-between flex-column flex-sm-row">
-							<div class="col-auto">
-								<div class="small m-0 text-dark">대구 중구 중앙대로 403 5층
-									예담직업전묵학교 대표이사:@@@ 개인정보 관리책임자:@@@ &copy; Your Website 2024</div>
-							</div>
-							<div class="col-auto">
-								<a class="link-light small" href="#!">Privacy</a> <span
-									class="text-dark mx-1">&middot;</span> <a
-									class="link-light small" href="#!">Terms</a> <span
-									class="text-dark mx-1">&middot;</span> <a
-									class="link-light small" href="#!">Contact</a>
-							</div>
-						</div>
-					</div>
-				</footer>
+    <!-- Footer-->
+	<footer class="bg-info py-4 mt-auto fixed-bottom">
+		<div class="container px-5">
+			<div
+				class="row align-items-center justify-content-between flex-column flex-sm-row">
+				<div class="col-auto">
+					<div class="small m-0 text-dark">대구 중구 중앙대로 403 5층
+						예담직업전묵학교 대표이사:@@@ 개인정보 관리책임자:@@@ &copy; Your Website 2024</div>
+				</div>
+				<div class="col-auto">
+					<a class="link-light small" href="#!">Privacy</a> <span
+						class="text-dark mx-1">&middot;</span> <a
+						class="link-light small" href="#!">Terms</a> <span
+						class="text-dark mx-1">&middot;</span> <a
+						class="link-light small" href="#!">Contact</a>
+				</div>
+			</div>
+		</div>
+	</footer>
 	<!-- Bootstrap core JS-->
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>

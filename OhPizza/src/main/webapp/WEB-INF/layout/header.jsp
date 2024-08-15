@@ -11,7 +11,7 @@
 			<nav class="navbar navbar-light bg-white">
 				<div class="container-fluid">
 					<a class="navbar-brand" href="index.jsp"> <img
-						src="images/ohPizzaLoge.jpg" alt="" width="200" height="90"
+						src="images/ohPizzaLoge.jpg" alt="" width="180" height="80"
 						class="d-inline-block align-text-top">
 					</a>
 				</div>
@@ -26,24 +26,11 @@
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-	  			<!--바로주문-->
-				<!-- <li class="nav-item"><a class="nav-link" href="index.jsp"> -->
-					<!-- <nav class="navbar navbar-light bg-white"> -->
-						<!-- <div class="container-fluid"> -->
-							<!-- <a class="navbar-brand" href="index.jsp"> <img -->
-							<!-- src="images/menu1.jpg" alt="" width="150" height="60" -->
-							<!-- class="d-inline-block align-text-top"> -->
-							<!-- </a> -->
-						<!-- </div> -->
-					<!-- </nav> -->
-				<!-- </a></li> -->
-				<!--바로주문-->
-				<!--메뉴-->
-				<li class="nav-item"><a class="nav-link" href="productList.do">
+ 				<li class="nav-item"><a class="nav-link" href="productList.do">
 					<nav class="navbar navbar-light bg-white">
 						<div class="container-fluid">
 							<a class="navbar-brand" href="productList.do"> <img
-							src="images/menu2.jpg" alt="" width="150" height="60"
+							src="images/menu2.jpg" alt="" width="125" height="50"
 							class="d-inline-block align-text-top">
 							</a>
 						</div>
@@ -51,11 +38,11 @@
 				</a></li>
 				<!--메뉴-->
 				<!--매장-->
-				<li class="nav-item"><a class="nav-link" href="storeList.do">
+				<li class="nav-item"><a class="nav-link" href="#">
 					<nav class="navbar navbar-light bg-white">
 						<div class="container-fluid">
 							<a class="navbar-brand" href="storeList.do"> <img
-							src="images/menu3.jpg" alt="" width="150" height="60"
+							src="images/menu3.jpg" alt="" width="125" height="50"
 							class="d-inline-block align-text-top">
 							</a>
 						</div>
@@ -67,7 +54,7 @@
 					<nav class="navbar navbar-light bg-white">
 						<div class="container-fluid">
 							<a class="navbar-brand" href="event.do"> <img
-							src="images/menu4.jpg" alt="" width="150" height="60"
+							src="images/menu4.jpg" alt="" width="125" height="50"
 							class="d-inline-block align-text-top">
 							</a>
 						</div>
@@ -79,7 +66,7 @@
 					<nav class="navbar navbar-light bg-white">
 						<div class="container-fluid">
 							<a class="navbar-brand" href="boardList.do"> <img
-							src="images/board_icon.jpg" alt="" width="150" height="50"
+							src="images/board.jpg" alt="" width="125" height="45"
 							class="d-inline-block align-text-top">
 							</a>
 						</div>
@@ -91,37 +78,44 @@
 					<nav class="navbar navbar-light bg-white">
 						<div class="container-fluid">
 							<a class="navbar-brand" href="myPage.do"> <img
-							src="images/menu5.jpg" alt="" width="150" height="60"
+							src="images/menu5.jpg" alt="" width="125" height="50"
 							class="d-inline-block align-text-top">
 							</a>
 						</div>
 					</nav>
 				</a></li>
-				
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<!-- 로그인을 했을 경우 카트 사용가능 기능 c:when절 이용 -->
-				<c:choose>
-					<c:when test="${NULL != logId }">
-						<form class="d-flex" action="cartList.do">
-							<button class="btn btn-outline-light"
-							onclick="location.href = 'cart.do?id=${logId }'" type="button">
-							<i class="bi-cart-fill me-1"></i> Cart <span
-							class="badge bg-dark text-white ms-1 rounded-pill">${cartNo }</span>
-							</button>
-						</form>
+				<!--마이오피-->
+				<!--장바구니-->
+				<li class="nav-item">
+				  <c:choose>
+				    <c:when test="${NULL != logId }">
+				      <a class="nav-link" href="cart.do?id=${logId }">
+					    <nav class="navbar navbar-light bg-white">
+						  <div class="container-fluid">
+							<a class="navbar-brand" href="cart.do?id=${logId }"> <img
+							src="images/basket.jpg" alt="" width="125" height="45"
+							class="d-inline-block align-text-top">
+							</a>
+						  </div>
+					    </nav>
+					  </a>
 					</c:when>
-					<c:otherwise>
-						<form>
-							<button class="btn btn-outline-light"
-							onclick="alert('로그인이 필요합니다.');" type="button">
-							<i class="bi-cart-fill me-1"></i> Cart <span
-							class="badge bg-dark text-white ms-1 rounded-pill">${cartNo }</span>
-							</button>
-						</form>
+				    <c:otherwise>
+				      <a class="nav-link" href="#">
+					    <nav class="navbar navbar-light bg-white">
+						  <div class="container-fluid">
+							<a class="navbar-brand" href="#"> <img
+							src="images/basket.jpg" alt="" width="125" height="45"
+							class="d-inline-block align-text-top"
+							onclick="alert('로그인이 필요합니다.');">
+							</a>
+						  </div>
+					    </nav>
+					  </a>
 					</c:otherwise>
-				</c:choose>
-				</div>
-				
+				  </c:choose> 
+				</li>
+				<!--장바구니-->
 			</ul>
 		</div>
 	</div>

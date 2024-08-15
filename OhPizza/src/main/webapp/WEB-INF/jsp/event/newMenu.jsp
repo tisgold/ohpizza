@@ -9,9 +9,9 @@
 		<div class="list-group list-group-flush">
 			<a
 				class="list-group-item list-group-item-action list-group-item-light p-3"
-				href="newmenu.do">신제품 소개</a> <a
+				href="event.do">신제품 소개</a> <a
 				class="list-group-item list-group-item-action list-group-item-light p-3"
-				href="addMemCopon.do">진행중 이벤트</a> <a
+				href="showCurrEvent.do">진행중 이벤트</a> <a
 				class="list-group-item list-group-item-action list-group-item-light p-3"
 				href="closedEvent.do">종료된 이벤트</a> 				
 		</div>
@@ -19,5 +19,5 @@
 </div>
 <div class="border-end bg-white" align="center" align="center" id="sidebar-wrapper">
 	<h3>신제품 소개</h3>	
-	<a href='productInfo.do?type=pizza&prodNo=10000002'><img src="images/thehiden.jpg" alt="img" width="40%" height="40%"></a>
+	<a href='productInfo.do?type=pizza&prodNo=10000002'><img src="images/thehiden.jpg" alt="img" width="40%"></a>
 </div>
