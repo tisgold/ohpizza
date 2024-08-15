@@ -42,5 +42,7 @@ public interface BoardMapper {
 	//관리자용 답변 
 	int adminAnswer(BoardVO boardvo);
 	
+	// 관리자 답변 화면에 가져오기
+	BoardVO selectQuestion(int bno);
 	
 }

@@ -67,5 +67,10 @@ public class BoardServiceImpl implements BoardService {
 	public boolean adminAnswer(BoardVO boardvo) {
 		return mapper.adminAnswer(boardvo) == 1;
 	}
+
+	@Override
+	public BoardVO getQuestion(int bno) {
+		return mapper.selectQuestion(bno);
+	}
 	
 }
