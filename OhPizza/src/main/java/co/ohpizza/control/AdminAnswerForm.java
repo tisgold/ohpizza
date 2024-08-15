@@ -19,10 +19,14 @@ public class AdminAnswerForm implements Control {
 			throws ServletException, IOException {
 
 		String bno = req.getParameter("bno");
-		String question = req.getParameter("question");
-
-		req.setAttribute("bno", bno);
-		req.setAttribute("question", question);
+		//String question = req.getParameter("question");
+		
+		BoardService bsv = new BoardServiceImpl(); 
+		BoardVO bvo = bsv.getQuestion(Integer.parseInt(bno));
+		
+		//req.setAttribute("bno", bno);
+		//req.setAttribute("question", question);
+		req.setAttribute("board", bvo);
 
 		req.getRequestDispatcher("admin/adminAnswerForm.tiles").forward(req, resp);
 	}

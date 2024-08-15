@@ -18,7 +18,7 @@
 	     <th scope="row">${stat.count }</th>
 	     <td>${store.strName }</td>
 	     <td>${store.phone }</td>
-	     <td>${store.address }</td>
+	     <td><a href="map.jsp?lat=${store.latitude }&lng=${store.longitude }" target='_blank'>${store.address }</a></td>
 	     <td>${store.locName }</td>
 	   </tr>
 	</c:forEach>

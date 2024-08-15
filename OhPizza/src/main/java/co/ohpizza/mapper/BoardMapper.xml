@@ -99,5 +99,11 @@
 	set answer = #{answer}
 	where board_no = #{boardNo}
 	</update>
+	
+	<select id="selectQuestion" parameterType="int" resultType="co.ohpizza.vo.BoardVO">
+	  select *
+	  from tbl_board
+	  where board_no = #{bno}	  
+	</select>
 
 </mapper>

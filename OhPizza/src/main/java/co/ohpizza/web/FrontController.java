@@ -210,6 +210,7 @@ public class FrontController extends HttpServlet {
 		
 		// 최종 결제 버튼 눌렀을 때
 		map.put("/finalBuy.do", new FinalBuyControl());
+		
   }
 
 	@Override

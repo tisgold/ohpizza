@@ -1,12 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<form action="adminAnswer.do?bno=${bno }" method="post">
-<input type="hidden" name="bno" value="${bno }">
+<form action="adminAnswer.do?bno=${board.boardNo }" method="post">
+<input type="hidden" name="bno" value="${board.boardNo }">
 <table class="table">
 	<tr>
+		<th>제목</th>
+		<td><input class="form-control" type="text" readonly value="${board.boardTitle }"></td>
+	</tr>
+	<tr>
 		<th>문의 내용</th>
-		<td><input class="form-control" type="text" readonly value="${question }"></td>
+		<td><input class="form-control" type="text" readonly value="${board.question }"></td>
 	</tr>
 	<tr>
 		<th>답변</th>
