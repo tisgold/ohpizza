@@ -14,7 +14,7 @@ a {
 <c:choose>
 	<c:when test="${NULL != logId }">
 <!-- Navigation bar -->
-<nav class="nav nav-pills flex-column flex-sm-row">
+<nav class="nav nav-pills nav-fill">
 	<!-- <nav class="navbar navbar-dark bg-dark"> -->
 	<div class="container px-5">
 		<ul class="nav nav-pills nav-justifie">
