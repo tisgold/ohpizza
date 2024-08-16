@@ -24,16 +24,12 @@ public class StoreListControl implements Control {
 		List<StoreVO> stores = ssv.storeList();
 		
 		req.setAttribute("stores", stores);
-		if(id == null) {
-			req.getRequestDispatcher("store/storeList.tiles").forward(req, resp);
+		
+		if(id != null && id.equals("admin")) {
+			req.getRequestDispatcher("admin/storeList.tiles").forward(req, resp);
 		}
 		else {
-			if(id.equals("admin")) {
-				req.getRequestDispatcher("admin/storeList.tiles").forward(req, resp);
-			}
-			else {
-				req.getRequestDispatcher("store/storeList.tiles").forward(req, resp);
-			}
+			req.getRequestDispatcher("store/stores.tiles").forward(req, resp);
 		}
 
 	}

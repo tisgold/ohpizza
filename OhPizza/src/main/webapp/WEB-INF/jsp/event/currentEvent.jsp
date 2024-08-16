@@ -17,6 +17,6 @@
 		</div>
 	</div>
 	<div>
-		<a href='addMemCoupon.do'><img src="images/20coupon.jpg"width="80%"></a>
+		<a href='addMemCoupon.do'><img src="images/welcome.jpg"width="70%"></a>
 	</div>
 </div>

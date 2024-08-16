@@ -27,7 +27,7 @@ public class CreateStoreControl implements Control {
 		float longi = Float.parseFloat(req.getParameter("long"));
 		
 		StoreVO store = new StoreVO();
-		store.setStrName(name);
+		store.setStoreName(name);
 		store.setPhone(phone);
 		store.setAddress(address);
 		store.setLocName(locName);

@@ -7,17 +7,17 @@
   <select id="selectStore" resultType="co.ohpizza.vo.StoreVO">
     select *
     from tbl_store
-    order by str_name
+    order by store_name
   </select>
   
   <delete id="deleteStore" parameterType="string">
     delete tbl_store
-    where str_name = #{name}
+    where store_name = #{name}
   </delete>
   
   <insert id="insertStore" parameterType="co.ohpizza.vo.StoreVO">
-    insert into tbl_store (str_name, address, phone, loc_name, latitude, longitude)
-    values (#{strName}, #{address}, #{phone}, #{locName}, #{latitude}, #{longitude})
+    insert into tbl_store (store_name, address, phone, loc_name, latitude, longitude)
+    values (#{storeName}, #{address}, #{phone}, #{locName}, #{latitude}, #{longitude})
   </insert>
 
 </mapper>

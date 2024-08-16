@@ -10,16 +10,22 @@
 	  <th scope="col">전화번호</th>
 	  <th scope="col">주소</th>
 	  <th scope="col">지점명</th>
+	  <c:if test="${logId eq 'admin'}">
+	  	<th scope="col">지점삭제</th>
+	  </c:if>
 	</tr>
   </thead>  
   <tbody>
 	 <c:forEach var="store" items="${stores }" varStatus="stat">
 	   <tr>
 	     <th scope="row">${stat.count }</th>
-	     <td>${store.strName }</td>
+	     <td>${store.storeName }</td>
 	     <td>${store.phone }</td>
 	     <td><a href="map.jsp?lat=${store.latitude }&lng=${store.longitude }" target='_blank'>${store.address }</a></td>
 	     <td>${store.locName }</td>
+	     <c:if test="${logId eq 'admin'}">
+	       <td><a href="deleteStore.do?name=${store.storeName }">삭제</a></td>
+	     </c:if>
 	   </tr>
 	</c:forEach>
   </tbody>
