@@ -18,8 +18,7 @@
 	</div>
 </div>
 
-<h1>종료된이벤트</h1>
 <span class="img">
-<img src="images/endevent.jpg" alt="6월다 june day, '히든 굿즈 팩 2종'출시!">
+<img src="images/endevent.jpg" alt="6월다 june day, '히든 굿즈 팩 2종'출시!"><br>
 <strong>마감된 이벤트입니다.</strong>
 </span>

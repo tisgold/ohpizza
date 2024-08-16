@@ -19,12 +19,12 @@
 	 <c:forEach var="store" items="${stores }" varStatus="stat">
 	   <tr>
 	     <th scope="row">${stat.count }</th>
-	     <td>${store.strName }</td>
+	     <td>${store.storeName }</td>
 	     <td>${store.phone }</td>
 	     <td>${store.address }</td>
 	     <td>${store.locName }</td>
 	     <c:if test="${logId eq 'admin'}">
-	       <td><a href="deleteStore.do?name=${store.strName }">삭제</a></td>
+	       <td><a href="deleteStore.do?name=${store.storeName }">삭제</a></td>
 	     </c:if>
 	   </tr>
 	</c:forEach>

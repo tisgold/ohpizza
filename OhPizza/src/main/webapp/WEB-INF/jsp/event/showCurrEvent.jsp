@@ -15,6 +15,6 @@
 		</div>
 	</div>
 	<div>
-		<a href='currentEvent.do'><img src="images/20coupon.jpg"width="50%"></a>
+		<a href='currentEvent.do'><img src="images/welcome.jpg"width="40%"></a>
 	</div>
 </div>
