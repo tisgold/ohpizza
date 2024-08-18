@@ -3,6 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!-- 상품목록  -->
 <head>
+<link href="css/allMarginPadding.css" rel="stylesheet">
 <style>
 a {
 	text-decoration-line: none;
@@ -11,6 +12,8 @@ a {
 </style>
 </head>
 
+<body>
+  <section class="box">
 <c:choose>
 	<c:when test="${NULL != logId }">
 <!-- Navigation bar -->
@@ -1104,3 +1107,5 @@ a {
 </div>
 </c:otherwise>
 </c:choose>
+</section>
+</body>
