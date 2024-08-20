@@ -24,7 +24,14 @@
 					<th scope="col">작성자</th>
 					<th scope="col">작성일</th>
 					<th scope="col">조회수</th>
-					<th scope="col">삭제</th>
+					<c:choose>
+					<c:when test="${logId != null}">
+						<th scope="col">삭제</th>								
+					</c:when>
+					<c:otherwise>
+						<!-- <th scope="col" type="hidden"> - </th> -->
+					</c:otherwise>
+					</c:choose>
 				</tr>
 			</thead>
 			<tbody>
@@ -42,7 +49,7 @@
 									<a href="removeBoard.do?boardNo=${board.boardNo }"><button type="button">삭제</button></a>
 								</c:when>
 								<c:otherwise>
-									-
+									
 								</c:otherwise>
 						</c:choose>
 						</td>
