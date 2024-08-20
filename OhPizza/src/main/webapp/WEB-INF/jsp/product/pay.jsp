@@ -845,14 +845,15 @@
 </style>
 <link rel="stylesheet" type="text/css"
 	href="https://financial.pstatic.net/orders/ordersheet/d689069-real/static/css/65.b50cb429.chunk.css">
+<link href="css/allMarginPadding2.css" rel="stylesheet">
 <script charset="utf-8"
 	src="https://financial.pstatic.net/orders/ordersheet/d689069-real/static/js/65.b366bff9.chunk.js"></script>
 </head>
 
 
-
 <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
-
+<body>
+<section class="box">
 <div width=20px>
 <div class="DoubleTemplate_section-left__19C4I">
 	<div class="ContentSection_article__3a-7Z">
@@ -887,10 +888,10 @@
 							<span class="blind">주소</span>${member.address }
 						</div>
 					</div>
-					<div class="DeliveryContent_area-button__tN_x3">
-						<button type="button" data-nlog-click-code="addcha"
-							class="ButtonBox-module_article__b5G1- ButtonBox-module_tiny__Y0FYf ButtonBox-module_basic__AwAaz">변경</button>
-					</div>
+					<!-- <div class="DeliveryContent_area-button__tN_x3"> -->
+						<!-- <button type="button" data-nlog-click-code="addcha" -->
+							<!-- class="ButtonBox-module_article__b5G1- ButtonBox-module_tiny__Y0FYf ButtonBox-module_basic__AwAaz">변경</button> -->
+					<!-- </div> -->
 				</div>
 
 
@@ -931,11 +932,9 @@
 									<div></div>
 									<c:forEach var="ol" items="${olList }">
 									<input type="hidden" name=listNo value="${ol.listNo }">
-										<a
-											href="https://smartstore.naver.com/main/products/9461787188"
-											class="" data-nlog-click-code="name"><strong
+										<strong
 											class="ProductDetail_name__19lwp"><span
-												class="blind">상품명</span>${ol.prodName } </strong></a>
+												class="blind">상품명</span>${ol.prodName } </strong>
 										<ul class="ProductDetail_list-option__TXsQ2">
 											<li class="ProductDetail_option__1t3iU"><span
 												class="ProductDetail_badge__33Ils"><span
@@ -999,7 +998,8 @@
 	</div>
 </div>
 </div>
-
+</section>
+</body>
 
 
 <script src="js/pay.js"></script>

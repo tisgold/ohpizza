@@ -59,8 +59,12 @@
 					<input type=hidden name=id value='${logId }'>
 					<input type=hidden name=cart value='${cartList }'>
 					<input type=hidden name=price value='${aPrice }'>
-					<h1>총 가격: </h1><h1 id=aPrice>0</h1>
-					<button type=button onclick='priceCart()'>결제하기</button>
+					<div class="row">
+	  				  <div class="col text-center">
+						<h3><span >총 가격: </span><span id=aPrice>0</span></h3>						
+						<button type=button onclick='priceCart()'>결제하기</button>
+					  </div>
+					</div>
 				</div>
 			</section>
 
