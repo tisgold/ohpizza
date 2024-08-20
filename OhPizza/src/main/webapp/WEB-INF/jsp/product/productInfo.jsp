@@ -157,10 +157,12 @@ a {
 	</div>
 </section>
 
-
-
-
-
+<div class="row">
+  <div class="col text-center">
+	<a href="origin.html" onclick="window.open(this.href, '_blank', 'width=1280, height=720'); return false;"><button>원산지 정보</button></a>
+	<a href="allergy.html" onclick="window.open(this.href, '_blank', 'width=820, height=720'); return false;"><button>알레르기 유발재료</button></a>
+  </div>
+</div>
 
 
 <!-- 하단리스트 출력 -->

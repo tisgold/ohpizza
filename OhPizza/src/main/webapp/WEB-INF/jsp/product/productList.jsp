@@ -22,13 +22,17 @@ a {
 	<div class="container px-5">
 		<ul class="nav nav-pills nav-justifie">
 			<li class="nav-item"><a class="nav-link"
-				href="productList.do?type=pizza">피자</a></li>
+				href="productList.do?type=pizza"><img class="logo"
+					src="images/pizza.jpg"></a></li>
 			<li class="nav-item"><a class="nav-link"
-				href="productList.do?type=spizza">1인용피자</a></li>
+				href="productList.do?type=spizza"><img class="logo"
+					src="images/spizza.jpg"></a></li>
 			<li class="nav-item"><a class="nav-link"
-				href="productList.do?type=set">특가세트</a></li>
+				href="productList.do?type=set"><img class="logo"
+					src="images/set.jpg"></a></li>
 			<li class="nav-item"><a class="nav-link"
-				href="productList.do?type=side">샐러드&사이드</a></li>
+				href="productList.do?type=side"><img class="logo"
+					src="images/side.jpg"></a></li>
 		</ul>
 	</div>
 </nav>
@@ -568,13 +572,17 @@ a {
 	<div class="container px-5">
 		<ul class="nav nav-pills nav-justifie">
 			<li class="nav-item"><a class="nav-link"
-				href="productList.do?type=pizza">피자</a></li>
+				href="productList.do?type=pizza"><img class="logo"
+					src="images/pizza.jpg"></a></li>
 			<li class="nav-item"><a class="nav-link"
-				href="productList.do?type=spizza">1인용피자</a></li>
+				href="productList.do?type=spizza"><img class="logo"
+					src="images/spizza.jpg"></a></li>
 			<li class="nav-item"><a class="nav-link"
-				href="productList.do?type=set">특가세트</a></li>
+				href="productList.do?type=set"><img class="logo"
+					src="images/set.jpg"></a></li>
 			<li class="nav-item"><a class="nav-link"
-				href="productList.do?type=side">샐러드&사이드</a></li>
+				href="productList.do?type=side"><img class="logo"
+					src="images/side.jpg"></a></li>
 		</ul>
 	</div>
 </nav>
