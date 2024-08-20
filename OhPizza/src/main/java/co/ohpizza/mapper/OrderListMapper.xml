@@ -5,7 +5,7 @@
 <mapper namespace="co.ohpizza.mapper.OrderListMapper">
 	<insert id="addOrderList" parameterType="string">
 		insert into tbl_orderlist(list_no, ord_no, prod_no, count, prod_price, prod_name)
-		values (orderlist_seq.nextVal, ${ordNo}, ${prodNo}, ${count}, ${prodPrice}, '${prodName}')
+		values (orderlist_seq.nextVal, #{ordNo}, #{prodNo}, #{count}, #{prodPrice}, #{prodName})
 	</insert>
 	
 	<select id="selectOrderListL" parameterType="int" resultType="co.ohpizza.vo.OrderlistVO">
@@ -29,13 +29,13 @@
 	<update id="modifyOlcnt" parameterType="int">
 		update tbl_orderlist
 		set count = ${count}
-		where list_No = ${listNo}
+		where list_No = #{listNo}
 	</update>
 	
 	<select id="selectOrderList" parameterType="int" resultType="co.ohpizza.vo.OrderlistVO">
 		select *
 		from tbl_orderlist
-		where list_no = ${listNo}
+		where list_no = #{listNo}
 	</select>
 	
 	<update id="updateOrderList" parameterType="int">

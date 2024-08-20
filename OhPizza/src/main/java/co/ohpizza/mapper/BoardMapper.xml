@@ -4,7 +4,7 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="co.ohpizza.mapper.BoardMapper">
 
-	<select id="boardList" parameterType="String">
+	<select id="boardList" parameterType="string">
 		select  *
 		from (select rownum rn, a.*
 		from (select *
