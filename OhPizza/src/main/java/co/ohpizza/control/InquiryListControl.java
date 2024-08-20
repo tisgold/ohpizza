@@ -20,21 +20,22 @@ public class InquiryListControl implements Control {
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		HttpSession session = req.getSession(false);
 		String id = (String) session.getAttribute("logId");
-		
-		//페이지 계산 기능
+
+		// 페이지 계산 기능
 		BoardService boardService = new BoardServiceImpl();
 		String page = req.getParameter("page");
 		page = page == null ? "1" : page;
-		int totalCnt = boardService.inquirypage();
-		PageDTO pageDTO = new PageDTO(Integer.parseInt(page), totalCnt, 5);	
-		System.out.println(page);
-		
-		//리스트
-		List<BoardVO> inquiryList = boardService.inquiryList(page,id);
-		
+		int totalCnt = boardService.inquiryPageCnt(id);
+		System.out.println(totalCnt);
+		PageDTO pageDTO = new PageDTO(Integer.parseInt(page), totalCnt, 5);
+		//System.out.println(page);
+
+		// 리스트
+		List<BoardVO> inquiryList = boardService.inquiryList(page, id);
+
 		req.setAttribute("inquiryList", inquiryList);
 		req.setAttribute("paging", pageDTO);
-		
+
 		req.getRequestDispatcher("user/inquiryList.tiles").forward(req, resp);
 
 	}

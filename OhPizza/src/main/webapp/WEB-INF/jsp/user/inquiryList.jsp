@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<div>
 <table class="table table-light table-striped table-hover">
 	<thead>
 		<tr>
@@ -22,14 +21,11 @@
 				<td scope="row">${inquiry.boardTitle }</td>
 				<td scope="row">${inquiry.question }</td>
 				<td scope="row">${inquiry.answer }</td>
-
 				<!-- <td scope="row">${inquiry.memId }</td> -->
-
 			</tr>
 		</c:forEach>
 	</tbody>
 </table>
-</div>
 <!-- 페이징 -->
 <nav aria-label="Page navigation example">
 	<ul class="pagination justify-content-center">
